@@ -57,6 +57,9 @@ global.navigator.userAgent = global.navigator.userAgent || 'all';
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/assets', (req, res) => {
+  res.sendStatus(400)
+})
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -99,6 +102,8 @@ app.use('/graphql', expressGraphQL(req => ({
 // -----------------------------------------------------------------------------
 
 app.get('*', async (req, res, next) => {
+  var fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  console.log(fullUrl)
   try {
     let setting = await Setting.findOne({})
     const store = configureStore({
@@ -107,7 +112,7 @@ app.get('*', async (req, res, next) => {
       cookie: req.headers.cookie,
     });
     store.dispatch(setSetting({
-      value: setting.ssr
+      value: setting.ssr || true
     }))
     store.dispatch(setRuntimeVariable({
       name: 'initialNow',

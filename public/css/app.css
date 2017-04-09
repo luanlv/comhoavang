@@ -1056,3 +1056,7 @@
 
 .selectImage .ant-modal-footer {
   display: none !important; }
+
+.lineh .title-2 {
+  line-height: 40px !important;
+  max-height: 40px; }
