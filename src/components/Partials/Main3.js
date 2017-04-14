@@ -2,6 +2,9 @@ import React from 'react'
 
 class Main extends React.Component {
   render() {
+    console.log(this.props.news)
+    const {page, totalPage, data} = this.props.news
+    const news = data
     return (
       <div id="mainContent">
         <div className="container">
@@ -20,20 +23,24 @@ class Main extends React.Component {
                   Thông tin website</a>
               </div>
             </div>
+
             <div className="news-big line-bottom">
-              <a href="/hlv-huu-thang-quyet-gianh-chien-thang-ngay-ra-quan-o-vong-loai-asian-cup-2019-tci-15-tt-1073.aspx" className="news-img">
-                <img src="/assets/images/hlv-huu-thang-quyet-gianh-chien-thang-ngay-ra-quan-o-vong-loai-asian-cup-2019-1073.jpg" alt="hlv-huu-thang-quyet-gianh-chien-thang-ngay-ra-quan-o-vong-loai-asian-cup-2019-1073.jpg" /></a>
+              <a href={'/bai-viet/' + news[0].slug} className="news-img">
+                <img src={"/image/small/" + news[0].coverUrl } /></a>
               <div className="news-content">
                 <h3 className="news-name">
-                  <a href="/hlv-huu-thang-quyet-gianh-chien-thang-ngay-ra-quan-o-vong-loai-asian-cup-2019-tci-15-tt-1073.aspx">
-                    HLV Hữu Thắng quyết giành chiến thắng ngày ra quân ở vòng loại ASIAN Cup 2019</a></h3>
+                  <a href={'/bai-viet/' + news[0].slug}>
+                    {news[0].title}
+                  </a></h3>
                 <div className="description">
-                  Mặc dù khá cẩn trọng khi phát biểu tại cuộc họp báo trước trận đấu với Afghanistan, nhưng HLV Hữu Thắng tin vào một chiến thắng cùng đội tuyển Việt Nam ở trận quân vòng loại Asian Cup 2019.</div>
+                  {news[0].description}
+                </div>
                 <div className="more-details">
-                  <a href="/hlv-huu-thang-quyet-gianh-chien-thang-ngay-ra-quan-o-vong-loai-asian-cup-2019-tci-15-tt-1073.aspx">
+                  <a href={'/bai-viet/' + news[0].slug}>
                     Xem chi tiết</a></div>
               </div>
             </div>
+
             <div id="ctl00_ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_ContentPlaceHolder1_UpdatePanel1">
               <div className="wrap-section pro-site">
                 <div className="product-tb row" style={{position: 'relative', height: '1656.63px'}}>
@@ -238,6 +245,7 @@ class Main extends React.Component {
                 <span id="ctl00_ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_ContentPlaceHolder1_DataPager1"><span className="first">First</span>&nbsp;<span className="prev">Previous</span>&nbsp;<span className="current">1</span>&nbsp;<a className="numer-paging" href="javascript:__doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$ContentPlaceHolder1$ContentPlaceHolder1$DataPager1$ctl02$ctl01','')">2</a>&nbsp;<a className="numer-paging" href="javascript:__doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$ContentPlaceHolder1$ContentPlaceHolder1$DataPager1$ctl02$ctl02','')">3</a>&nbsp;<a className="numer-paging" href="javascript:__doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$ContentPlaceHolder1$ContentPlaceHolder1$DataPager1$ctl02$ctl03','')">4</a>&nbsp;<a className="numer-paging" href="javascript:__doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$ContentPlaceHolder1$ContentPlaceHolder1$DataPager1$ctl02$ctl04','')">5</a>&nbsp;&nbsp;<a href="javascript:__doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$ContentPlaceHolder1$ContentPlaceHolder1$DataPager1$ctl02$ctl05','')">...</a>&nbsp;<a className="next" href="javascript:__doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$ContentPlaceHolder1$ContentPlaceHolder1$DataPager1$ctl03$ctl00','')">Next</a>&nbsp;<a className="last" href="javascript:__doPostBack('ctl00$ctl00$ctl00$ContentPlaceHolder1$ContentPlaceHolder1$ContentPlaceHolder1$DataPager1$ctl04$ctl00','')">Last</a>&nbsp;</span>
               </div>
             </div>
+
           </div>
           <div id="colAside">
             <div className="row">

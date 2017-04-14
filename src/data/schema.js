@@ -15,15 +15,18 @@ import {
 // import me from './queries/me';
 import news from './queries/news';
 import imageQueries from './models/image/queries'
+import postQueries from './models/post/queries'
 import userQueries from './models/user/queries'
 import settingQueries from './models/setting/queries'
 
 // mutation
 import settingMutation from './models/setting/mutations'
+import postMutation from './models/post/mutations'
 
 let {listImage} = imageQueries
 let { users } = userQueries
 let { setting } = settingQueries
+let { getNews, getOneNews, getFoodNews, getOnePost} = postQueries
 
 const schema = new Schema({
   query: new ObjectType({
@@ -32,7 +35,11 @@ const schema = new Schema({
       setting,
       news,
       listImage,
-      users
+      users,
+      getNews,
+      getOneNews,
+      getFoodNews,
+      getOnePost
     },
   }),
   mutation: new ObjectType({
@@ -41,7 +48,8 @@ const schema = new Schema({
     fields: {
       // addUser: userMutations.addUser,
       // updateUser: userMutations.updateUser
-      updateSetting: settingMutation.update
+      updateSetting: settingMutation.update,
+      newPost: postMutation.newPost
     },
   }),
 });

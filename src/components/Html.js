@@ -36,44 +36,42 @@ class Html extends React.Component {
     return (
       <html className="no-js" lang="en">
         <head>
-          <meta charSet="utf-8" />
-          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-          <title>{title}</title>
-          <meta name="description" content={description} />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta name="referrer" content="unsafe-url" />
-          <meta name="referrer" content="origin" />
-          <meta name="referrer" content="no-referrer-when-downgrade" />
-          <meta name="referrer" content="origin-when-cross-origin" />
-          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-          <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+            <meta charSet="utf-8" />
+            <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+            <title>{title}</title>
+            <meta name="description" content={description} />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta name="referrer" content="unsafe-url" />
+            <meta name="referrer" content="origin" />
+            <meta name="referrer" content="no-referrer-when-downgrade" />
+            <meta name="referrer" content="origin-when-cross-origin" />
+            {/*<meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />*/}
+            <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-          <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
-          <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
-          <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/uniform-base.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/nivo-slider.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/slick.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/lugo.datepicker.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/site.css" rel="stylesheet" type="text/css" />
-          <link href="/assets/styles/site-repond.css" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
+            <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/uniform-base.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/nivo-slider.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/slick.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/lugo.datepicker.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/site.css" rel="stylesheet" type="text/css" />
+            <link href="/assets/styles/site-repond.css" rel="stylesheet" />
 
-
-
-          <script src="/assets/js/jquery.js" type="text/javascript"></script>
-          <script src="/assets/js/jquery-ui.min.js" type="text/javascript"></script>
-          <script src="/assets/js/jquery.ui.datepicker-vi-VN.js" type="text/javascript"></script>
-          <script src="/assets/js/jquery.easing.1.3.js" type="text/javascript"></script>
-          <script src="/assets/js/jquery.mb.browser.min.js" type="text/javascript"></script>
-          <script src="/assets/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
-          <script src="/assets/js/jquery.textheight.js" type="text/javascript"></script>
-
-          <link rel="stylesheet" type="text/css"  href="/css/app.css" />
+            <script src="/assets/js/jquery.js" type="text/javascript"></script>
+            <script src="/assets/js/jquery-ui.min.js" type="text/javascript"></script>
+            <script src="/assets/js/jquery.ui.datepicker-vi-VN.js" type="text/javascript"></script>
+            <script src="/assets/js/jquery.easing.1.3.js" type="text/javascript"></script>
+            <script src="/assets/js/jquery.mb.browser.min.js" type="text/javascript"></script>
+            <script src="/assets/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+            <script src="/assets/js/jquery.textheight.js" type="text/javascript"></script>
+            <link rel="stylesheet" type="text/css"  href="/css/app.css" />
         </head>
+
         <body>
           <div
             id="app"
@@ -87,6 +85,7 @@ class Html extends React.Component {
               `window.APP_STATE=${serialize(state, { isJSON: true })}` }}
             />
           )}
+
 
           <script src="/assets/js/hoverIntent.js" type="text/javascript"></script>
           <script src="/assets/js/imagesloaded.pkgd.min.js" type="text/javascript"></script>

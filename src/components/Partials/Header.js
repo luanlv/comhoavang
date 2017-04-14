@@ -42,7 +42,7 @@ class Header extends React.Component {
                 </ul>
               </li>
               <li><Link to="/home3">Điều trị ho</Link></li>
-              <li><Link to="/home4">Sức khoẻ tổng hợp</Link></li>
+              <li><Link to="/bai-viet/aaa">Sức khoẻ tổng hợp</Link></li>
               <li><a href="/tu-van.aspx">Tư vấn chuyên gia</a></li>
               <li><a href="/tin-tuc.aspx">Tin tức</a></li>
               <li><a href="/he-thong-phan-phoi.aspx">Hệ thống phân phối</a></li>

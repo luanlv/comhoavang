@@ -16,6 +16,10 @@ import logoUrl from './logo-small.png';
 import logoUrl2x from './logo-small@2x.png';
 
 class Header extends React.Component {
+  componentDidMount () {
+    window.myfunload()
+    window.mypageload()
+  }
   render() {
     return (
       <div className={s.root}>

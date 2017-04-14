@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Main = () => {
+const Main = ({post}) => {
     return (
        <div id="mainContent">
         <div className="container">
@@ -11,7 +11,8 @@ const Main = () => {
             </div>
 
             <div className="wrapper-text">
-            <h2>HLV Hữu Thắng quyết giành chiến thắng ngày ra quân ở vòng loại ASIAN Cup 2019</h2>
+              <h2>{post.title}</h2>
+              <div className="post-body" dangerouslySetInnerHTML={{__html: post.body}} />
             </div>
           </div>
           <div id="colAside">

@@ -18,8 +18,8 @@ export default {
   children: [
     require('./home').default,
     require('./home2').default,
-    require('./home3').default,
-    require('./home4').default,
+    require('./tintuc').default,
+    require('./baiviet').default,
     require('./contact').default,
     require('./login').default,
     require('./register').default,

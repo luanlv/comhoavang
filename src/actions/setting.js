@@ -1,10 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 
-import { SET_SETTING } from '../constants';
+import * as type from '../constants';
 
 export function setSetting({ value }) {
   return {
-    type: SET_SETTING,
+    type: type.SET_SETTING,
     payload: {
       value
     },
