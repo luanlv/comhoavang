@@ -11,6 +11,7 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import Header from '../../components/Partials/Header'
 import Main4 from '../../components/Partials/Main4'
+import Aside from '../../components/Partials/Aside'
 import Footer from '../../components/Partials/Footer'
 import MenuMobile from '../../components/Partials/MenuMobile'
 
@@ -19,7 +20,12 @@ class Home extends React.Component {
   render() {
     return (
       <div >
-        <Main4 post={this.props.post} />
+        <div id="mainContent">
+          <div className="container">
+            <Main4 post={this.props.post} />
+            <Aside />
+          </div>
+        </div>
       </div>
     );
   }

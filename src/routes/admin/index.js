@@ -20,9 +20,10 @@ export default {
     require('./dashboard').default,
     require('./library').default,
     require('./setting').default,
-    require('./editor').default,
+    // require('./editor').default,
     require('./news').default,
     require('./monngon').default,
+    require('./product').default,
   ],
   async action({next}) {
     const route = await next();

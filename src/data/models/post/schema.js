@@ -5,7 +5,7 @@ var schema = new mongoose.Schema({
   category: String,
   slug: { type:String, required:true, unique: true, index: true},
   title: String,
-  public: Boolean,
+  public: {type: Boolean, default: false},
   coverUrl: String,
   description: String,
   body: String,
@@ -44,6 +44,24 @@ module.exports.getNews = (root, {page}) => {
   });
 };
 
+module.exports.getNewsInCategory = (root, {page, slug}) => {
+
+  return new Promise((resolve, reject) => {
+
+    model.count({category: slug}).exec((err, count) => {
+      if(err) return reject(err)
+      model.find({category: slug}).sort({created_at: -1}).skip((page-1)*16).limit(16).exec((err, res) => {
+        err ? reject(err) : resolve({
+          page: page,
+          totalPage: Math.floor(count/16) + 1,
+          data: res
+        });
+      });
+
+    })
+  });
+};
+
 module.exports.getOnePost = (root, {slug}) => {
   return new Promise((resolve, reject) => {
     model.findOne({slug: slug}).exec((err, res) => {
@@ -60,11 +78,19 @@ module.exports.getFoodNews = (root, {page}) => {
     'cach-lam-mon-ngon-tai-nha'
   ]
   return new Promise((resolve, reject) => {
-    model.find({category: {
-      $in: listCategoryInNews
-    }}).sort({created_at: -1}).skip((page-1)*16).limit(16).exec((err, res) => {
-      err ? reject(err) : resolve(res);
-    });
+    model.count({category: {$in: listCategoryInNews}}).exec((err, count) => {
+      if(err) return reject(err)
+      model.find({category: {
+        $in: listCategoryInNews
+      }}).sort({created_at: -1}).skip((page-1)*16).limit(16).exec((err, res) => {
+        err ? reject(err) : resolve({
+          page: page,
+          totalPage: Math.floor(count/16) + 1,
+          data: res
+        });
+      });
+
+    })
   });
 };
 

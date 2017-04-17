@@ -8,45 +8,24 @@ class Header extends React.Component {
       <div id="header">
         <div className="container">
           <div id="logo">
-            <a href="/">
-              <img src="/assets/images/logosh.png" alt="logo"/></a>
+            <Link to="/">
+              <img src="/assets/images/logosh.png" alt="logo"/></Link>
           </div>
           <div className="header-right">
             <div className="button-menu mobile-showhide">
-              <a className="panel-left" href="#menumobile"><span className="icon-bar">bar</span>
+              <a className="panel-left" href="#"><span className="icon-bar">bar</span>
                 <span className="icon-bar">bar</span> <span className="icon-bar">bar</span> </a>
             </div>
-            <a href="#searchbox" className="finda mobile-showhide">search</a>
+            <a href="#" className="finda mobile-showhide">search</a>
             <ul id="menu" className="desktop-showhide sf-js-enabled" style={{touchAction: 'pan-y'}}>
               <li className="home">
                 <Link to="/">Trang chủ</Link></li>
               <li>
-                <Link to="/home2" className="sf-with-ul">Sản phẩm</Link>
-                <ul style={{display: 'none'}}>
-                  <li><a href="/nghien-cuu.aspx">Nghiên cứu phát triển</a></li>
-                  <li><a href="/siro-ho-bezut-pci-2-pi-1.aspx">
-                    Siro ho bezut</a>
-                  </li>
-                  <li><Link to="/home3">
-                    Viên ngậm ho bezut không đường</Link>
-                  </li>
-                  <li><a href="/vien-ngam-ho-bezut-pci-2-pi-2.aspx">
-                    Viên ngậm ho bezut</a>
-                  </li>
-                  <li><a href="/calcium-mumekids-10-pci-2-pi-8.aspx">
-                    Calcium mumekids 10</a>
-                  </li>
-                  <li><a href="/hobezut-pci-2-pi-11.aspx">
-                    HOBEZUT</a>
-                  </li>
-                </ul>
+                <Link to="/san-pham" className="sf-with-ul">Sản phẩm</Link>
               </li>
-              <li><Link to="/home3">Điều trị ho</Link></li>
-              <li><Link to="/bai-viet/aaa">Sức khoẻ tổng hợp</Link></li>
-              <li><a href="/tu-van.aspx">Tư vấn chuyên gia</a></li>
-              <li><a href="/tin-tuc.aspx">Tin tức</a></li>
-              <li><a href="/he-thong-phan-phoi.aspx">Hệ thống phân phối</a></li>
-              <li className="last"><a href="/lien-he.aspx">Liên hệ</a></li>
+              <li><Link to="/mon-ngon">Món ngon</Link></li>
+              <li><Link to="/tin-tuc">Tin tức</Link></li>
+              <li className="last"><a href="/">Liên hệ đặt hàng</a></li>
             </ul>
             <div className="header-bottom">
               <div id="searchbox" className="search-form">

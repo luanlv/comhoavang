@@ -114,6 +114,7 @@ class EditNewsComponent extends React.Component {
   addNews(post){
     axios.post('/api/post/new', post)
       .then(res => {
+        message.success('Thêm mới thành công!')
         history.push({
           pathname: '/admin/news',
           search: '?v=edit&slug=' + res.data.slug

@@ -10,6 +10,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import NotFound from './NotFound';
+import needFeed from '../../core/needFetch'
 
 const title = 'Page Not Found';
 
@@ -18,6 +19,7 @@ export default {
   path: '*',
 
   action() {
+    needFeed()
     return {
       title,
       component: <Layout><NotFound title={title} /></Layout>,

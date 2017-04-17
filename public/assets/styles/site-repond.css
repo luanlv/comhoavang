@@ -34,7 +34,20 @@
 
 @media (max-width: 1199px)
 {
-    
+    /**/
+    .ads-banner {
+        display:none;
+    }
+    .container {
+        width:970px;
+    }
+    #header .container {
+        width:970px;
+    }
+    #colAside {
+        width:310px;
+    }
+    /**/
     #menu > li > a {
         padding: 0 6px;
     }
@@ -134,13 +147,19 @@
         font-size: 13px;
         line-height: 19px;
     }
-    
 }
 @media (min-width: 990px)
 {
 }
 @media (max-width: 989px)
 {
+    
+    .container {
+        width:750px;
+    }
+    #header .container {
+        width:750px;
+    }
     
     /*#colAside, #colContent {
         float: none;
@@ -280,6 +299,13 @@
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px)
 {
+    
+    .container {
+        width:100%;
+    }
+    #header .container {
+        width:100%;
+    }
      .desktop-showhide
      {
          display: none !important;
@@ -455,7 +481,7 @@
         padding: 0;
     }
     #banner .doctor {
-        background: url(/assets/images/do-bg.gif) repeat-x left bottom;
+        background: url(../images/do-bg.gif) repeat-x left bottom;
         position: relative;
         height: auto;
         overflow: hidden;

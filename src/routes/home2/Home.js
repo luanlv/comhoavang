@@ -19,7 +19,7 @@ class Home extends React.Component {
   render() {
     return (
       <div >
-        <Main2 />
+        <Main2 posts={this.props.posts} />
       </div>
     );
   }

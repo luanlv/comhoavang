@@ -20,16 +20,6 @@ class Admin extends React.Component {
   render() {
     return (
         <div>
-          <h1>{this.props.title}</h1>
-          <a href="/auth/facebook"><Button type="primary">Button</Button></a>
-          <Button type="primary"
-            onClick={() => {
-              history.push({
-                pathname: '/admin/library',
-                search: event.currentTarget.search
-              })
-            }}
-          >Redirect</Button>
         </div>
     );
   }

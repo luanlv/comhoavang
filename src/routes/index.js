@@ -17,7 +17,10 @@ export default {
   // Keep in mind, routes are evaluated in order
   children: [
     require('./home').default,
-    require('./home2').default,
+    require('./monngon').default,
+    require('./sanpham').default,
+    require('./danhsachsanpham').default,
+    require('./danhmuc').default,
     require('./tintuc').default,
     require('./baiviet').default,
     require('./contact').default,
@@ -30,7 +33,10 @@ export default {
     require('./notFound').default,
   ],
 
-  async action({ next }) {
+  async action({ next, store }) {
+    if(process.env.BROWSER && !window.numRendered) {
+      window.numRendered = 0
+    }
     // Execute each child route until one of them return the result
     const route = await next();
 

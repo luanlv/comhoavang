@@ -38,7 +38,7 @@ class ListNews extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query: '{ getFoodNews(page: '+ page +'){category, coverUrl, slug, public, title, description, body, view, tags, created_at} }',
+        query: '{getFoodNews(page:'+ page +' ){page,totalPage,data{category, coverUrl, slug, public, title, description, body, view, tags, created_at}}}',
       }),
       credentials: 'include',
     })
@@ -47,7 +47,7 @@ class ListNews extends React.Component {
       return {
         ...prev,
         loading: false,
-        data: data.getFoodNews
+        data: data.getFoodNews.data
       }
     })
   }

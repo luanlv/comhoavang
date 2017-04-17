@@ -42,7 +42,21 @@ export default {
       resolve: model.getNews
   },
   getFoodNews: {
-    type: new GraphQLList(type),
+    type: new GraphQLObjectType({
+      name: 'getFoodNews',
+      description: 'getFoodNews object',
+      fields: () => ({
+        page: {
+          type: GraphQLInt
+        },
+        totalPage: {
+          type: GraphQLInt
+        },
+        data: {
+          type: new GraphQLList(type)
+        }
+      })
+    }),
     args: {
       page: {
         type: GraphQLInt
@@ -68,4 +82,30 @@ export default {
     },
     resolve: model.getOnePost
   },
+  getNewsInCategory: {
+    type: new GraphQLObjectType({
+      name: 'getNewsInCategory',
+      description: 'getNewsInCategory object',
+      fields: () => ({
+        page: {
+          type: GraphQLInt
+        },
+        totalPage: {
+          type: GraphQLInt
+        },
+        data: {
+          type: new GraphQLList(type)
+        }
+      })
+    }),
+    args: {
+      page: {
+        type: GraphQLInt
+      },
+      slug: {
+        type: GraphQLString
+      }
+    },
+    resolve: model.getNewsInCategory
+  }
 };

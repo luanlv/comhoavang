@@ -52,23 +52,47 @@ a {
     width: 100%;
     z-index: 1;
 }
-/*.container
+.container
 {
-    width: 1170px;
-}*/
+    width: 980px;
+}
 hr
 {
     display: none;
 }
+.clr {
+    clear:both;
+}
+.ads-banner {
+    position:relative;
+}
+#ads-left {
+    left: 0;
+}
+.ads-box {
+    top: 115px;
+    position: fixed;
+    width: 127px;
+    z-index: 99;
+}
+#ads-right {
+    right: 0;
+}
+.ads-box img {
+    width:100%;
+}
 /*======================================================*/
 #header
 {
-    background: url(/assets/images/header-bgg.png) repeat-x left top;
+    background: url(../images/header-bgg.png) repeat-x left top;
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 100;
+}
+#header .container {
+    width:1170px;
 }
 #header.header-sroll
 {
@@ -97,7 +121,7 @@ hr
 /*========================================*/
 #header .header-bgr
 {
-    background: url(/assets/images/header-bg.png) repeat-x left top;
+    background: url(../images/header-bg.png) repeat-x left top;
     top: 0;
     right: 0;
     position: absolute;
@@ -116,19 +140,19 @@ hr
 }
 #header .header-right
 {
-    background: url(/assets/images/header-bg.jpg) no-repeat left top;
+    background: url(../images/header-bg.jpg) no-repeat left top;
     margin-left: 219px;
     z-index: 99;
 }
 /*========================================================*/
 #logo {
-        /*background: url(/assets/images/logo-bg.png) no-repeat left bottom;*/
+        /*background: url(../images/logo-bg.png) no-repeat left bottom;*/
         margin: 0 auto;
         height: 65px;
         width: 195px;
 }
 .header-bgl {
-    background: url(/assets/images/logo-bg.png) no-repeat left top;
+    background: url(../images/logo-bg.png) no-repeat left top;
     left: 0;
     top: 0;
     position: absolute;
@@ -163,7 +187,7 @@ hr
 }*/
 .hotline
 {
-    background: url(/assets/images/icon-phone.png) no-repeat left center;
+    background: url(../images/icon-phone.png) no-repeat left center;
     color: #87600c;
     font-size: 12px;
     font-weight: 700;
@@ -213,7 +237,7 @@ hr
 }
 /*======================*/
 .mo-box {
-    background: url(/assets/images/mbgm.png) repeat-y right top;
+    background: url(../images/mbgm.png) repeat-y right top;
 }
 .menu-in .hotline {
     background-position: 20px 12px;
@@ -253,7 +277,7 @@ hr
 }
 .search-form .search-btn, .finda
 {
-    background: url(/assets/images/search-btn.png) no-repeat center center;
+    background: url(../images/search-btn.png) no-repeat center center;
     border: none;
     cursor: pointer;
     display: block;
@@ -323,7 +347,7 @@ hr
     border: none;
 }
     #menu > li.home {
-        background: url(/assets/images/homebg.png) no-repeat left top;
+        background: url(../images/homebg.png) no-repeat left top;
     }
 #menu a
 {
@@ -371,7 +395,7 @@ hr
 }
 #menu > li.home > a
 {
-    background: url(/assets/images/icon-home.png) no-repeat center center;
+    background: url(../images/icon-home.png) no-repeat center center;
     height: 45px;
     overflow: hidden;
     text-indent: -9999em;
@@ -464,7 +488,7 @@ hr
 }
 .bannerbg
 {
-    background: url(/assets/images/mbg.png) repeat-x left top;
+    background: url(../images/mbg.png) repeat-x left top;
     left: 0;
     top: 0;
     position: absolute;
@@ -553,7 +577,7 @@ hr
 }
 .pager .first, .pager .last, .pager .prev, .pager .next
 {
-    background: url(/assets/images/pager-bg.png) no-repeat left top;
+    background: url(../images/pager-bg.png) no-repeat left top;
     overflow: hidden;
     text-align: left;
     text-indent: -9999em;
@@ -566,7 +590,7 @@ hr
 }
 .pager .first:hover
 {
-    background: url(/assets/images/pager-bg.png) no-repeat right bottom;
+    background: url(../images/pager-bg.png) no-repeat right bottom;
 }
 .pager .last
 {
@@ -574,7 +598,7 @@ hr
 }
 .pager .last:hover
 {
-    background: url(/assets/images/pager-bg.png) no-repeat -40px bottom;
+    background: url(../images/pager-bg.png) no-repeat -40px bottom;
 }
 .pager .prev
 {
@@ -582,7 +606,7 @@ hr
 }
 .pager .prev:hover
 {
-    background: url(/assets/images/pager-bg.png) no-repeat left bottom;
+    background: url(../images/pager-bg.png) no-repeat left bottom;
 }
 .pager .next
 {
@@ -590,13 +614,13 @@ hr
 }
 .pager .next:hover
 {
-    background: url(/assets/images/pager-bg.png) no-repeat -20px bottom;
+    background: url(../images/pager-bg.png) no-repeat -20px bottom;
 }
 /*============================*/
 #colAside
 {
     float: right;
-    width: 325px;
+    width: 250px;
 }
 .adv
 {
@@ -671,7 +695,7 @@ hr
     display: block;
     float: left;
     position: relative;
-    width: 151px;
+    width: 85px;
 }
 .list-video a:hover
 {
@@ -731,19 +755,19 @@ hr
 /*========================================*/
 .wrap-question
 {
-    background: url(/assets/images/formbg-center.png) repeat-y left top;
+    background: url(../images/formbg-center.png) repeat-y left top;
     overflow: hidden;
     width: 100%;
 }
 .wrap-question .question-out
 {
-    background: url(/assets/images/formbg-bottom.jpg) no-repeat left bottom;
+    background: url(../images/formbg-bottom.jpg) no-repeat left bottom;
     padding-bottom: 33px;
     width: 100%;
 }
 .wrap-question .question-in
 {
-    background: url(/assets/images/formbg-top.jpg) no-repeat left top;
+    background: url(../images/formbg-top.jpg) no-repeat left top;
     padding-top: 15px;
     min-height: 379px;
     width: 100%;
@@ -767,7 +791,7 @@ hr
 }
 .form-question
 {
-    padding: 0 27px;
+    padding: 0 15px;
 }
 .form-question .question-input
 {
@@ -800,7 +824,7 @@ hr
 }
 .question-input .question-btn
 {
-    background: url(/assets/images/buttom-btn.png) no-repeat left top;
+    background: url(../images/buttom-btn.png) no-repeat left top;
     border: none;
     color: #fff;
     display: block;
@@ -861,7 +885,7 @@ hr
 }
 #colAside .news-box .news-name a
 {
-    background: url(/assets/images/op-60.png) repeat left top;
+    background: url(../images/op-60.png) repeat left top;
     color: #fff;
     display: block;
     font-size: 16px;
@@ -915,7 +939,7 @@ hr
 {
     float: left;
     overflow: hidden;
-    width: 815px;
+    width: calc(100% - 280px);
 }
 .head, .headno
 {
@@ -933,7 +957,7 @@ hr
 }
 .headno
 {
-    background: url(/assets/images/line-4.png) repeat-x left center;
+    background: url(../images/line-4.png) repeat-x left center;
     margin-bottom: 15px;
 }
 .title
@@ -955,7 +979,7 @@ hr
 {
     color: #fff;
     float: left;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 36px;
     text-transform: uppercase;
@@ -972,7 +996,7 @@ hr
 }
 .head-list
 {
-    background: #fff url(/assets/images/line-pl.png) repeat left top;
+    background: #fff url(../images/line-pl.png) repeat left top;
     color: #f2f2f2;
     font-size: 14px;
     overflow: hidden;
@@ -980,12 +1004,12 @@ hr
 }
 .head-list a
 {
-    background: url(/assets/images/line-1.gif) no-repeat left center;
+    background: url(../images/line-1.gif) no-repeat left center;
     /*border-bottom: solid 1px #e5e5e5;*/
     color: #005aa8;
     display: block;
     float: left;
-    font-size: 14px;
+    font-size: 12px;
     /*font-weight: 700;*/
     font-weight: 600;
     line-height: 22px;
@@ -1018,7 +1042,7 @@ hr
 .wrap-section .section-box
 {
     float: left;
-    width: 424px;
+    width: 360px;
 }
 .wrap-section .section-box .section-img, .wrap-section .section-box .section-img img
 {
@@ -1029,7 +1053,7 @@ hr
 }
 .section-box .section-img .section-name
 {
-    background: url(/assets/images/op-60.png) repeat left top;
+    background: url(../images/op-60.png) repeat left top;
     bottom: 0;
     color: #fff;
     display: block;
@@ -1052,7 +1076,7 @@ hr
 }
 .more-all
 {
-    background: url(/assets/images/line-3.png) repeat-x left center;
+    background: url(../images/line-3.png) repeat-x left center;
     overflow: hidden;
     width: 100%;
 }
@@ -1069,7 +1093,7 @@ hr
 }
 .more-all a span
 {
-    background: url(/assets/images/iconr-1.png) no-repeat right center;
+    background: url(../images/iconr-1.png) no-repeat right center;
     display: block;
     padding-right: 25px;
 }
@@ -1187,7 +1211,7 @@ hr
 }
 .box-newsa .news-name a
 {
-    background: url(/assets/images/op-60.png) repeat left top;
+    background: url(../images/op-60.png) repeat left top;
     color: #fff;
     display: block;
     font-size: 16px;
@@ -1274,13 +1298,13 @@ hr
 }
 #footer .list-footer
 {
-    background: url(/assets/images/line-1.png) repeat-x left top;
+    background: url(../images/line-1.png) repeat-x left top;
     padding-top: 2px;
     width: 250px;
 }
 .list-footer li
 {
-    background: url(/assets/images/line-1.png) repeat-x left bottom;
+    background: url(../images/line-1.png) repeat-x left bottom;
     padding-bottom: 2px;
 }
 .list-footer > li > a
@@ -1312,7 +1336,7 @@ hr
 }
 .address-box li 
 {
-    background: url(/assets/images/line-1.png) repeat-x left bottom;
+    background: url(../images/line-1.png) repeat-x left bottom;
     padding: 6px 0 8px 0;
 }
 .address-box li span
@@ -1322,23 +1346,23 @@ hr
 }
 .address-box .add-1 span
 {
-    background: url(/assets/images/fac-1.png) no-repeat 2px 2px;
+    background: url(../images/fac-1.png) no-repeat 2px 2px;
 }
 .address-box .add-2 span
 {
-    background: url(/assets/images/fac-2.png) no-repeat 1px 2px;
+    background: url(../images/fac-2.png) no-repeat 1px 2px;
 }
 .address-box .add-3 span
 {
-    background: url(/assets/images/fac-3.png) no-repeat 1px 2px;
+    background: url(../images/fac-3.png) no-repeat 1px 2px;
 }
 .address-box .add-5 span
 {
-    background: url(/assets/images/fac-4.png) no-repeat 1px 5px;
+    background: url(../images/fac-4.png) no-repeat 1px 5px;
 }
 .copyright 
 {
-    background: url(/assets/images/line-2.png) repeat-x center top;
+    background: url(../images/line-2.png) repeat-x center top;
     padding-top: 3px;
     text-align: center;
     line-height: 48px;
@@ -1390,7 +1414,7 @@ hr
 }
 .product-box .icon-lay
 {
-    background: url(/assets/images/op-33.png) repeat left top;
+    background: url(../images/op-33.png) repeat left top;
     display: block;
     left: 0;
     top: 0;
@@ -1401,7 +1425,7 @@ hr
 }
 .product-box .icon-lay span
 {
-    background: url(/assets/images/icon-plays.png) no-repeat center center;
+    background: url(../images/icon-plays.png) no-repeat center center;
     display: block;
     height: 100%;
     width: 100%;
@@ -1525,7 +1549,7 @@ hr
     padding: 10px 0;
 }
 .ico-play {
-    background: url(/assets/images/icon-play.png) no-repeat center center;
+    background: url(../images/icon-play.png) no-repeat center center;
     height: 100%;
     width: 100%;
     position: absolute;
@@ -1792,7 +1816,7 @@ hr
 }
 .headb-bgtop
 {
-    background: url(/assets/images/line-5.png) repeat-x left top;
+    background: url(../images/line-5.png) repeat-x left top;
 }
 .headb .title-2
 {
@@ -1828,7 +1852,7 @@ hr
 }
 .form-search .search-btn
 {
-    background: url(/assets/images/search-btn2.png) no-repeat center center;
+    background: url(../images/search-btn2.png) no-repeat center center;
     border: none;
     cursor: pointer;
     display: block;
@@ -1842,7 +1866,7 @@ hr
 }
 .list-dsitri a
 {
-    background: url(/assets/images/icon-pphoi.png) no-repeat left 3px;
+    background: url(../images/icon-pphoi.png) no-repeat left 3px;
     color: #282828;
     display: block;
     font-size: 13px;
@@ -1963,17 +1987,17 @@ hr
 
             #map .box .contact-1
             {
-                background: url(/assets/images/contact/icon-f-1.png) no-repeat 3px 2px;
+                background: url(../images/contact/icon-f-1.png) no-repeat 3px 2px;
             }
 
             #map .box .contact-2
             {
-                background: url(/assets/images/contact/icon-f-2.png) no-repeat 3px 4px;
+                background: url(../images/contact/icon-f-2.png) no-repeat 3px 4px;
             }
 
             #map .box .contact-3
             {
-                background: url(/assets/images/contact/icon-f-3.png) no-repeat left 2px;
+                background: url(../images/contact/icon-f-3.png) no-repeat left 2px;
             }
 
 .box .wrap-mapbox
@@ -2083,7 +2107,7 @@ hr
 
 .address-contact
 {
-    /*background: url(/assets/images/address-bg.jpg) no-repeat right bottom;*/
+    /*background: url(../images/address-bg.jpg) no-repeat right bottom;*/
     border: solid 1px #065eaa;
     margin-bottom: 15px;
     padding: 15px 25px;
@@ -2220,7 +2244,7 @@ hr
 .wrapper-contact .contact-address
 {
     float: left;
-    width: 510px;
+    width: 450px;
 }
 .contact-address .node
 {
@@ -2432,7 +2456,7 @@ hr
 }
 .RadCaptcha a
 {
-    background: url(/assets/images/contact/refresh.png) no-repeat left top;
+    background: url(../images/contact/refresh.png) no-repeat left top;
     display: block;
     float: left;
     overflow: hidden;
@@ -2518,7 +2542,7 @@ hr
 }
 .input-text .text-tc
 {
-    background: #fff url(/assets/images/icon-date.png) no-repeat right center;
+    background: #fff url(../images/icon-date.png) no-repeat right center;
     border: none;
     color: #000;
     display: block;
@@ -2701,7 +2725,7 @@ hr
     color: #005aa8;
     font-weight: 600;
     font-size: 12px;
-    background: url(/assets/images/icon-clickme.png) no-repeat left -3px;
+    background: url(../images/icon-clickme.png) no-repeat left -3px;
     padding-left: 30px;
 }
 .link-nc a:hover
@@ -2768,7 +2792,7 @@ hr
 }
 .details-content .list-nav li
 {
-    background: url(/assets/images/line-6.png) repeat-x left 18px;
+    background: url(../images/line-6.png) repeat-x left 18px;
     overflow: hidden;
     padding: 4px 0;
     width: 100%;
@@ -2808,7 +2832,7 @@ hr
 }
 .detail-text .list-check li
 {
-    background: url(/assets/images/icon-check.png) no-repeat left top;
+    background: url(../images/icon-check.png) no-repeat left top;
     padding: 3px 0 3px 25px;
 }
 .detail-text .list-squate
@@ -2819,7 +2843,7 @@ hr
 }
 .detail-text > .list-squate li
 {
-    background: url(/assets/images/icon-c1.png) no-repeat left 12px;
+    background: url(../images/icon-c1.png) no-repeat left 12px;
     padding: 3px 0 3px 20px;
 }
 /*============================*/
@@ -2848,7 +2872,7 @@ hr
 }
 .wrap-button .button-btn
 {
-    background: #efcb6d url(/assets/images/btn-bg1.png) repeat-y left top;
+    background: #efcb6d url(../images/btn-bg1.png) repeat-y left top;
     border: none;
 	border-radius: 26px; /* Opera 10.5+, future browsers, and now also Internet Explorer 6+ using IE-CSS3 */
 	-moz-border-radius: 26px; /* Firefox */
@@ -2880,17 +2904,17 @@ hr
 }
 .wrap-button .btn-b:hover
 {
-    background: #ff8400 url(/assets/images/btn-bg3.png) repeat-y left top;
+    background: #ff8400 url(../images/btn-bg3.png) repeat-y left top;
 }
 .wrap-button .phone
 {
-    background: #084e89 url(/assets/images/btn-bg2.png) repeat-y left top;
+    background: #084e89 url(../images/btn-bg2.png) repeat-y left top;
     font-weight: 300;
     text-transform: uppercase;
 }
 .wrap-button .phone span
 {
-    background: url(/assets/images/icon-phone2.png) no-repeat 23px center;
+    background: url(../images/icon-phone2.png) no-repeat 23px center;
     display: block;
     padding-left: 60px;
 }
@@ -2900,15 +2924,15 @@ hr
 }
 .wrap-button .btn-a
 {
-    background: #ff8400 url(/assets/images/btn-bg3.png) repeat-y left top;
+    background: #ff8400 url(../images/btn-bg3.png) repeat-y left top;
 }
 .wrap-button .btn-a:hover
 {
-    background: #084e89 url(/assets/images/btn-bg2.png) repeat-y left top;
+    background: #084e89 url(../images/btn-bg2.png) repeat-y left top;
 }
 .wrap-button .btn-a span
 {
-    background: url(/assets/images/icon-hd.png) no-repeat right center;
+    background: url(../images/icon-hd.png) no-repeat right center;
     display: block;
     /*margin-right: 30px;
     padding-left: 40px;*/

@@ -17,7 +17,7 @@ gulp.task('sassAdmin', function () {
 });
 
 
-gulp.task('default', function () {
+gulp.task('default',['sass','sassAdmin'], function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch('./sassAdmin/**/*.scss', ['sassAdmin']);
 });

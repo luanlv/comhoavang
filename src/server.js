@@ -114,9 +114,25 @@ app.get('*', async (req, res, next) => {
           needUpdate: true,
           value: {}
         },
+        foodNews: {
+          needUpdate: true,
+          value: {}
+        },
         news: {
           needUpdate: true,
           value: {}
+        },
+        newsInCategory: {
+          needUpdate: true,
+          value: {}
+        },
+        product: {
+          needUpdate: true,
+          value: {}
+        },
+        products: {
+          needUpdate: true,
+          value: []
         }
       },
       user: req.user || null,

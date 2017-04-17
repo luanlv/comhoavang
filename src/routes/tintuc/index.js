@@ -6,7 +6,7 @@ import Layout from '../../components/Layout';
 import {setData} from '../../actions/data'
 
 export default {
-  path: '/home3',
+  path: '/tin-tuc',
   async action({ store, query }) {
     let page = 1;
     if(query.p) page = query.p
@@ -26,8 +26,7 @@ export default {
       const { data } = await resp.json();
       store.dispatch(setData(data))
     }
-    console.log('news')
-    console.log(store.getState().news)
+
     return {
       title: 'Trang chủ',
       component: <Layout><Home news={store.getState().data.news.value} /></Layout>,

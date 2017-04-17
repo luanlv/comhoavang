@@ -10,6 +10,7 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './ErrorPage.css';
+import needFetch from '../../core/needFetch';
 
 class ErrorPage extends React.Component {
   static propTypes = {
@@ -21,6 +22,7 @@ class ErrorPage extends React.Component {
   };
 
   render() {
+    needFetch()
     if (__DEV__) {
       const { error } = this.props;
       return (

@@ -20,6 +20,7 @@ class ListNews extends React.Component {
     this.state = {
       loading: true,
       page: 1,
+      totalPage: 1,
       data: []
     }
     this.getNews(1)
@@ -32,6 +33,7 @@ class ListNews extends React.Component {
     );
   }
   async getNews(page) {
+
     const resp = await fetch('/graphql', {
       method: 'post',
       headers: {
@@ -39,16 +41,20 @@ class ListNews extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query: '{ getNews(page: '+ page +'){category, coverUrl, slug, public, title, description, body, view, tags, created_at} }',
+        query: '{getNews(page:'+ page +' ){page,totalPage,data{category, coverUrl, slug, public, title, description, body, view, tags, created_at}}}',
       }),
       credentials: 'include',
-    })
+    });
+
     const {data} = await resp.json();
+    // console.log(data.getNews)
     this.setState(prev => {
       return {
         ...prev,
         loading: false,
-        data: data.getNews
+        page: data.getNews.page,
+        totalPage: data.getNews.totalPage,
+        data: data.getNews.data
       }
     })
   }
