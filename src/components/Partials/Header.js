@@ -9,7 +9,8 @@ class Header extends React.Component {
         <div className="container">
           <div id="logo">
             <Link to="/">
-              <img src="/assets/images/logosh.png" alt="logo"/></Link>
+              <img src="/assets/images/logo-com.png" alt="logo"/>
+            </Link>
           </div>
           <div className="header-right">
             <div className="button-menu mobile-showhide">

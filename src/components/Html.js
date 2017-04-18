@@ -111,7 +111,6 @@ class Html extends React.Component {
           {analytics.google.trackingId &&
             <script src="https://www.google-analytics.com/analytics.js" async defer />
           }
-
           <script dangerouslySetInnerHTML={{ __html: this.props.scriptBottom }} />
 
         </body>

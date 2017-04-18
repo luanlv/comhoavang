@@ -24,17 +24,28 @@ class Aside extends React.Component {
           <div className="col-md-12 col-xs-6">
           </div>
           <div className="col-md-12 col-xs-6">
-
+            <div className="wrap-video">
+              <a href="https://www.youtube.com/watch?v=L74dhO4i-0w" target="_blank" className="videob">
+                <img src="/assets/images/video-com.jpg"
+                     alt="video-com.jpg"/>
+                <span className="ico-play">
+                    </span></a>
+              <div className="video-content">
+                <h3 className="video-name">
+                  <Link to="/">
+                    Rộn ràng ngày hội văn hóa Cốm Mễ Trì</Link></h3>
+              </div>
+            </div>
             <ul className="list-video">
-              <li><a href="/quang-cao-vien-ngam-ho-bezut-vd-5.aspx" className="video-box"><span className="video-img">
-                        <img src="/assets/images/quang-cao-vien-ngam-ho-bezut-5.jpg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl0_Img3" alt="quang-cao-vien-ngam-ho-bezut-5.jpg" />
+              <li><Link to="/" className="video-box"><span className="video-img">
+                        <img src="/assets/images/bao-quan-com.jpeg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl0_Img3" alt="quang-cao-vien-ngam-ho-bezut-5.jpg" />
                       </span><span className="video-content"><span className="video-name">
-                          Cách bảo quản và sử dụng Cốm Mễ Trì </span> </span></a>
+                          Cách bảo quản và sử dụng Cốm Mễ Trì </span> </span></Link>
               </li>
-              <li><a href="/quang-cao-siro-ho-bezut-vd-4.aspx" className="video-box"><span className="video-img">
-                        <img src="/assets/images/quang-cao-siro-ho-bezut-4.jpg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl1_Img3" alt="quang-cao-siro-ho-bezut-4.jpg" />
+              <li><Link to="/" className="video-box"><span className="video-img">
+                        <img src="/assets/images/phan-biet.jpg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl1_Img3" alt="quang-cao-siro-ho-bezut-4.jpg" />
                       </span><span className="video-content"><span className="video-name">
-                          Cách phân biệt cốm sạch và cốm bẩn </span> </span></a>
+                          Cách phân biệt cốm sạch và cốm bẩn </span> </span></Link>
               </li>
             </ul>
           </div>
