@@ -1487,3 +1487,6 @@ span.CodeMirror-selectedtext {
   display: block;
   height: auto !important;
   margin: 0 auto; }
+
+#toolbarLocation {
+  z-index: 9999 !important; }

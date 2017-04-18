@@ -144,11 +144,13 @@ class EditNewsComponent extends React.Component {
         <Row className="padding-5" style={{marginBottom: 15}}>
           <Affix>
             {this.props.isEdit && <Button type="primary" style={{float: 'right'}}
+                                          size="large"
               onClick={() => {
                 this.updateNews(this.state.data)
               }}
             >Cập nhập</Button>}
             {!this.props.isEdit && <Button type="primary" style={{float: 'right'}}
+                                           size="large"
               onClick={() => {
                 this.addNews(this.state.data)
               }}

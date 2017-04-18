@@ -76,7 +76,6 @@ class EditNewsComponent extends React.Component {
     });
   }
   handleOk = (e) => {
-    console.log(e);
     this.setState({
       modalSelectImage: false,
     });
@@ -140,12 +139,16 @@ class EditNewsComponent extends React.Component {
       !this.state.loading && <div className="admin-editor">
         <Row className="padding-5" style={{marginBottom: 15}}>
           <Affix>
-            {this.props.isEdit && <Button type="primary" style={{float: 'right'}}
+            {this.props.isEdit && <Button
+              size="large"
+              type="primary" style={{float: 'right'}}
               onClick={() => {
                 this.updateNews(this.state.data)
               }}
             >Cập nhập</Button>}
-            {!this.props.isEdit && <Button type="primary" style={{float: 'right'}}
+            {!this.props.isEdit && <Button
+              size="large"
+              type="primary" style={{float: 'right'}}
               onClick={() => {
                 this.addNews(this.state.data)
               }}
@@ -289,8 +292,9 @@ class EditNewsComponent extends React.Component {
                       <img src={this.state.data.coverUrl} />
                     </Card>}
                   </div>
-                  <Button style={{marginRight: 10}}
-                          onClick={() => this.showModalSelectImage('cover')}
+                  <Button
+                    style={{marginRight: 10}}
+                    onClick={() => this.showModalSelectImage('cover')}
                   >Chọn ảnh từ thư viện</Button>
                   {this.state.data.coverUrl && <Button
                     onClick={() => {

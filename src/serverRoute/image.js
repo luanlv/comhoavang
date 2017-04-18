@@ -21,10 +21,10 @@ function getSmallImage(req, res, next){
   if (fs.existsSync(pathImage)) {
     next()
   } else {
-    // Gm(originalPathImage).resize(300, "!").write(pathImage, function (err) {
-    //   if(err) console.log(err)
-    //   next()
-    // })
+    Gm(originalPathImage).resize(300, "!").write(pathImage, function (err) {
+      if(err) console.log(err)
+      next()
+    })
     next()
   }
 }
