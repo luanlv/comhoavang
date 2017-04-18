@@ -53,8 +53,10 @@ class CKEditor extends React.Component {
       <div>
         <Row>
           <Col className="padding-5">
-            <Button style={{marginRight: 10}}
-                    onClick={() => this.showModalSelectImage('editor')}
+            <Button
+              id="addImage"
+              style={{marginRight: 10}}
+              onClick={() => this.showModalSelectImage('editor')}
             >Lấy link ảnh từ thư viện</Button>
           </Col>
 
@@ -116,7 +118,7 @@ class CKEditor extends React.Component {
 
     this.editor.addCommand("mySimpleCommand", { // create named command
       exec: function(edt) {
-        alert(edt.getData());
+        $( "#addImage" ).trigger( "click" )
       }
     });
 
@@ -124,7 +126,7 @@ class CKEditor extends React.Component {
       label: "Click me",
       command: 'mySimpleCommand',
       toolbar: 'insert',
-      icon: 'https://avatars1.githubusercontent.com/u/5500999?v=2&s=16'
+      icon: '/assets/add-image.png'
     });
 
   }

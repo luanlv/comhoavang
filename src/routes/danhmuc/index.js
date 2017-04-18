@@ -27,8 +27,27 @@ export default {
     }
     return {
       title: 'Trang tin tuc',
-      component: <Layout><Home posts={store.getState().data.newsInCategory.value} /></Layout>,
+      component: <Layout><Home posts={store.getState().data.newsInCategory.value} title={mapSlugToName(params.slug)} /></Layout>,
     };
   },
 
 };
+
+function mapSlugToName(slug) {
+  switch(slug) {
+    case 'mon-ngon-tu-com':
+      return 'Món ngon từ cốm';
+      break;
+    case 'cach-lam-mon-ngon-tai-nha':
+      return 'Cách làm món ngon tại nhà';
+      break;
+    case 'su-kien':
+      return 'Sự kiện';
+      break;
+    case 'tin-tuc-tong-hop':
+      return 'Tin tức tổng hợp'
+      break;
+    default:
+      return ''
+  }
+}

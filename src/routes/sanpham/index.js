@@ -8,7 +8,7 @@ import {setData} from '../../actions/data'
 export default {
   path: '/san-pham/:slug',
   async action({ store, params }) {
-    // if(!process.env.BROWSER || !store.getState().setting.ssr || (process.env.BROWSER && needFetch())){
+    if(!process.env.BROWSER || !store.getState().setting.ssr || (process.env.BROWSER && needFetch())){
       const resp = await fetch('/graphql', {
         method: 'post',
         headers: {
@@ -21,9 +21,8 @@ export default {
         credentials: 'include',
       });
       const { data } = await resp.json();
-      console.log(data)
       store.dispatch(setData(data))
-    // }
+    }
 
     return {
       title: 'Trang chủ',

@@ -26,7 +26,7 @@ class Main extends React.Component {
                     <img src={product.coverUrl} />
                   </div>
                   <div className="details-content">
-                    <h4 className="title-2"><span>Thành phần</span></h4>
+                    <h4 className="title-2"><span>Thông tin sản phẩm</span></h4>
                     <div>
                       {product.description}
                     </div>

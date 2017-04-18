@@ -19,7 +19,7 @@ class Home extends React.Component {
   render() {
     return (
       <div >
-        <Main5 posts={this.props.posts} />
+        <Main5 posts={this.props.posts} title={this.props.title} />
       </div>
     );
   }

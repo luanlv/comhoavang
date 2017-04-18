@@ -18,7 +18,7 @@ class Main extends React.Component {
             <div id="colContent">
               <div className="headno">
                 <h1 className="title text-uppercase">
-                  <span id="ctl00_ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_ContentPlaceHolder1_lblCategory">Tin tức đời sống</span>
+                  <span id="ctl00_ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_ContentPlaceHolder1_lblCategory">{this.props.title}</span>
                 </h1>
               </div>
               <div className="news-big line-bottom mb12">
@@ -31,8 +31,7 @@ class Main extends React.Component {
                       {firstPost.title}
                     </Link></h3>
                   <div className="description">
-                    Nước là phần không thể thiếu của sự sống, tuy vậy cũng có những thời điểm bổ sung nước lại không tốt
-                    sức khỏe của bạn.
+                    {firstPost.description.slice(0, 50)} ...
                   </div>
                   <div className="more-details">
                     <Link to={'/bai-viet/' + firstPost.slug}>Xem chi tiết</Link></div>

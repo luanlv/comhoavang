@@ -16,7 +16,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: '{ getProducts{name, price, coverUrl, description, saleOff, body, created_at} }',
+          query: '{ getProducts{name, price, slug, coverUrl, description, saleOff, body, created_at} }',
         }),
         credentials: 'include',
       });
