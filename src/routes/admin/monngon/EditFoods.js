@@ -27,6 +27,7 @@ class EditNewsComponent extends React.Component {
       selectImageType: '',
       showModalSelectImage: false,
       data: {
+        description: '',
         tags: []
       }
     }
@@ -248,7 +249,7 @@ class EditNewsComponent extends React.Component {
                     />
                   </div>
                   <div style={{ marginBottom: 16 }}>
-                    <label><b>Mô tả:</b></label>
+                    <label><b>Mô tả ( {(this.state.data.description.length >= 140 && this.state.data.description.length <= 150) ? <span style={{color: 'blue'}}>{this.state.data.description.length}</span> : <span style={{color: 'red'}}>{this.state.data.description.length}</span>} /150) :</b></label>
                     <Input type="textarea"
                            autosize={{ minRows: 2, maxRows: 10 }}
                            defaultValue={this.state.data.description}
