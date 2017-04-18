@@ -53,11 +53,11 @@ class CKEditor extends React.Component {
       <div>
         <Row>
           <Col className="padding-5">
-            <Button
+            <span
               id="addImage"
               style={{marginRight: 10}}
               onClick={() => this.showModalSelectImage('editor')}
-            >Lấy link ảnh từ thư viện</Button>
+            />
           </Col>
 
           <Col>
@@ -98,7 +98,7 @@ class CKEditor extends React.Component {
 
   componentDidMount() {
     let configuration = {
-      removePlugins : 'magicline',
+      // removePlugins : 'magicline',
       extraPlugins : 'autogrow,image2,sharedspace',
       uploadUrl: '/upload/imageCKEditor',
       disallowedContent : 'img{width,height}',

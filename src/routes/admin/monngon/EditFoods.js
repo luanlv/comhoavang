@@ -138,7 +138,9 @@ class EditNewsComponent extends React.Component {
     return (
       !this.state.loading && <div className="admin-editor">
         <Row className="padding-5" style={{marginBottom: 15}}>
-          <Affix>
+          <Affix
+            offsetTop={10}
+          >
             {this.props.isEdit && <Button
               size="large"
               type="primary" style={{float: 'right'}}
