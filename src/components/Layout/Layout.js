@@ -23,6 +23,13 @@ class Layout extends React.Component {
     children: PropTypes.node.isRequired,
   };
 
+  componentDidMount(){
+    console.log('test ok')
+    if(process.env.BROWSER) {
+      window.myfunload()
+    }
+  }
+
   render() {
     return (
       <div id="wrapper">

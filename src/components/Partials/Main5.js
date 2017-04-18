@@ -48,10 +48,10 @@ class Main extends React.Component {
                 </Link>
                 <div className="news-content">
                   <h3 className="news-name">
-                    <a
-                      href={'/bai-viet/' + el.slug}>
+                    <Link
+                      to={'/bai-viet/' + el.slug}>
                       {el.title}
-                    </a></h3>
+                    </Link></h3>
                   <div className="description">
                     {el.description}
                   </div>

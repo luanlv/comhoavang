@@ -14,10 +14,10 @@ class Header extends React.Component {
           </div>
           <div className="header-right">
             <div className="button-menu mobile-showhide">
-              <a className="panel-left" href="#"><span className="icon-bar">bar</span>
+              <a className="panel-left" href="#menumobile"><span className="icon-bar">bar</span>
                 <span className="icon-bar">bar</span> <span className="icon-bar">bar</span> </a>
             </div>
-            <a href="#" className="finda mobile-showhide">search</a>
+            <a href="#searchbox" className="finda mobile-showhide">search</a>
             <ul id="menu" className="desktop-showhide sf-js-enabled" style={{touchAction: 'pan-y'}}>
               <li className="home">
                 <Link to="/">Trang chủ</Link></li>
