@@ -129,7 +129,7 @@ class Setting extends React.Component {
               {this.state.setting.scriptTop !== undefined &&
               <Row className="padding-5">
                 <CodeMirror
-                  value={this.state.setting.script} onChange={(value) => this.setState(prev => {
+                  value={this.state.setting.scriptTop} onChange={(value) => this.setState(prev => {
                   return {
                     ...prev,
                     setting: {
@@ -145,7 +145,7 @@ class Setting extends React.Component {
               {this.state.setting.scriptBottom !== undefined &&
               <Row className="padding-5">
                 <CodeMirror
-                  value={this.state.setting.script} onChange={(value) => this.setState(prev => {
+                  value={this.state.setting.scriptTop} onChange={(value) => this.setState(prev => {
                   return {
                     ...prev,
                     setting: {

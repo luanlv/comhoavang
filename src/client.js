@@ -80,7 +80,7 @@ let onRenderComplete = function initialRenderComplete() {
     // the initial rendering, as it was already sent
     // if (window.ga) {
     //   window.ga('send', 'pageview', createPath(location));
-    // }
+    // }w
     if (window.run) {
       window.run()
     }
