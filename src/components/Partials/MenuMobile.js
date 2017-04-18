@@ -5,7 +5,7 @@ class MenuMobile extends React.Component {
     return (
       <div id="menumobile" className="mobile-panel mobilep-left" style={{transform: 'translate3d(-120%, 0px, 0px)'}}>
         <div className="close-menu">
-          <a href="#menumobile" className="glyphicon glyphicon-remove-circle" />
+          <a id="close-menu" href="#menumobile" className="glyphicon glyphicon-remove-circle" />
         </div>
         <div className="menu-in">
           <div className="menu-mobile">

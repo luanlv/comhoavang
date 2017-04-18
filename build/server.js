@@ -1099,7 +1099,7 @@ class MenuMobile extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'close-menu' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', { href: '#menumobile', className: 'glyphicon glyphicon-remove-circle' })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a', { id: 'close-menu', href: '#menumobile', className: 'glyphicon glyphicon-remove-circle' })
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
@@ -1249,7 +1249,7 @@ class MenuMobile extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
               'Follow me on ',
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
-                { href: 'https://www.facebook.com/comhoavang' },
+                { target: '_blank', href: 'https://www.facebook.com/comhoavang' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/images/fa-1.png', alt: true })
               )
             )
