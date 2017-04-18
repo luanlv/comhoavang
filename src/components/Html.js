@@ -71,6 +71,7 @@ class Html extends React.Component {
             <script src="/assets/js/jquery.textheight.js" type="text/javascript"></script>
             <link rel="stylesheet" type="text/css"  href="/css/app.css" />
             <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+            <script dangerouslySetInnerHTML={{ __html: this.props.scriptTop }} />
         </head>
 
         <body>
@@ -111,7 +112,7 @@ class Html extends React.Component {
             <script src="https://www.google-analytics.com/analytics.js" async defer />
           }
 
-          <script dangerouslySetInnerHTML={{ __html: this.props.script }} />
+          <script dangerouslySetInnerHTML={{ __html: this.props.scriptBottom }} />
 
         </body>
       </html>

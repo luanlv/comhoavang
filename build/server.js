@@ -2540,7 +2540,8 @@ var schema = new mongoose.Schema({
   id: { type: String },
   ssr: { type: Boolean, default: true },
   css: { type: String, default: '' },
-  script: { type: String, default: '' }
+  scriptTop: { type: String, default: '' },
+  scriptBottom: { type: String, default: '' }
 }, {
   collection: 'setting'
 });
@@ -2594,7 +2595,10 @@ module.exports.update = (root, { ssr }) => {
     css: {
       type: __WEBPACK_IMPORTED_MODULE_0_graphql__["GraphQLString"]
     },
-    script: {
+    scriptTop: {
+      type: __WEBPACK_IMPORTED_MODULE_0_graphql__["GraphQLString"]
+    },
+    scriptBottom: {
       type: __WEBPACK_IMPORTED_MODULE_0_graphql__["GraphQLString"]
     }
   })
@@ -2927,7 +2931,7 @@ app.get('*', (() => {
         res.status(route.status || 200);
         res.send(`<!doctype html>${html}`);
       } else {
-        const html = __WEBPACK_IMPORTED_MODULE_7_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_Html__["a" /* default */], _extends({}, data, { isAdmin: isAdmin, script: setting.script || '', css: setting.css || '' })));
+        const html = __WEBPACK_IMPORTED_MODULE_7_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_Html__["a" /* default */], _extends({}, data, { isAdmin: isAdmin, scriptTop: setting.scriptTop || '', scriptBottom: setting.scriptBottom || '', css: setting.css || '' })));
         res.status(route.status || 200);
         res.send(`<!doctype html>${html}`);
       }
@@ -3266,7 +3270,8 @@ class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.nivo.slider.pack.js', type: 'text/javascript' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.textheight.js', type: 'text/javascript' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/css/app.css' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('style', { dangerouslySetInnerHTML: { __html: this.props.css } })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('style', { dangerouslySetInnerHTML: { __html: this.props.css } }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { dangerouslySetInnerHTML: { __html: this.props.scriptTop } })
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'body',
@@ -3295,7 +3300,7 @@ class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           dangerouslySetInnerHTML: { __html: 'window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;' + `ga('create','${__WEBPACK_IMPORTED_MODULE_2__config__["d" /* analytics */].google.trackingId}','auto');ga('send','pageview')` }
         }),
         __WEBPACK_IMPORTED_MODULE_2__config__["d" /* analytics */].google.trackingId && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://www.google-analytics.com/analytics.js', async: true, defer: true }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { dangerouslySetInnerHTML: { __html: this.props.script } })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { dangerouslySetInnerHTML: { __html: this.props.scriptBottom } })
       )
     );
   }
@@ -8959,7 +8964,7 @@ class Setting extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          query: '{ setting{ssr, css, script} }'
+          query: '{ setting{ssr, css, scriptTop, scriptBottom} }'
         }),
         credentials: 'include'
       });
@@ -9058,15 +9063,32 @@ class Setting extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           Panel,
-          { header: 'JAVASCIRPT', key: '2' },
-          this.state.setting.script !== undefined && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          { header: 'Javascript đầu trang', key: '2' },
+          this.state.setting.scriptTop !== undefined && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_1_antd__["Row"],
             { className: 'padding-5' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(CodeMirror, {
               value: this.state.setting.script, onChange: value => this.setState(prev => {
                 return _extends({}, prev, {
                   setting: _extends({}, prev.setting, {
-                    script: value
+                    scriptTop: value
+                  })
+                });
+              })
+            })
+          )
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          Panel,
+          { header: 'Javascript cuối trang', key: '3' },
+          this.state.setting.scriptBottom !== undefined && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_antd__["Row"],
+            { className: 'padding-5' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(CodeMirror, {
+              value: this.state.setting.script, onChange: value => this.setState(prev => {
+                return _extends({}, prev, {
+                  setting: _extends({}, prev.setting, {
+                    scriptBottom: value
                   })
                 });
               })

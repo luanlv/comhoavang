@@ -200,7 +200,7 @@ app.get('*', async (req, res, next) => {
       res.status(route.status || 200);
       res.send(`<!doctype html>${html}`);
     } else {
-      const html = ReactDOM.renderToStaticMarkup(<Html {...data} isAdmin={isAdmin}  script={setting.script || ''} css={setting.css || ''} />);
+      const html = ReactDOM.renderToStaticMarkup(<Html {...data} isAdmin={isAdmin}  scriptTop={setting.scriptTop || ''} scriptBottom={setting.scriptBottom || ''} css={setting.css || ''} />);
       res.status(route.status || 200);
       res.send(`<!doctype html>${html}`);
     }

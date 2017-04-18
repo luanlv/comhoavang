@@ -4,7 +4,8 @@ var schema = new mongoose.Schema({
   id: { type:String },
   ssr: {type: Boolean, default: true },
   css: {type: String, default: '' },
-  script: {type: String, default: '' }
+  scriptTop: {type: String, default: '' },
+  scriptBottom: {type: String, default: '' }
   },
   {
     collection : 'setting'

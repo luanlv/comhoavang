@@ -44,7 +44,7 @@ if (window.history && 'scrollRestoration' in window.history) {
 let onRenderComplete = function initialRenderComplete() {
   const elem = document.getElementById('css');
   if (elem) elem.parentNode.removeChild(elem);
-  onRenderComplete = function renderComplete(route, location) {
+  onRenderComplete = function renderComplete(route, location) {s
     document.title = route.title;
 
     updateMeta('description', route.description);

@@ -32,7 +32,7 @@ class Setting extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query: '{ setting{ssr, css, script} }',
+        query: '{ setting{ssr, css, scriptTop, scriptBottom} }',
       }),
       credentials: 'include',
     })
@@ -125,8 +125,8 @@ class Setting extends React.Component {
 
               </Row>}
             </Panel>
-            <Panel header={'JAVASCIRPT'} key="2">
-              {this.state.setting.script !== undefined &&
+            <Panel header={'Javascript đầu trang'} key="2">
+              {this.state.setting.scriptTop !== undefined &&
               <Row className="padding-5">
                 <CodeMirror
                   value={this.state.setting.script} onChange={(value) => this.setState(prev => {
@@ -134,14 +134,29 @@ class Setting extends React.Component {
                     ...prev,
                     setting: {
                       ...prev.setting,
-                      script: value
+                      scriptTop: value
                     }
                   }
                 })}
                 />
               </Row>}
             </Panel>
-
+            <Panel header={'Javascript cuối trang'} key="3">
+              {this.state.setting.scriptBottom !== undefined &&
+              <Row className="padding-5">
+                <CodeMirror
+                  value={this.state.setting.script} onChange={(value) => this.setState(prev => {
+                  return {
+                    ...prev,
+                    setting: {
+                      ...prev.setting,
+                      scriptBottom: value
+                    }
+                  }
+                })}
+                />
+              </Row>}
+            </Panel>
           </Collapse>
           <Row className="padding-5">
             <Button

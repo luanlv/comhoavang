@@ -29,7 +29,10 @@ export default new GraphQLObjectType({
     css: {
       type: GraphQLString
     },
-    script: {
+    scriptTop: {
+      type: GraphQLString
+    },
+    scriptBottom: {
       type: GraphQLString
     },
   })
