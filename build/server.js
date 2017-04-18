@@ -9085,7 +9085,7 @@ class Setting extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_1_antd__["Row"],
             { className: 'padding-5' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(CodeMirror, {
-              value: this.state.setting.scriptTop, onChange: value => this.setState(prev => {
+              value: this.state.setting.scriptBottom, onChange: value => this.setState(prev => {
                 return _extends({}, prev, {
                   setting: _extends({}, prev.setting, {
                     scriptBottom: value
