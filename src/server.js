@@ -105,9 +105,10 @@ app.use('/graphql', expressGraphQL(req => ({
 app.get('*', async (req, res, next) => {
   let routeUrl = req.originalUrl
   let isAdmin = (routeUrl.slice(0,6) === '/admin')
-  console.log(isAdmin)
   try {
     let setting = await Setting.findOne({})
+    console.log('setting')
+    console.log(setting)
     const store = configureStore({
       data: {
         post: {
@@ -185,8 +186,6 @@ app.get('*', async (req, res, next) => {
       { id: 'css', cssText: [...css].join('') },
     ];
 
-
-
     data.scripts = [
       assets.vendor.js,
       assets.client.js,
@@ -201,7 +200,7 @@ app.get('*', async (req, res, next) => {
       res.status(route.status || 200);
       res.send(`<!doctype html>${html}`);
     } else {
-      const html = ReactDOM.renderToStaticMarkup(<Html {...data} isAdmin={isAdmin} />);
+      const html = ReactDOM.renderToStaticMarkup(<Html {...data} isAdmin={isAdmin}  script={setting.script || ''} css={setting.css || ''} />);
       res.status(route.status || 200);
       res.send(`<!doctype html>${html}`);
     }

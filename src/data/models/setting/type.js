@@ -26,5 +26,11 @@ export default new GraphQLObjectType({
     ssr: {
       type: new GraphQLNonNull(GraphQLBoolean)
     },
+    css: {
+      type: GraphQLString
+    },
+    script: {
+      type: GraphQLString
+    },
   })
 });

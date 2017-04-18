@@ -2,7 +2,9 @@ let mongoose = require('mongoose')
 
 var schema = new mongoose.Schema({
   id: { type:String },
-  ssr: {type: Boolean, default: true }
+  ssr: {type: Boolean, default: true },
+  css: {type: String, default: '' },
+  script: {type: String, default: '' }
   },
   {
     collection : 'setting'

@@ -1,0 +1,13 @@
+.test {
+  display: none; }
+
+.lineh .title-2 {
+  line-height: 40px !important;
+  max-height: 40px; }
+
+.post-body img {
+  width: 100% !important;
+  height: auto !important; }
+
+.post-body figcaption {
+  background: rgba(100, 100, 100, 0.08); }

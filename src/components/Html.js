@@ -70,6 +70,7 @@ class Html extends React.Component {
             <script src="/assets/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
             <script src="/assets/js/jquery.textheight.js" type="text/javascript"></script>
             <link rel="stylesheet" type="text/css"  href="/css/app.css" />
+            <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </head>
 
         <body>
@@ -109,6 +110,9 @@ class Html extends React.Component {
           {analytics.google.trackingId &&
             <script src="https://www.google-analytics.com/analytics.js" async defer />
           }
+
+          <script dangerouslySetInnerHTML={{ __html: this.props.script }} />
+
         </body>
       </html>
     );

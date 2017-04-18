@@ -81,6 +81,9 @@ let onRenderComplete = function initialRenderComplete() {
     if (window.ga) {
       window.ga('send', 'pageview', createPath(location));
     }
+    if (window.run) {
+      window.run()
+    }
   };
 };
 

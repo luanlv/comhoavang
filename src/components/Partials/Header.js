@@ -25,7 +25,7 @@ class Header extends React.Component {
               </li>
               <li><Link to="/mon-ngon">Món ngon</Link></li>
               <li><Link to="/tin-tuc">Tin tức</Link></li>
-              <li className="last"><a href="/">Liên hệ đặt hàng</a></li>
+              <li className="last"><Link to="/">Liên hệ đặt hàng</Link></li>
             </ul>
             <div className="header-bottom">
               <div id="searchbox" className="search-form">
@@ -39,11 +39,11 @@ class Header extends React.Component {
                 </div>
               </div>
               <div className="share desktop-showhide">
-                Follow me on <a href="https://www.facebook.com/bacsibezut">
+                Follow me on <a target="_blank" href="https://www.facebook.com/comhoavang">
                 <img src="/assets/images/fa-1.png" alt=""/></a>
               </div>
               <div className="hotline desktop-showhide">
-                Tổng đài CSKH: <strong>091 926 3399</strong>
+                Tổng đài CSKH: <strong>097 331 8868</strong>
               </div>
               <div className="clr">
               </div>

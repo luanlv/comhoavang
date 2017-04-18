@@ -1,17 +1,15 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 import React, { PropTypes } from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import { Button, DatePicker, Switch, Row, Col, message} from 'antd';
+import { Button, DatePicker, Switch, Row, Col, message, Collapse} from 'antd';
+// import CodeMirror from '../Components/CodeMirror'
 import fetch from '../../../core/fetch';
-
+import axios from 'axios'
+const Panel = Collapse.Panel;
+var CodeMirror = require('react-codemirror')
+if(process.env.BROWSER) {
+  require('codemirror/mode/javascript/javascript');
+  require('codemirror/mode/xml/xml');
+  require('codemirror/mode/css/css');
+}
 
 class Setting extends React.Component {
   static propTypes = {
@@ -34,7 +32,7 @@ class Setting extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query: '{ setting{ssr} }',
+        query: '{ setting{ssr, css, script} }',
       }),
       credentials: 'include',
     })
@@ -90,6 +88,16 @@ class Setting extends React.Component {
     }
   }
 
+  updateSetting(setting){
+    axios.post('/api/setting/update', setting)
+      .then(res => {
+        message.success('Cập nhập thành công!')
+      })
+      .catch(err => {
+        message.error('Cập nhập thất bại')
+      })
+  }
+
   render() {
     return (
         <div>
@@ -98,6 +106,52 @@ class Setting extends React.Component {
             <b>SSR: </b>
             <Switch checked={this.state.setting.ssr} onChange={() => this.toggleSSR()} />
           </Row>}
+
+          <Collapse>
+            <Panel header={'STYLESHEETS'} key="1">
+              {this.state.setting.css !== undefined &&
+              <Row className="padding-5">
+                <CodeMirror
+                  value={this.state.setting.css} onChange={(value) => this.setState(prev => {
+                  return {
+                    ...prev,
+                    setting: {
+                      ...prev.setting,
+                      css: value
+                    }
+                  }
+                })}
+                />
+
+              </Row>}
+            </Panel>
+            <Panel header={'JAVASCIRPT'} key="2">
+              {this.state.setting.script !== undefined &&
+              <Row className="padding-5">
+                <CodeMirror
+                  value={this.state.setting.script} onChange={(value) => this.setState(prev => {
+                  return {
+                    ...prev,
+                    setting: {
+                      ...prev.setting,
+                      script: value
+                    }
+                  }
+                })}
+                />
+              </Row>}
+            </Panel>
+
+          </Collapse>
+          <Row className="padding-5">
+            <Button
+              size="large"
+              type="primary"
+              onClick={() => {
+                this.updateSetting(this.state.setting)
+              }}
+            >Cập nhập</Button>
+          </Row>
         </div>
     );
   }
