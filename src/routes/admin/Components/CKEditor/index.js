@@ -45,7 +45,7 @@ class CKEditor extends React.Component {
         modalSelectImage: false,
       }
     })
-    this.editor.insertHtml( '<p style="text-align:center"><img alt="eS9cTTQzZT-3.jpg" src="' + '/image/' + img.name + '" /></p>' );
+    this.editor.insertHtml( '<p style="text-align:center"><img alt="eS9cTTQzZT-3.jpg" src="' + '/image/' + img.name + '" /></p><br/>' );
   }
 
   render() {
@@ -98,6 +98,7 @@ class CKEditor extends React.Component {
 
   componentDidMount() {
     let configuration = {
+      removePlugins : 'magicline',
       extraPlugins : 'autogrow,image2,sharedspace',
       uploadUrl: '/upload/imageCKEditor',
       disallowedContent : 'img{width,height}',

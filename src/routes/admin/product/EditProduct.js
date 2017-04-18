@@ -10,7 +10,7 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './style.css';
-import {Modal, Input, Button, Switch, Select, Row, Col, Card, Tabs, message, InputNumber} from 'antd';
+import {Modal, Input, Button, Switch, Select, Row, Col, Card, Tabs, message, InputNumber, Affix} from 'antd';
 import axios from 'axios';
 import history from '../../../core/history'
 import CustomTag from '../Components/Tags'
@@ -142,16 +142,18 @@ class EditNewsComponent extends React.Component {
     return (
       !this.state.loading && <div className="admin-editor">
         <Row className="padding-5" style={{marginBottom: 15}}>
-          {this.props.isEdit && <Button type="primary" style={{float: 'right'}}
-            onClick={() => {
-              this.updateProduct(this.state.data)
-            }}
-          >Cập nhập</Button>}
-          {!this.props.isEdit && <Button type="primary" style={{float: 'right'}}
-            onClick={() => {
-              this.addProduct(this.state.data)
-            }}
-          >Thêm mới</Button>}
+          <Affix>
+            {this.props.isEdit && <Button type="primary" style={{float: 'right'}}
+              onClick={() => {
+                this.updateProduct(this.state.data)
+              }}
+            >Cập nhập</Button>}
+            {!this.props.isEdit && <Button type="primary" style={{float: 'right'}}
+              onClick={() => {
+                this.addProduct(this.state.data)
+              }}
+            >Thêm mới</Button>}
+          </Affix>
         </Row>
         <Row>
           <Tabs type="card">

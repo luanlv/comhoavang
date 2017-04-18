@@ -22,7 +22,7 @@ class Home extends React.Component {
       <div >
         <div id="mainContent">
           <div className="container">
-            <Main6 product={this.props.product} />
+            <Main6 product={this.props.product} products={this.props.products} />
             <Aside />
           </div>
         </div>

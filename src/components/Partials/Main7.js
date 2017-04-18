@@ -39,7 +39,7 @@ class Main extends React.Component {
                       <div className="product-content">
                         <h3 className="product-name">
                           <Link to={'/san-pham/' + el.slug} >
-                            Siro ho bezut
+                            {el.name}
                           </Link>
                         </h3>
                         <div className="description">

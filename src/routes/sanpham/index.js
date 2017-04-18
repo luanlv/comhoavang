@@ -16,7 +16,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: '{ getOneProduct(slug: "'+ params.slug +'"){name, price, coverUrl, description, saleOff, body, created_at} }',
+          query: '{ getProducts{name, slug, price, coverUrl, description, saleOff, body, created_at},getOneProduct(slug: "'+ params.slug +'"){name, price, coverUrl, description, saleOff, body, created_at} }',
         }),
         credentials: 'include',
       });
@@ -26,7 +26,7 @@ export default {
 
     return {
       title: 'Trang chủ',
-      component: <Layout><Home product={store.getState().data.product.value} /></Layout>,
+      component: <Layout><Home product={store.getState().data.product.value} products={store.getState().data.products.value} /></Layout>,
     };
   },
 

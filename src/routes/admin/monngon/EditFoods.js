@@ -8,7 +8,7 @@
  */
 
 import React, { PropTypes } from 'react';
-import {Modal, Input, Button, Switch, Select, Row, Col, Card, Tabs, message} from 'antd';
+import {Modal, Input, Button, Switch, Select, Row, Col, Card, Tabs, message, Affix} from 'antd';
 import axios from 'axios';
 import history from '../../../core/history'
 import CustomTag from '../Components/Tags'
@@ -139,16 +139,18 @@ class EditNewsComponent extends React.Component {
     return (
       !this.state.loading && <div className="admin-editor">
         <Row className="padding-5" style={{marginBottom: 15}}>
-          {this.props.isEdit && <Button type="primary" style={{float: 'right'}}
-            onClick={() => {
-              this.updateNews(this.state.data)
-            }}
-          >Cập nhập</Button>}
-          {!this.props.isEdit && <Button type="primary" style={{float: 'right'}}
-            onClick={() => {
-              this.addNews(this.state.data)
-            }}
-          >Thêm mới</Button>}
+          <Affix>
+            {this.props.isEdit && <Button type="primary" style={{float: 'right'}}
+              onClick={() => {
+                this.updateNews(this.state.data)
+              }}
+            >Cập nhập</Button>}
+            {!this.props.isEdit && <Button type="primary" style={{float: 'right'}}
+              onClick={() => {
+                this.addNews(this.state.data)
+              }}
+            >Thêm mới</Button>}
+          </Affix>
         </Row>
         <Row>
           <Tabs type="card">
