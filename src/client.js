@@ -44,7 +44,7 @@ if (window.history && 'scrollRestoration' in window.history) {
 let onRenderComplete = function initialRenderComplete() {
   const elem = document.getElementById('css');
   if (elem) elem.parentNode.removeChild(elem);
-  onRenderComplete = function renderComplete(route, location) {s
+  onRenderComplete = function renderComplete(route, location) {
     document.title = route.title;
 
     updateMeta('description', route.description);
@@ -78,9 +78,9 @@ let onRenderComplete = function initialRenderComplete() {
 
     // Google Analytics tracking. Don't send 'pageview' event after
     // the initial rendering, as it was already sent
-    if (window.ga) {
-      window.ga('send', 'pageview', createPath(location));
-    }
+    // if (window.ga) {
+    //   window.ga('send', 'pageview', createPath(location));
+    // }
     if (window.run) {
       window.run()
     }
