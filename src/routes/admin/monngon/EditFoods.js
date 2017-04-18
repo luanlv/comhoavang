@@ -42,7 +42,7 @@ class EditNewsComponent extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query: '{ getOnePosts(slug: "'+ slug +'"){category, coverUrl, slug, public, title, description, body, view, tags, created_at} }',
+        query: '{ getOneNews(slug: "'+ slug +'"){category, coverUrl, slug, public, title, description, body, view, tags, created_at} }',
       }),
       credentials: 'include',
     })

@@ -72,7 +72,7 @@ const columns = [{
   key: 'action',
   render: (text, record) => (
     <span>
-      <Link to={"/admin/news?v=edit&slug=" + record.slug }>Sửa</Link>
+      <Link to={"/admin/monngon?v=edit&slug=" + record.slug }>Sửa</Link>
     </span>
   ),
 }];
