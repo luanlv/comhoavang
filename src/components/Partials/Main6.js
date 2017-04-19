@@ -26,7 +26,7 @@ class Main extends React.Component {
                   <div className="details-img" style={{paddingRight: 5}}>
                     <img src={product.coverUrl} />
                   </div>
-                  <div className="details-content">
+                  <div className="details-content details-content2">
                     <h4 className="title-2" style={{textAlign: 'center'}}>Thông tin sản phẩm</h4>
                     <div className="price-product">
                       Giá: <em style={{color: 'red'}}>{numberWithCommas(product.price)} đ/kg</em>

@@ -96,13 +96,14 @@
     margin: 0 auto;
     width: 100%;
     padding: 0 !important; }
-  .details-content {
+  .details-content2 {
     width: 100%;
     float: none !important;
     margin: 0 auto;
     border: 1px solid #014987; }
   h1 {
-    text-align: center; } }
+    text-align: center;
+    border-bottom: 1px solid #014987; } }
 
 .title-2 {
   background: #014987; }

@@ -4226,7 +4226,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
-              { className: 'details-content' },
+              { className: 'details-content details-content2' },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'h4',
                 { className: 'title-2', style: { textAlign: 'center' } },
