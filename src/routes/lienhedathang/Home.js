@@ -27,7 +27,7 @@ class Home extends React.Component {
                 <form className="form-horizontal">
                   <fieldset>
                     {/* Form Name */}
-                    <legend >Liên hệ đặt hàng</legend>
+                    <legend >Đặt hàng</legend>
                     {/* Text input*/}
                     <div className="form-group">
                       <label className="col-md-4 control-label" htmlFor="product_id">Họ Và Tên:</label>

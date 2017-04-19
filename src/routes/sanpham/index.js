@@ -4,11 +4,13 @@ import fetch from '../../core/fetch';
 import needFetch from '../../core/needFetch';
 import Layout from '../../components/Layout';
 import {setData} from '../../actions/data'
+import { showLoading, hideLoading } from 'react-redux-loading-bar'
 
 export default {
   path: '/san-pham/:slug',
   async action({ store, params }) {
     if(!process.env.BROWSER || !store.getState().setting.ssr || (process.env.BROWSER && needFetch())){
+      store.dispatch(showLoading())
       const resp = await fetch('/graphql', {
         method: 'post',
         headers: {
@@ -22,6 +24,7 @@ export default {
       });
       const { data } = await resp.json();
       store.dispatch(setData(data))
+      store.dispatch(hideLoading())
     }
 
     return {

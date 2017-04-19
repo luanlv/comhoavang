@@ -4,6 +4,7 @@ import fetch from '../../core/fetch';
 import needFetch from '../../core/needFetch';
 import Layout from '../../components/Layout';
 import * as dataAction from '../../actions/data'
+import { showLoading, hideLoading } from 'react-redux-loading-bar'
 
 export default {
   path: '/bai-viet/:slug',
@@ -11,6 +12,7 @@ export default {
     // process.env.BROWSER
     var post;
     if(!process.env.BROWSER || !store.getState().setting.ssr || (process.env.BROWSER && needFetch())){
+      store.dispatch(showLoading())
       const resp = await fetch('/graphql', {
         method: 'post',
         headers: {
@@ -27,16 +29,13 @@ export default {
       if (!data || !data.getOnePost) {
         return { redirect: '/' }
       }
-
       store.dispatch(dataAction.setData(data))
-      post = data.getOnePost
-    } else {
-      post = store.getState().data.post.value
+      store.dispatch(hideLoading())
     }
     return {
-      title: post.title,
-      description: post.description,
-      component: <Layout><Home post={post} /></Layout>,
+      title: store.getState().data.post.value.title,
+      description: store.getState().data.post.value.description,
+      component: <Layout><Home post={store.getState().data.post.value} /></Layout>,
     };
   },
 

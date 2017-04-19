@@ -4,12 +4,14 @@ import fetch from '../../core/fetch';
 import needFetch from '../../core/needFetch';
 import Layout from '../../components/Layout';
 import { setData } from '../../actions/data';
+import { showLoading, hideLoading } from 'react-redux-loading-bar'
 
 export default {
   path: '/',
   async action({ store }) {
     // process.env.BROWSER
     if(!process.env.BROWSER || !store.getState().setting.ssr || (process.env.BROWSER && needFetch())) {
+      store.dispatch(showLoading())
       const resp = await fetch('/graphql', {
         method: 'post',
         headers: {
@@ -25,6 +27,7 @@ export default {
       const {data} = await resp.json();
       if (!data) throw new Error('Failed to load the news feed.');
       store.dispatch(setData(data))
+      store.dispatch(hideLoading())
     }
 
     return {
