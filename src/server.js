@@ -107,8 +107,6 @@ app.get('*', async (req, res, next) => {
   let isAdmin = (routeUrl.slice(0,6) === '/admin')
   try {
     let setting = await Setting.findOne({})
-    console.log('setting')
-    console.log(setting)
     const store = configureStore({
       data: {
         post: {

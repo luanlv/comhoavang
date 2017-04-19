@@ -26,7 +26,7 @@ export default {
       store.dispatch(setData(data))
     }
     return {
-      title: 'Trang tin tuc',
+      title: 'Danh mục: ' + mapSlugToName(params.slug),
       component: <Layout><Home posts={store.getState().data.newsInCategory.value} title={mapSlugToName(params.slug)} /></Layout>,
     };
   },

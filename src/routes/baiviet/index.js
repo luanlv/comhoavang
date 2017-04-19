@@ -18,7 +18,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: '{getOnePost(slug: "' + params.slug + '"){title,slug,body}}',
+          query: '{getOnePost(slug: "' + params.slug + '"){title,slug,body,category, description}}',
         }),
         credentials: 'include',
       });
@@ -34,7 +34,8 @@ export default {
       post = store.getState().data.post.value
     }
     return {
-      title: 'Trang chủ',
+      title: post.title,
+      description: post.description,
       component: <Layout><Home post={post} /></Layout>,
     };
   },

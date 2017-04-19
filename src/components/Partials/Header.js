@@ -26,7 +26,7 @@ class Header extends React.Component {
               </li>
               <li><Link to="/mon-ngon">Món ngon</Link></li>
               <li><Link to="/tin-tuc">Tin tức</Link></li>
-              <li className="last"><Link to="/">Liên hệ đặt hàng</Link></li>
+              <li className="last"><Link to="/lien-he-dat-hang">Liên hệ đặt hàng</Link></li>
             </ul>
             <div className="header-bottom">
               <div id="searchbox" className="search-form">

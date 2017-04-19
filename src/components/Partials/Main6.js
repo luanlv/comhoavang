@@ -34,7 +34,7 @@ class Main extends React.Component {
                     <div className="wrap-button" style={{textAlign: 'center'}}>
                       <div className="col-w230 w258" style={{width: 250, float: 'none', textAlign: 'center'}}>
                         <div className="box-in" style={{margin: '0 auto'}}>
-                          <a href="javascript:void(0);" className="button-btn btn-b corner text-center">Đặt hàng ngay!</a>
+                          <Link to="/lien-he-dat-hang" className="button-btn btn-b corner text-center">Đặt hàng ngay!</Link>
                         </div>
                       </div>
                       <div className="col-w230 w298" style={{width: 250, float: 'none'}}>

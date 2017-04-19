@@ -44,7 +44,7 @@ class Aside extends React.Component {
               </li>
               <li><Link to="/bai-viet/com-me-tri-thom-ngon-duoc-lam-cong-phu-the-nao" className="video-box"><span className="video-img">
                         <img src="/image/5n9GkKlQVI-01dc4a05-cc41-48f9-8ee7-b10058293fef.jpg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl1_Img3" alt="Cốm Mễ Trì thơm ngon được làm công phu thế nào.jpg" />
-                  
+
                       </span><span className="video-content"><span className="video-name">
                           Cốm Mễ Trì thơm ngon được làm công phu thế nào?</span> </span></Link>
               </li>

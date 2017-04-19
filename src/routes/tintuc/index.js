@@ -28,7 +28,7 @@ export default {
     }
 
     return {
-      title: 'Trang chủ',
+      title: 'Trang tin tức',
       component: <Layout><Home news={store.getState().data.news.value} /></Layout>,
     };
   },

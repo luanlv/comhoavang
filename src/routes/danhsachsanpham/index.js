@@ -25,7 +25,7 @@ export default {
     // }
 
     return {
-      title: 'Trang chủ',
+      title: 'Trang danh sách sản phẩm',
       component: <Layout><Home products={store.getState().data.products.value} /></Layout>,
     };
   },

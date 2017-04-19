@@ -28,7 +28,7 @@ export default {
     }
 
     return {
-      title: 'Trang chủ',
+      title: 'Trang món ngon',
       component: <Layout><Home posts={store.getState().data.foodNews.value} /></Layout>,
     };
   },

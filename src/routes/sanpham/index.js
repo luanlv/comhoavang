@@ -25,7 +25,8 @@ export default {
     }
 
     return {
-      title: 'Trang chủ',
+      title: store.getState().data.product.value.name,
+      description: store.getState().data.product.value.description,
       component: <Layout><Home product={store.getState().data.product.value} products={store.getState().data.products.value} /></Layout>,
     };
   },
