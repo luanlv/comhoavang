@@ -29,6 +29,10 @@ class MenuMobile extends React.Component {
                     <Link to="/san-pham/cha-com" onClick={this.closeMenu} >
                     Chả Cốm
                     </Link></li>
+                  <li>
+                    <Link to="/san-pham/com-non-me-tri" onClick={this.closeMenu} >
+                      Cốm Non Mễ Trì
+                    </Link></li>
                 </ul>
               </li>
               <li><Link to="/mon-ngon" onClick={this.closeMenu} >MÓN NGON</Link>
@@ -55,7 +59,7 @@ class MenuMobile extends React.Component {
                   </Link></li>
                 </ul>
               </li>
-              <li className="last"><Link to="/" onClick={this.closeMenu} >Liên hệ đặt hàng</Link></li>
+              <li className="last"><Link to="/lien-he-dat-hang" onClick={this.closeMenu} >Liên hệ đặt hàng</Link></li>
             </ul>
             <div className="mo-box">
               <div className="hotline">

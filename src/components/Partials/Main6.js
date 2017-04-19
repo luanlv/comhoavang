@@ -28,19 +28,26 @@ class Main extends React.Component {
                   </div>
                   <div className="details-content details-content2">
                     <h4 className="title-2" style={{textAlign: 'center'}}>Thông tin sản phẩm</h4>
-                    <div className="price-product">
-                      Giá: <em style={{color: 'red'}}>{numberWithCommas(product.price)} đ/kg</em>
+                    <div className="price-product" style={{textAlign: 'center'}}>
+                      <em style={{color: 'red'}}>{numberWithCommas(product.price)} đ/kg</em>
+                    </div>
+                    <div className="product-status" style={{textAlign: 'center', borderTop: '1px solid #ddd'}}>
+                      Trạng thái: <b style={{color: 'blue'}}>Còn hàng</b>
+                    </div>
+                    <div className="product-ship" style={{textAlign: 'center', borderTop: '1px solid #ddd', borderBottom: '1px solid #ddd'}}>
+                      <div style={{display: 'inline-block', paddingRight: 5}}>
+                        Vận <br/> chuyển
+                      </div>
+                      <div style={{display: 'inline-block', borderLeft: '1px solid #ddd', paddingLeft: 5}}>
+                        <div>{'<20km : 25k/đơn'}</div>
+                        <div>{'>20km : 25k/kg' }</div>
+                      </div>
                     </div>
                     <div className="wrap-button" style={{textAlign: 'center'}}>
+
                       <div className="col-w230 w258" style={{width: 250, float: 'none', textAlign: 'center'}}>
                         <div className="box-in" style={{margin: '0 auto'}}>
                           <Link to="/lien-he-dat-hang" className="button-btn btn-b corner text-center">Đặt hàng ngay!</Link>
-                        </div>
-                      </div>
-                      <div className="col-w230 w298" style={{width: 250, float: 'none'}}>
-                        <div className="box-in">
-                          <div className="button-btn phone corner" style={{fontSize: 18, fontWeight: 'bold'}}>
-                            Tư vấn: <b>097 331 8868</b></div>
                         </div>
                       </div>
 

@@ -19,19 +19,19 @@ class Footer extends React.Component {
                   <h2>
                     MÓN NGON TỪ CỐM </h2>
                   <ul className="list-footer">
-                    <li><Link to={'/'}>
+                    <li><Link to={'/bai-viet/cach-lam-che-com-thom-mat  '}>
                       Chè cốm
                         <span className="icona-left icon-chevron-right" /></Link></li>
-                    <li><Link to={'/'}>
-                      Xôi cốm
+                    <li><Link to={'/bai-viet/cach-lam-cha-com-ngon-tai-nha'}>
+                      Chả cốm
                         <span className="icona-left icon-chevron-right" /></Link></li>
-                    <li><Link to={'/'}>
+                    <li><Link to={'/bai-viet/com-xao---mon-an-binh-di-goi-nho-mua-thu'}>
                       Cốm xào
                         <span className="icona-left icon-chevron-right" /></Link></li>
-                    <li><Link to={'/'}>
+                    <li><Link to={'/bai-viet/tom-chien-com-xanh-don-gian-la-mieng'}>
                       Tôm chiên cốm
                         <span className="icona-left icon-chevron-right" /></Link></li>
-                    <li><Link to={'/'}>
+                    <li><Link to={'/bai-viet/mon-trung-ran-com-ngon-cho-ban-vung-ve'}>
                       Trứng cốm
                       <span className="icona-left icon-chevron-right" /></Link></li>
                   </ul>
@@ -40,13 +40,13 @@ class Footer extends React.Component {
                   <h2>
                     THÔNG TIN WEBSITE</h2>
                   <ul className="list-footer">
-                    <li><Link to={'/'}>
+                    <li><Link to={'/lien-he-dat-hang'}>
                         Hình thức thanh toán
                       <span className="icona-left icon-chevron-right" /></Link></li>
-                    <li><Link to={'/'}>
+                    <li><Link to={'/lien-he-dat-hang'}>
                       Chính sách vận chuyển, giao nhận
                       <span className="icona-left icon-chevron-right" /></Link></li>
-                    <li><Link to={'/'}>
+                    <li><Link to={'/lien-he-dat-hang'}>
                       Liên hệ đặt hàng
                       <span className="icona-left icon-chevron-right" /></Link></li>
                   </ul>

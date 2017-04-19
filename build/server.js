@@ -482,7 +482,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/' },
+                      { to: '/bai-viet/cach-lam-che-com-thom-mat  ' },
                       'Ch\xE8 c\u1ED1m',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )
@@ -492,8 +492,8 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/' },
-                      'X\xF4i c\u1ED1m',
+                      { to: '/bai-viet/cach-lam-cha-com-ngon-tai-nha' },
+                      'Ch\u1EA3 c\u1ED1m',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )
                   ),
@@ -502,7 +502,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/' },
+                      { to: '/bai-viet/com-xao---mon-an-binh-di-goi-nho-mua-thu' },
                       'C\u1ED1m x\xE0o',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )
@@ -512,7 +512,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/' },
+                      { to: '/bai-viet/tom-chien-com-xanh-don-gian-la-mieng' },
                       'T\xF4m chi\xEAn c\u1ED1m',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )
@@ -522,7 +522,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/' },
+                      { to: '/bai-viet/mon-trung-ran-com-ngon-cho-ban-vung-ve' },
                       'Tr\u1EE9ng c\u1ED1m',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )
@@ -545,7 +545,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/' },
+                      { to: '/lien-he-dat-hang' },
                       'H\xECnh th\u1EE9c thanh to\xE1n',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )
@@ -555,7 +555,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/' },
+                      { to: '/lien-he-dat-hang' },
                       'Ch\xEDnh s\xE1ch v\u1EADn chuy\u1EC3n, giao nh\u1EADn',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )
@@ -565,7 +565,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/' },
+                      { to: '/lien-he-dat-hang' },
                       'Li\xEAn h\u1EC7 \u0111\u1EB7t h\xE0ng',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )
@@ -910,6 +910,15 @@ class MenuMobile extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
                     { to: '/san-pham/cha-com', onClick: this.closeMenu },
                     'Ch\u1EA3 C\u1ED1m'
                   )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
+                    { to: '/san-pham/com-non-me-tri', onClick: this.closeMenu },
+                    'C\u1ED1m Non M\u1EC5 Tr\xEC'
+                  )
                 )
               )
             ),
@@ -984,7 +993,7 @@ class MenuMobile extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
               { className: 'last' },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                { to: '/', onClick: this.closeMenu },
+                { to: '/lien-he-dat-hang', onClick: this.closeMenu },
                 'Li\xEAn h\u1EC7 \u0111\u1EB7t h\xE0ng'
               )
             )
@@ -3478,7 +3487,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_1__components_Link__["a" /* default */],
                 { className: 'section-img', to: '/bai-viet/' + el.slug },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl,
-                  alt: 'thuong-xuan-da-tot-bezut-nay-con-tot-hon-964.jpg' })
+                  alt: el.title })
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
@@ -4234,13 +4243,47 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'price-product' },
-                'Gi\xE1: ',
+                { className: 'price-product', style: { textAlign: 'center' } },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'em',
                   { style: { color: 'red' } },
                   numberWithCommas(product.price),
                   ' \u0111/kg'
+                )
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'product-status', style: { textAlign: 'center', borderTop: '1px solid #ddd' } },
+                'Tr\u1EA1ng th\xE1i: ',
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'b',
+                  { style: { color: 'blue' } },
+                  'C\xF2n h\xE0ng'
+                )
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'product-ship', style: { textAlign: 'center', borderTop: '1px solid #ddd', borderBottom: '1px solid #ddd' } },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  { style: { display: 'inline-block', paddingRight: 5 } },
+                  'V\u1EADn ',
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+                  ' chuy\u1EC3n'
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  { style: { display: 'inline-block', borderLeft: '1px solid #ddd', paddingLeft: 5 } },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    null,
+                    '<20km : 25k/đơn'
+                  ),
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    null,
+                    '>20km : 25k/kg'
+                  )
                 )
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -4256,24 +4299,6 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
                       { to: '/lien-he-dat-hang', className: 'button-btn btn-b corner text-center' },
                       '\u0110\u1EB7t h\xE0ng ngay!'
-                    )
-                  )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'div',
-                  { className: 'col-w230 w298', style: { width: 250, float: 'none' } },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'box-in' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'div',
-                      { className: 'button-btn phone corner', style: { fontSize: 18, fontWeight: 'bold' } },
-                      'T\u01B0 v\u1EA5n: ',
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'b',
-                        null,
-                        '097 331 8868'
-                      )
                     )
                   )
                 )

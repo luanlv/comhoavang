@@ -67,7 +67,7 @@ class Main extends React.Component {
                 <li key={index}>
                   <Link className="section-img" to={'/bai-viet/' + el.slug}>
                     <img src={el.coverUrl}
-                         alt="thuong-xuan-da-tot-bezut-nay-con-tot-hon-964.jpg"/></Link>
+                         alt={el.title} /></Link>
                   <div className="section-content">
                     <h3 className="section-name">
                       <Link to={'/bai-viet/' + el.slug}>
