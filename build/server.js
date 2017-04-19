@@ -482,7 +482,7 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                      { to: '/bai-viet/cach-lam-che-com-thom-mat  ' },
+                      { to: '/bai-viet/cach-lam-che-com-thom-mat' },
                       'Ch\xE8 c\u1ED1m',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span', { className: 'icona-left icon-chevron-right' })
                     )

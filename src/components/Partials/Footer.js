@@ -19,7 +19,7 @@ class Footer extends React.Component {
                   <h2>
                     MÓN NGON TỪ CỐM </h2>
                   <ul className="list-footer">
-                    <li><Link to={'/bai-viet/cach-lam-che-com-thom-mat  '}>
+                    <li><Link to={'/bai-viet/cach-lam-che-com-thom-mat'}>
                       Chè cốm
                         <span className="icona-left icon-chevron-right" /></Link></li>
                     <li><Link to={'/bai-viet/cach-lam-cha-com-ngon-tai-nha'}>
