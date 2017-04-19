@@ -32,11 +32,11 @@ class Main extends React.Component {
                       <em style={{color: 'red'}}>{numberWithCommas(product.price)} đ/kg</em>
                     </div>
                     <div className="product-status" style={{textAlign: 'center', borderTop: '1px solid #ddd'}}>
-                      Trạng thái: <b style={{color: 'blue'}}>Còn hàng</b>
+                      Mua trên 3kg giảm <b style={{color: 'blue'}}>10%</b>
                     </div>
                     <div className="product-ship" style={{textAlign: 'center', borderTop: '1px solid #ddd', borderBottom: '1px solid #ddd'}}>
-                      <div style={{display: 'inline-block', paddingRight: 5}}>
-                        Vận <br/> chuyển
+                      <div className="centerText" style={{display: 'inline-block', paddingRight: 5}}>
+                        Vận chuyển
                       </div>
                       <div style={{display: 'inline-block', borderLeft: '1px solid #ddd', paddingLeft: 5}}>
                         <div>{'<20km : 25k/đơn'}</div>
@@ -50,7 +50,12 @@ class Main extends React.Component {
                           <Link to="/lien-he-dat-hang" className="button-btn btn-b corner text-center">Đặt hàng ngay!</Link>
                         </div>
                       </div>
-
+                      <div className="col-w230 w298" style={{width: 250, float: 'none'}}>
+                        <div className="box-in">
+                          <div className="button-btn phone corner" style={{fontSize: 18, fontWeight: 'bold'}}>
+                            Tư vấn: <b>097 331 8868</b></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

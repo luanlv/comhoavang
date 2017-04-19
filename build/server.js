@@ -4254,11 +4254,11 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: 'product-status', style: { textAlign: 'center', borderTop: '1px solid #ddd' } },
-                'Tr\u1EA1ng th\xE1i: ',
+                'Mua tr\xEAn 3kg gi\u1EA3m ',
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'b',
                   { style: { color: 'blue' } },
-                  'C\xF2n h\xE0ng'
+                  '10%'
                 )
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -4266,10 +4266,8 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 { className: 'product-ship', style: { textAlign: 'center', borderTop: '1px solid #ddd', borderBottom: '1px solid #ddd' } },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'div',
-                  { style: { display: 'inline-block', paddingRight: 5 } },
-                  'V\u1EADn ',
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                  ' chuy\u1EC3n'
+                  { className: 'centerText', style: { display: 'inline-block', paddingRight: 5 } },
+                  'V\u1EADn chuy\u1EC3n'
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'div',
@@ -4299,6 +4297,24 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                       __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
                       { to: '/lien-he-dat-hang', className: 'button-btn btn-b corner text-center' },
                       '\u0110\u1EB7t h\xE0ng ngay!'
+                    )
+                  )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  { className: 'col-w230 w298', style: { width: 250, float: 'none' } },
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    'div',
+                    { className: 'box-in' },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                      'div',
+                      { className: 'button-btn phone corner', style: { fontSize: 18, fontWeight: 'bold' } },
+                      'T\u01B0 v\u1EA5n: ',
+                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'b',
+                        null,
+                        '097 331 8868'
+                      )
                     )
                   )
                 )
