@@ -20,6 +20,7 @@ export default {
     require('./monngon').default,
     require('./sanpham').default,
     require('./danhsachsanpham').default,
+    require('./landingpage').default,
     require('./danhmuc').default,
     require('./tintuc').default,
     require('./baiviet').default,

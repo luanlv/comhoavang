@@ -51,23 +51,26 @@ class Html extends React.Component {
             <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
             <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" />
-            <link href="/assets/styles/font-awesome.min.css" rel="stylesheet" type="text/css" />
-            <link href="/assets/styles/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
-            <link href="/assets/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+            {/*<link href="/assets/styles/font-awesome.min.css" rel="stylesheet" type="text/css" />*/}
+            {/*<link href="/assets/styles/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />*/}
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
             <link href="/assets/styles/uniform-base.css" rel="stylesheet" type="text/css" />
-            <link href="/assets/styles/nivo-slider.css" rel="stylesheet" type="text/css" />
+            {/*<link href="/assets/styles/nivo-slider.css" rel="stylesheet" type="text/css" />*/}
             <link href="/assets/styles/slick.css" rel="stylesheet" type="text/css" />
             <link href="/assets/styles/jquery.ui.datepicker.css" rel="stylesheet" type="text/css" />
             <link href="/assets/styles/lugo.datepicker.css" rel="stylesheet" type="text/css" />
             <link href="/assets/styles/site.css" rel="stylesheet" type="text/css" />
             <link href="/assets/styles/site-repond.css" rel="stylesheet" />
 
-            <script src="/assets/js/jquery.js" type="text/javascript"></script>
-            <script src="/assets/js/jquery-ui.min.js" type="text/javascript"></script>
+            {/*<script src="/assets/js/jquery.js" type="text/javascript"></script>*/}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+            {/*<script src="/assets/js/jquery-ui.min.js" type="text/javascript"></script>*/}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" type="text/javascript"></script>
             <script src="/assets/js/jquery.ui.datepicker-vi-VN.js" type="text/javascript"></script>
             <script src="/assets/js/jquery.easing.1.3.js" type="text/javascript"></script>
             <script src="/assets/js/jquery.mb.browser.min.js" type="text/javascript"></script>
-            <script src="/assets/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+            {/*<script src="/assets/js/jquery.nivo.slider.pack.js" type="text/javascript"></script>*/}
             <script src="/assets/js/jquery.textheight.js" type="text/javascript"></script>
             <link rel="stylesheet" type="text/css"  href="/css/app.css" />
             <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
@@ -95,7 +98,7 @@ class Html extends React.Component {
           <script src="/assets/js/jquery.uniform.min.js" type="text/javascript"></script>
           <script src="/assets/js/isotope.pkgd.min.js" type="text/javascript"></script>
           <script src="/assets/js/slick.min.js" type="text/javascript"></script>
-          <script src="/assets/js/superfish.js" type="text/javascript"></script>
+          {/*<script src="/assets/js/superfish.js" type="text/javascript"></script>*/}
           <script src="/assets/js/jquery.panel.mobile.js"></script>
           <script src="/assets/js/jquery.main.js" type="text/javascript"></script>
 

@@ -1,6 +1,12 @@
 import React from 'react'
 import Link from '../Link'
 class MenuMobile extends React.Component {
+  closeMenu(){
+    if(process.env.BROWSER) {
+      console.log('close')
+      $('#close-menu').trigger('click')
+    }
+  }
   render() {
     return (
       <div id="menumobile" className="mobile-panel mobilep-left" style={{transform: 'translate3d(-120%, 0px, 0px)'}}>
@@ -10,42 +16,46 @@ class MenuMobile extends React.Component {
         <div className="menu-in">
           <div className="menu-mobile">
             <div className="logo">
-              <Link to="/">
+              <Link to="/"
+                onClick={this.closeMenu}
+              >
                 <img src="/assets/images/logo-com.png" alt="logo com hoa vang" /></Link></div>
             <ul className="menu-nav">
-              <li><Link to="/san-pham">Sản phẩm</Link>
+              <li><Link to="/san-pham" onClick={this.closeMenu} >Sản phẩm</Link>
                 <ul>
-                  <li><Link to="/san-pham/com-kho-hoa-vang">
+                  <li><Link to="/san-pham/com-kho-hoa-vang" onClick={this.closeMenu} >
                     Cốm khô hoa vàng</Link></li>
-                  <li><Link to="/san-pham/cha-com">
-                    Chả Cốm</Link></li>
+                  <li>
+                    <Link to="/san-pham/cha-com" onClick={this.closeMenu} >
+                    Chả Cốm
+                    </Link></li>
                 </ul>
               </li>
-              <li><Link to="/mon-ngon">MÓN NGON</Link>
+              <li><Link to="/mon-ngon" onClick={this.closeMenu} >MÓN NGON</Link>
                 <ul>
-                  <li><Link to="/danh-muc/mon-ngon-tu-com">
+                  <li><Link to="/danh-muc/mon-ngon-tu-com" onClick={this.closeMenu} >
                       <span className="icon-chevron-right iconl" />
                     Món ngon từ Cốm
                   </Link></li>
-                  <li><Link to="/danh-muc/cach-lam-mon-ngon-tai-nha">
+                  <li><Link to="/danh-muc/cach-lam-mon-ngon-tai-nha" onClick={this.closeMenu} >
                       <span className="icon-chevron-right iconl" />
                     Cách làm món ngon tài nhà
                   </Link></li>
                 </ul>
               </li>
-              <li className="active"><Link to="/tin-tuc">TIN TỨC</Link>
+              <li className="active"><Link to="/tin-tuc" onClick={this.closeMenu} >TIN TỨC</Link>
                 <ul>
-                  <li><Link to="/danh-muc/su-kien">
+                  <li><Link to="/danh-muc/su-kien" onClick={this.closeMenu} >
                     <span className="icon-chevron-right iconl" />
                     Sự kiện
                   </Link></li>
-                  <li><Link to="/danh-muc/tin-tuc-tong-hop">
+                  <li><Link to="/danh-muc/tin-tuc-tong-hop" onClick={this.closeMenu} >
                     <span className="icon-chevron-right iconl" />
                     Tin tức tổng hợp
                   </Link></li>
                 </ul>
               </li>
-              <li className="last"><Link to="/">Liên hệ đặt hàng</Link></li>
+              <li className="last"><Link to="/" onClick={this.closeMenu} >Liên hệ đặt hàng</Link></li>
             </ul>
             <div className="mo-box">
               <div className="hotline">

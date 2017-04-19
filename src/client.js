@@ -81,10 +81,7 @@ let onRenderComplete = function initialRenderComplete() {
     // if (window.ga) {
     //   window.ga('send', 'pageview', createPath(location));
     // }w
-    if(process.env.BROWSER) {
-      console.log('close')
-      $('#close-menu').trigger('click')
-    }
+
     if (window.run) {
       window.run()
     }

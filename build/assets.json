@@ -1,17 +1,17 @@
 {
   "contact": {
-    "js": "/assets/contact.5d291be3.chunk.js"
+    "js": "/assets/contact.4ff8a6e7.chunk.js"
   },
   "privacy": {
-    "js": "/assets/privacy.0ae2a035.chunk.js"
+    "js": "/assets/privacy.e5bb83d2.chunk.js"
   },
   "about": {
-    "js": "/assets/about.436beee1.chunk.js"
+    "js": "/assets/about.584ffcb0.chunk.js"
   },
   "client": {
-    "js": "/assets/client.4d8baf74.js"
+    "js": "/assets/client.a8c7ffee.js"
   },
   "vendor": {
-    "js": "/assets/vendor.d785a082.js"
+    "js": "/assets/vendor.83e0c818.js"
   }
 }

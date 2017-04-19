@@ -65,10 +65,10 @@
         font-size: 24px;
         line-height: 30px;
     }
-    .detail-text .details-img {
-        float: none !important;
-        margin: 0 auto;
-    }
+    /*.detail-text .details-img {*/
+        /*float: none !important;*/
+        /*margin: 0 auto;*/
+    /*}*/
     .detail-text .title-2 {
         width: 100% !important;
     }
@@ -77,10 +77,6 @@
     }
     .wrap-button {
         text-align: center;
-    }
-    .col-w230 {
-        display: inline-block;
-        float: none;
     }
 }
 @media (min-width: 990px) and (max-width: 1199px)
@@ -94,7 +90,7 @@
     #header.header-sroll #logo a
     {
         margin: 0;
-        
+
     }
     #header .header-right {
         margin-left: 130px;
@@ -153,14 +149,14 @@
 }
 @media (max-width: 989px)
 {
-    
+
     .container {
         width:750px;
     }
     #header .container {
         width:750px;
     }
-    
+
     /*#colAside, #colContent {
         float: none;
         padding: 0;
@@ -208,14 +204,14 @@
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 989px)
 {
-    
+
     #logo {
         top: 25px;
         width: 90px;
     }
     #header.header-sroll #logo {
         width: 90px;
-        
+
     }
     #header .header-right {
         margin-left: 100px;
@@ -294,12 +290,12 @@
         overflow: hidden;
         width: auto;
     }
-    
+
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px)
 {
-    
+
     .container {
         width:100%;
     }
@@ -510,7 +506,7 @@
     }
 }
 @media (max-width: 480px)
-{ 
+{
     .mobile100 .col-xs-6, .form-search .col-xs-6, .form-search .col-xs-10, .form-search .col-xs-2 {
         width: 100%;
     }
