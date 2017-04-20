@@ -5999,7 +5999,9 @@ class Admin extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         __WEBPACK_IMPORTED_MODULE_1_antd__["Row"],
         { className: 'padding-5' },
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Table"], { columns: columns, rowKey: record => record.created_at, dataSource: this.state.orders })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Table"], {
+          style: { minWidth: 700, background: 'white' },
+          columns: columns, rowKey: record => record.created_at, dataSource: this.state.orders })
       )
     );
   }
@@ -6012,7 +6014,17 @@ const columns = [{
   render: text => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'span',
     null,
-    __WEBPACK_IMPORTED_MODULE_2_moment___default()(text).fromNow()
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'span',
+      { style: { color: 'blue' } },
+      __WEBPACK_IMPORTED_MODULE_2_moment___default()(text).format('LT')
+    ),
+    ', ',
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'b',
+      null,
+      __WEBPACK_IMPORTED_MODULE_2_moment___default()(text).format('L')
+    )
   )
 }, {
   title: 'Tên',
@@ -6030,15 +6042,16 @@ const columns = [{
   render: text => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'span',
     null,
-    text
-  )
-}, {
-  title: 'Địa chỉ',
-  dataIndex: 'address',
-  key: 'address',
-  render: text => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    'span',
-    null,
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'a',
+      { href: "tel:" + text },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_1_antd__["Button"],
+        null,
+        'G\u1ECDi \u0111i\u1EC7n'
+      )
+    ),
+    ' ',
     text
   )
 }, {
@@ -6057,6 +6070,15 @@ const columns = [{
     'span',
     null,
     mapProduct(record.product)
+  )
+}, {
+  title: 'Địa chỉ',
+  dataIndex: 'address',
+  key: 'address',
+  render: text => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'span',
+    null,
+    text
   )
 }];
 

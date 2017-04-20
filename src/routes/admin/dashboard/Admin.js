@@ -22,7 +22,9 @@ class Admin extends React.Component {
     return (
         <div>
           <Row className="padding-5">
-            <Table columns={columns} rowKey={record => record.created_at} dataSource={this.state.orders} />
+            <Table
+              style={{minWidth: 700, background: 'white'}}
+              columns={columns} rowKey={record => record.created_at} dataSource={this.state.orders} />
             {/*<Timeline pending={<a href="#">Xem thêm</a>}>*/}
               {/*{this.state.orders.map((el, index) => {*/}
                 {/*if(el.done){*/}
@@ -57,7 +59,7 @@ const columns = [
     title: 'Thời gian đặt hàng',
     dataIndex: 'created_at',
     key: 'created_at',
-    render: text => <span>{moment(text).fromNow()}</span>,
+    render: text => <span><span style={{color: 'blue'}}>{moment(text).format('LT')}</span>, <b>{moment(text).format('L')}</b></span>,
   },
   {
   title: 'Tên',
@@ -69,13 +71,7 @@ const columns = [
     title: 'Số điện thoại',
     dataIndex: 'phone',
     key: 'phone',
-    render: text => <span>{text}</span>,
-  },
-  {
-    title: 'Địa chỉ',
-    dataIndex: 'address',
-    key: 'address',
-    render: text => <span>{text}</span>,
+    render: text => <span><a href={"tel:" + text}><Button>Gọi điện</Button></a> {text}</span>,
   },
   {
     title: 'Số lượng (kg)',
@@ -91,6 +87,12 @@ const columns = [
         {mapProduct(record.product)}
       </span>
     ),
+  },
+  {
+    title: 'Địa chỉ',
+    dataIndex: 'address',
+    key: 'address',
+    render: text => <span>{text}</span>,
   }
 ];
 
