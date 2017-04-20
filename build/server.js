@@ -3303,7 +3303,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   __WEBPACK_IMPORTED_MODULE_1__components_Link__["a" /* default */],
                   { to: '/san-pham/' + el.slug, className: 'product-img' },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl, alt: el.title })
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl.replace("\/image", "\/image\/small"), alt: el.title })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'div',
@@ -3355,7 +3355,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_1__components_Link__["a" /* default */],
             { to: '/bai-viet/' + first_foodNews.slug, className: 'section-img' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: first_foodNews.coverUrl,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: first_foodNews.coverUrl.replace("\/image", "\/image\/small"),
               alt: first_foodNews.title }),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'span',
@@ -3380,7 +3380,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__components_Link__["a" /* default */],
                 { className: 'section-img', to: '/bai-viet/' + el.slug },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl.replace("\/image", "\/image\/small"),
                   alt: el.title })
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -3461,7 +3461,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                   { className: 'section-img',
                     to: '/bai-viet/' + el.slug },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-                    src: el.coverUrl,
+                    src: el.coverUrl.replace("\/image", "\/image\/small"),
                     alt: el.title
                   })
                 ),
@@ -3538,7 +3538,7 @@ class Slider extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
               { to: '/bai-viet/' + post.slug, className: 'news-img', style: { margin: 10 } },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: post.coverUrl, alt: post.title })
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: post.coverUrl.replace("\/image", "\/image\/small"), alt: post.title })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
@@ -3660,7 +3660,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
                 { to: '/bai-viet/' + el.slug,
                   className: 'news-img' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl,
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl.replace("\/image", "\/image\/small"),
                   alt: el.title })
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -3746,7 +3746,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
               { to: '/bai-viet/' + news[0].slug, className: 'news-img' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: news[0].coverUrl })
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: news[0].coverUrl.replace("\/image", "\/image\/small") })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
@@ -3795,7 +3795,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
                         { to: '/bai-viet/' + el.slug, className: 'product-img' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl })
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl.replace("\/image", "\/image\/small") })
                       ),
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'div',
@@ -4004,7 +4004,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
             { to: "/bai-viet/" + firstPost.slug, className: 'news-img' },
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: firstPost.coverUrl,
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: firstPost.coverUrl.replace("\/image", "\/image\/small"),
               alt: firstPost.title })
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -4046,7 +4046,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 to: '/bai-viet/' + el.slug,
                 className: 'news-img' },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', {
-                src: el.coverUrl,
+                src: el.coverUrl.replace("\/image", "\/image\/small"),
                 alt: el.title })
             ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -4246,7 +4246,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
                     { to: '/san-pham/' + el.slug, className: 'product-img' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl, alt: el.name })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl.replace("\/image", "\/image\/small"), alt: el.name })
                   ),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',
@@ -4332,7 +4332,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
                     { to: '/san-pham/' + el.slug, className: 'product-img' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl, alt: el.title })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: el.coverUrl.replace("\/image", "\/image\/small"), alt: el.title })
                   ),
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'div',

@@ -21,7 +21,7 @@ class Main extends React.Component {
           </div>
           <div className="news-big line-bottom mb12">
             <Link to={"/bai-viet/" + firstPost.slug} className="news-img">
-              <img src={firstPost.coverUrl}
+              <img src={firstPost.coverUrl.replace("\/image", "\/image\/small")}
                    alt={firstPost.title}/></Link>
             <div className="news-content">
               <h3 className="news-name">
@@ -43,7 +43,7 @@ class Main extends React.Component {
                   to={'/bai-viet/' + el.slug}
                   className="news-img">
                   <img
-                    src={el.coverUrl}
+                    src={el.coverUrl.replace("\/image", "\/image\/small")}
                     alt={el.title}/>
                 </Link>
                 <div className="news-content">

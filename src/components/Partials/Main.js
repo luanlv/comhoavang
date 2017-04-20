@@ -21,7 +21,7 @@ class Main extends React.Component {
                 <div key={index} className="col-xs-4 element-item">
                   <div className="product-box">
                     <Link to={'/san-pham/' + el.slug} className="product-img">
-                      <img src={el.coverUrl} alt={el.title} /></Link>
+                      <img src={el.coverUrl.replace("\/image", "\/image\/small")} alt={el.title} /></Link>
                     <div className="product-content">
                       <h3 className="product-name">
                         <Link to={'/san-pham/' + el.slug} >
@@ -50,7 +50,7 @@ class Main extends React.Component {
         <div className="wrap-section">
           <div className="section-box">
             <Link to={'/bai-viet/' + first_foodNews.slug} className="section-img">
-              <img src={first_foodNews.coverUrl}
+              <img src={first_foodNews.coverUrl.replace("\/image", "\/image\/small")}
                    alt={first_foodNews.title}/>
               <span className="section-name">
                     {first_foodNews.title}
@@ -66,7 +66,7 @@ class Main extends React.Component {
               return (
                 <li key={index}>
                   <Link className="section-img" to={'/bai-viet/' + el.slug}>
-                    <img src={el.coverUrl}
+                    <img src={el.coverUrl.replace("\/image", "\/image\/small")}
                          alt={el.title} /></Link>
                   <div className="section-content">
                     <h3 className="section-name">
@@ -110,7 +110,7 @@ class Main extends React.Component {
                     <Link className="section-img"
                           to={'/bai-viet/' + el.slug}>
                       <img
-                        src={el.coverUrl}
+                        src={el.coverUrl.replace("\/image", "\/image\/small")}
                         alt={el.title}
                       /></Link>
                     <div className="section-content">

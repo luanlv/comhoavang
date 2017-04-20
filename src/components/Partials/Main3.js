@@ -22,7 +22,7 @@ class Main extends React.Component {
 
             <div className="news-big line-bottom">
               <Link to={'/bai-viet/' + news[0].slug} className="news-img">
-                <img src={news[0].coverUrl } /></Link>
+                <img src={news[0].coverUrl.replace("\/image", "\/image\/small") } /></Link>
               <div className="news-content">
                 <h3 className="news-name">
                   <Link to={'/bai-viet/' + news[0].slug}>
@@ -45,7 +45,7 @@ class Main extends React.Component {
                       <div key={index} className="col-xs-4 element-item" >
                         <div className="product-box">
                           <Link to={'/bai-viet/' + el.slug} className="product-img">
-                            <img src={el.coverUrl} /></Link>
+                            <img src={el.coverUrl.replace("\/image", "\/image\/small")} /></Link>
 
                           <div className="product-content">
                             <h3 className="product-name" style={{height: 80}}>

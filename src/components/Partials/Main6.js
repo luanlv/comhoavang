@@ -77,7 +77,7 @@ class Main extends React.Component {
                       <div key={index} className="col-xs-4 element-item">
                         <div className="product-box">
                           <Link to={'/san-pham/' + el.slug} className="product-img">
-                            <img src={el.coverUrl} alt={el.name} /></Link>
+                            <img src={el.coverUrl.replace("\/image", "\/image\/small")} alt={el.name} /></Link>
                           <div className="product-content">
                             <h3 className="product-name">
                               <Link to={'/san-pham/' + el.slug}>

@@ -10,7 +10,7 @@ class Slider extends React.Component {
           <div className="slide slick-slide" data-slick-index={0} aria-hidden="true" style={{width: '100%'}}>
             <div className="news-big">
               <Link to={'/bai-viet/' + post.slug} className="news-img" style={{margin: 10}}>
-                <img src={post.coverUrl} alt={post.title} /></Link>
+                <img src={post.coverUrl.replace("\/image", "\/image\/small")} alt={post.title} /></Link>
               <div className="news-content">
                 <h3 className="news-name">
                   <Link to={"/bai-viet/" + post.slug}>
@@ -65,7 +65,7 @@ class Main extends React.Component {
                     <div key={index} className="news-lbox">
                       <Link to={'/bai-viet/' + el.slug}
                          className="news-img">
-                        <img src={el.coverUrl}
+                        <img src={el.coverUrl.replace("\/image", "\/image\/small")}
                              alt={el.title} />
                       </Link>
                       <div className="news-content">
