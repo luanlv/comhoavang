@@ -10,6 +10,7 @@ let UserSchema = new Schema({
   uid: String,
   provider: String,
   accessToken: String,
+  isAdmin: {type: Boolean, default: false},
   mustConfirmEmail: {type: Boolean, default: false},
   password: String,
   createAt: {type: Date, default: Date.now}

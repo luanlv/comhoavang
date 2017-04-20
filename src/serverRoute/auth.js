@@ -36,9 +36,10 @@ passport.use(new LocalStrategy(
 ))
 
 passport.use(new FacebookStrategy({
-    clientID:'398172067232323',
-    clientSecret:'f5466ed132ad5bd3c11519c5eee9c606',
-    callbackURL:'http://localhost:3001/auth/facebook/callback',
+    clientID:'123093138237586',
+    clientSecret:'bfddf6c0cb2bc745914a2b3236f57202',
+    // callbackURL:'http://localhost:3000/auth/facebook/callback',
+    callbackURL:'http://comhoavang.com/auth/facebook/callback',
     profileFields: ['id', 'displayName', 'emails', 'name']
   }, function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({username: profile.emails[0].value},
@@ -120,8 +121,10 @@ router.get('/facebook', passport.authenticate('facebook', {scope: ['email']}))
 router.get('/facebook/callback',
   passport.authenticate('facebook', {failureRedirect: '/'}),
   function (req, res) {
-  console.log(' call back facebook')
-    res.redirect('/')
+    if(req.user.isAdmin){
+      return res.redirect('/admin')
+    }
+    return res.redirect('/')
   })
 
 router.get('/google',

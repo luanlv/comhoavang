@@ -32,7 +32,7 @@ class Setting extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query: '{ setting{ssr, css, scriptTop, scriptBottom} }',
+        query: '{ setting{ssr, css, scriptTop, scriptBottom, adminId, emailAdmin} }',
       }),
       credentials: 'include',
     })
@@ -106,7 +106,40 @@ class Setting extends React.Component {
             <b>SSR: </b>
             <Switch checked={this.state.setting.ssr} onChange={() => this.toggleSSR()} />
           </Row>}
-
+          {this.state.setting.adminId !== undefined &&
+          <Row className="padding-5">
+            <b>Facebook Admin ID: </b>
+            <br/>
+            <input defaultValue={this.state.setting.adminId} onChange={(e) => {
+              let value = e.target.value
+              this.setState(prev => {
+                return {
+                  ...prev,
+                  setting: {
+                    ...prev.setting,
+                    adminId: value
+                  }
+                }
+              })
+            }} />
+          </Row>}
+          {this.state.setting.emailAdmin !== undefined &&
+          <Row className="padding-5">
+            <b>Facebook Admin ID: </b>
+            <br/>
+            <input defaultValue={this.state.setting.emailAdmin} onChange={(e) => {
+              let value = e.target.value
+              this.setState(prev => {
+                return {
+                  ...prev,
+                  setting: {
+                    ...prev.setting,
+                    emailAdmin: value
+                  }
+                }
+              })
+            }} />
+          </Row>}
           <Collapse>
             <Panel header={'STYLESHEETS'} key="1">
               {this.state.setting.css !== undefined &&

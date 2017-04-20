@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react'
-import { Layout, Menu, Breadcrumb, Icon, LocaleProvider } from 'antd';
+import { Layout, Menu, Breadcrumb, Icon, LocaleProvider, Button } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 import Link from '../../../components/Link'
@@ -110,7 +110,14 @@ class App extends React.Component {
                   </span>
                 </Link>
               </Menu.Item>
-
+              <Menu.Item key="Logout">
+                <a href="/auth/logout">
+                  <span>
+                    <Icon type="tool" />
+                    <span className="nav-text">Đăng xuất</span>
+                  </span>
+                </a>
+              </Menu.Item>
             </Menu>
           </Sider>
 

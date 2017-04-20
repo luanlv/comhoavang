@@ -6,6 +6,12 @@ const Setting = mongoose.model('Setting')
 const Product = mongoose.model('Product')
 const Order = mongoose.model('Order')
 let bodyParser = require('body-parser')
+let Mailer = require('./services/mailgun');
+let axios = require('axios')
+// import {FB, FacebookApiException} from 'fb';
+//
+// FB.options({version: 'v2.9'});
+// var comhoavangApp = FB.extend({appId: '1968072516812373', appSecret: '4e2c8135946ac8e7b7cd8cd48492d648'}),
 
 router.post('/post/new', bodyParser.json() ,(req, res) => {
   Post.create(req.body, (err, resData) => {
@@ -43,10 +49,23 @@ router.post('/product/update', bodyParser.json() ,(req, res) => {
   });
 })
 
-router.post('/order/new', bodyParser.json() ,(req, res) => {
+router.post('/order/new', bodyParser.json() ,async (req, res) => {
+  let setting = await Setting.findOne({})
+  let adminId = setting.adminId
+  let emailAdmin = setting.emailAdmin
   Order.create(req.body, (err, resData) => {
-    if(err) res.sendStatus(400)
-    res.send(resData)
+    if(err) return res.sendStatus(400)
+    Mailer.sendNewOrderMail(emailAdmin, resData.name, resData.phone)
+    // Mailer.sendNewOrderMail('luanlv2591@gmail.com', resData.name, resData.phone)
+    axios.post('https://graph.facebook.com/' + adminId + '/notifications?access_token=123093138237586|FEx3yoFukySO_rviU4Wl6MJxyRA&href=admin&template=Co_don_hang_moi')
+      .then(res => {
+        console.log(res.data)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+
+    return res.send(resData)
   })
 })
 

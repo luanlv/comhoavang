@@ -25,9 +25,13 @@ export default {
     require('./monngon').default,
     require('./product').default,
   ],
-  async action({next}) {
-    const route = await next();
+  async action({store, next}) {
+    let user = store.getState().user
+    if(!(user && user.isAdmin)){
+      return { redirect: '/login' }
+    }
 
+    const route = await next();
     // Provide default values for title, description etc.
     route.title = `${route.title || 'Amdmin Page'}`;
     return route;

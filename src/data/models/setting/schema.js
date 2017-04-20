@@ -4,6 +4,8 @@ var schema = new mongoose.Schema({
   id: { type:String },
   ssr: {type: Boolean, default: true },
   css: {type: String, default: '' },
+  adminId: {type: String, default: '100004231235930'},
+  emailAdmin: {type: String, default: 'luanlv2591@gmail.com'},
   scriptTop: {type: String, default: '' },
   scriptBottom: {type: String, default: '' }
   },

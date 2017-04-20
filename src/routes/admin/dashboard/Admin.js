@@ -23,7 +23,7 @@ class Admin extends React.Component {
         <div>
           <Row className="padding-5">
             <Table
-              style={{minWidth: 700, background: 'white'}}
+              style={{minWidth: 1100, background: 'white'}}
               columns={columns} rowKey={record => record.created_at} dataSource={this.state.orders} />
             {/*<Timeline pending={<a href="#">Xem thêm</a>}>*/}
               {/*{this.state.orders.map((el, index) => {*/}

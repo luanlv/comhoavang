@@ -10,6 +10,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import Login from './Login';
+import needFetch from '../../core/needFetch';
 
 const title = 'Log In';
 
@@ -17,7 +18,12 @@ export default {
 
   path: '/login',
 
-  action() {
+  action({store}) {
+    needFetch()
+    let user = store.getState().user
+    if(user && user.username){
+      return { redirect: '/' }
+    }
     return {
       title,
       component: <Layout><Login title={title} /></Layout>,

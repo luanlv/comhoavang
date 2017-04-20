@@ -32,6 +32,12 @@ export default new GraphQLObjectType({
     scriptTop: {
       type: GraphQLString
     },
+    adminId: {
+      type: GraphQLString
+    },
+    emailAdmin: {
+      type: GraphQLString
+    },
     scriptBottom: {
       type: GraphQLString
     },

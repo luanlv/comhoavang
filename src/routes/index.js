@@ -26,7 +26,7 @@ export default {
     require('./tintuc').default,
     require('./baiviet').default,
     // require('./contact').default,
-    // require('./login').default,
+    require('./login').default,
     // require('./register').default,
     // require('./about').default,
     // require('./privacy').default,
