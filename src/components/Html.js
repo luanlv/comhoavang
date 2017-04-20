@@ -78,6 +78,7 @@ class Html extends React.Component {
         </head>
 
         <body>
+
           <div
             id="app"
             // eslint-disable-next-line react/no-danger

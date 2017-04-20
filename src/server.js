@@ -90,6 +90,7 @@ app.use('/auth', require('./serverRoute/auth'))
 //
 // Register API middleware
 // -----------------------------------------------------------------------------
+
 app.use('/graphql', expressGraphQL(req => ({
   schema,
   graphiql: __DEV__,

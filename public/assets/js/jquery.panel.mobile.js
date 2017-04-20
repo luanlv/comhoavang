@@ -5,7 +5,7 @@
             // Đặt các giá trị mặc định
             var defaults = {
                 panelLeft: true,
-                speed: 100,
+                speed: 150,
                 wrapperid: "#wrapper",
                 cssmenu: ".menu-mobile",
                 easing: null

@@ -3,7 +3,7 @@ import { Layout, Menu, Breadcrumb, Icon, LocaleProvider } from 'antd';
 const { Header, Content, Footer, Sider } = Layout;
 const SubMenu = Menu.SubMenu;
 import Link from '../../../components/Link'
-import LoadingBar from 'react-redux-loading-bar';
+
 import enUS from 'antd/lib/locale-provider/en_US';
 import { StickyContainer, Sticky } from 'react-sticky';
 
@@ -17,7 +17,6 @@ class App extends React.Component {
     };
   }
   onCollapse = (collapsed) => {
-    console.log(collapsed);
     this.setState({
       collapsed,
       mode: collapsed ? 'vertical' : 'inline',
@@ -32,7 +31,6 @@ class App extends React.Component {
     return (
         <LocaleProvider locale={enUS}>
          <Layout>
-          <LoadingBar />
           <Sider
             collapsible
             breakpoint="lg"
