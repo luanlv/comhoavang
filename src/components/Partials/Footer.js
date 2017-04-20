@@ -62,11 +62,9 @@ class Footer extends React.Component {
               </div>
             </div>
             <div className="footer-box mobi480s">
-              <div className="footer-logo">
-                <a href="http://www.vinacare.vn/" id="ctl00_ctl00_ctl00_A1">
-                  <img src="/assets/images/logo-footer.png" alt="img" /></a></div>
+
               <div className="dangky">
-                <a href="http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=27183" target="_blank"><img src="/assets/images/dangky.png" alt="img" /></a></div>
+                <a href="http://online.gov.vn/CustomWebsiteDisplay.aspx" target="_blank"><img src="/assets/images/dangky.png" alt="img" /></a></div>
             </div>
           </div>
         </div>

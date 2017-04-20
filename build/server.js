@@ -656,19 +656,10 @@ class Footer extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             { className: 'footer-box mobi480s' },
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
-              { className: 'footer-logo' },
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'a',
-                { href: 'http://www.vinacare.vn/', id: 'ctl00_ctl00_ctl00_A1' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/images/logo-footer.png', alt: 'img' })
-              )
-            ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
               { className: 'dangky' },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'a',
-                { href: 'http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=27183', target: '_blank' },
+                { href: 'http://online.gov.vn/CustomWebsiteDisplay.aspx', target: '_blank' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/assets/images/dangky.png', alt: 'img' })
               )
             )
