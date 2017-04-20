@@ -35,6 +35,7 @@ import { setSetting } from './actions/setting';
 import { port, auth, mongoDBURL} from './config';
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
+var routeCache = require('route-cache');
 
 //mongoose
 import mongoose from 'mongoose'
@@ -91,7 +92,7 @@ app.use('/auth', require('./serverRoute/auth'))
 // Register API middleware
 // -----------------------------------------------------------------------------
 
-app.use('/graphql', expressGraphQL(req => ({
+app.use('/graphql',  expressGraphQL(req => ({
   schema,
   graphiql: __DEV__,
   rootValue: { request: req },
@@ -103,7 +104,7 @@ app.use('/graphql', expressGraphQL(req => ({
 // Register server-side rendering middleware
 // -----------------------------------------------------------------------------
 
-app.get('*', async (req, res, next) => {
+app.get('*', routeCache.cacheSeconds(20), async (req, res, next) => {
   let routeUrl = req.originalUrl
   let isAdmin = (routeUrl.slice(0,6) === '/admin')
   try {
