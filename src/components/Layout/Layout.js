@@ -33,7 +33,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div id="wrapper">
-        <LoadingBar showFastActions  maxProgress={95} progressIncrease={30} style={{ backgroundColor: 'red', zIndex: 1000, height: '3px' }} />
+        <LoadingBar showFastActions  maxProgress={80} progressIncrease={40} style={{ backgroundColor: 'red', zIndex: 1000, height: '2px' }} />
         <Header />
         <hr />
         {this.props.children}
