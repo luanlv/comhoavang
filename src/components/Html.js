@@ -32,7 +32,7 @@ class Html extends React.Component {
   };
 
   render() {
-    const { title, description, styles, scripts, state, children } = this.props;
+    const { title, description, styles, scripts, state, children, v } = this.props;
     return (
       <html className="no-js" lang="vi">
         <head>
@@ -85,20 +85,20 @@ class Html extends React.Component {
             dangerouslySetInnerHTML={{ __html:
                 `head.load("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")`
                 + `.js("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" )`
-                + `.js("/assets/js/jquery.ui.datepicker-vi-VN.js")`
-                + `.js("/assets/js/jquery.easing.1.3.js")`
-                + `.js("/assets/js/jquery.mb.browser.min.js")`
-                + `.js("/assets/js/jquery.textheight.js")`
-                + `.js("/assets/js/hoverIntent.js")`
-                + `.js("/assets/js/imagesloaded.pkgd.min.js")`
-                + `.js("/assets/js/bootstrap.min.js")`
-                + `.js("/assets/js/jquery.uniform.min.js")`
+                + `.js("/assets/js/jquery.ui.datepicker-vi-VN.js?v=${v}")`
+                + `.js("/assets/js/jquery.easing.1.3.js?v=${v}")`
+                + `.js("/assets/js/jquery.mb.browser.min.js?v=${v}")`
+                + `.js("/assets/js/jquery.textheight.js?v=${v}")`
+                + `.js("/assets/js/hoverIntent.js?v=${v}")`
+                + `.js("/assets/js/imagesloaded.pkgd.min.js?v=${v}")`
+                + `.js("/assets/js/bootstrap.min.js?v=${v}")`
+                + `.js("/assets/js/jquery.uniform.min.js?v=${v}")`
                 + `.js("/assets/js/isotope.pkgd.min.js")`
                 + `.js("/assets/js/slick.min.js")`
-                + `.js("/assets/js/jquery.panel.mobile.js")`
-                + `.js("/assets/js/jquery.main.js")`
-                +  `.js("${scripts[0]}")`
-                +  `.js("${scripts[1]}")`}}
+                + `.js("/assets/js/jquery.panel.mobile.js?v=${v}")`
+                + `.js("/assets/js/jquery.main.js?v=${v}")`
+                +  `.js("${scripts[0]}?v=${v}")`
+                +  `.js("${scripts[1]}?v=${v}")`}}
           >
           </script>
           <script dangerouslySetInnerHTML={{ __html: this.props.scriptBottom }} />

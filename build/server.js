@@ -406,11 +406,11 @@ class Aside extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
               null,
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
-                { to: '/bai-viet/cach-lam-che-com-thom-mat', className: 'video-box' },
+                { to: '/bai-viet/thuc-don-3-mon-gian-di-ma-ngon-cho-ngay-luoi-vao-bep', className: 'video-box' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'span',
                   { className: 'video-img' },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/image/R8cvtxxu3g-che-com-03.jpg', id: 'ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl0_Img3', alt: 'R8cvtxxu3g-che-com-03.jpg' })
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/image/small/niolaFMsg1-1492484092-14924837329720-untitled-1.jpg', id: 'ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl0_Img3', alt: 'R8cvtxxu3g-che-com-03.jpg' })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'span',
@@ -418,7 +418,7 @@ class Aside extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     'span',
                     { className: 'video-name' },
-                    'C\xE1ch b\u1EA3o qu\u1EA3n v\xE0 s\u1EED d\u1EE5ng C\u1ED1m M\u1EC5 Tr\xEC '
+                    'Th\u1EF1c \u0111\u01A1n 3 m\xF3n gi\u1EA3n d\u1ECB m\xE0 ngon cho ng\xE0y l\u01B0\u1EDDi v\xE0o b\u1EBFp '
                   ),
                   ' '
                 )
@@ -433,7 +433,7 @@ class Aside extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'span',
                   { className: 'video-img' },
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/image/5n9GkKlQVI-01dc4a05-cc41-48f9-8ee7-b10058293fef.jpg', id: 'ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl1_Img3', alt: 'C\u1ED1m M\u1EC5 Tr\xEC th\u01A1m ngon \u0111\u01B0\u1EE3c l\xE0m c\xF4ng phu th\u1EBF n\xE0o.jpg' })
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/image/small/q8u9mdGl1f-8dd01a94-a7ba-44f0-9469-026371258284.jpg', id: 'ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl1_Img3', alt: 'C\u1ED1m M\u1EC5 Tr\xEC th\u01A1m ngon \u0111\u01B0\u1EE3c l\xE0m c\xF4ng phu th\u1EBF n\xE0o.jpg' })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                   'span',
@@ -2783,12 +2783,14 @@ app.get('*', routeCache.cacheSeconds(20), (() => {
         data.scripts.push(__WEBPACK_IMPORTED_MODULE_18__assets_json___default.a[route.chunk].js);
       }
 
+      let version = 1;
+
       if (isAdmin) {
-        const html = __WEBPACK_IMPORTED_MODULE_7_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__components_HtmlAdmin__["a" /* default */], _extends({}, data, { isAdmin: isAdmin })));
+        const html = __WEBPACK_IMPORTED_MODULE_7_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__components_HtmlAdmin__["a" /* default */], _extends({ v: version }, data, { isAdmin: isAdmin })));
         res.status(route.status || 200);
         res.send(`<!doctype html>${html}`);
       } else {
-        const html = __WEBPACK_IMPORTED_MODULE_7_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_Html__["a" /* default */], _extends({}, data, { isAdmin: isAdmin, scriptTop: setting.scriptTop || '', scriptBottom: setting.scriptBottom || '', css: setting.css || '' })));
+        const html = __WEBPACK_IMPORTED_MODULE_7_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__components_Html__["a" /* default */], _extends({ v: version }, data, { isAdmin: isAdmin, scriptTop: setting.scriptTop || '', scriptBottom: setting.scriptBottom || '', css: setting.css || '' })));
         res.status(route.status || 200);
         res.send(`<!doctype html>${html}`);
       }
@@ -3085,7 +3087,7 @@ App.childContextTypes = ContextType;
 class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
-    const { title, description, styles, scripts, state, children } = this.props;
+    const { title, description, styles, scripts, state, children, v } = this.props;
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'html',
       { className: 'no-js', lang: 'vi' },
@@ -3131,7 +3133,7 @@ class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', {
-          dangerouslySetInnerHTML: { __html: `head.load("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")` + `.js("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" )` + `.js("/assets/js/jquery.ui.datepicker-vi-VN.js")` + `.js("/assets/js/jquery.easing.1.3.js")` + `.js("/assets/js/jquery.mb.browser.min.js")` + `.js("/assets/js/jquery.textheight.js")` + `.js("/assets/js/hoverIntent.js")` + `.js("/assets/js/imagesloaded.pkgd.min.js")` + `.js("/assets/js/bootstrap.min.js")` + `.js("/assets/js/jquery.uniform.min.js")` + `.js("/assets/js/isotope.pkgd.min.js")` + `.js("/assets/js/slick.min.js")` + `.js("/assets/js/jquery.panel.mobile.js")` + `.js("/assets/js/jquery.main.js")` + `.js("${scripts[0]}")` + `.js("${scripts[1]}")` }
+          dangerouslySetInnerHTML: { __html: `head.load("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")` + `.js("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" )` + `.js("/assets/js/jquery.ui.datepicker-vi-VN.js?v=${v}")` + `.js("/assets/js/jquery.easing.1.3.js?v=${v}")` + `.js("/assets/js/jquery.mb.browser.min.js?v=${v}")` + `.js("/assets/js/jquery.textheight.js?v=${v}")` + `.js("/assets/js/hoverIntent.js?v=${v}")` + `.js("/assets/js/imagesloaded.pkgd.min.js?v=${v}")` + `.js("/assets/js/bootstrap.min.js?v=${v}")` + `.js("/assets/js/jquery.uniform.min.js?v=${v}")` + `.js("/assets/js/isotope.pkgd.min.js")` + `.js("/assets/js/slick.min.js")` + `.js("/assets/js/jquery.panel.mobile.js?v=${v}")` + `.js("/assets/js/jquery.main.js?v=${v}")` + `.js("${scripts[0]}?v=${v}")` + `.js("${scripts[1]}?v=${v}")` }
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { dangerouslySetInnerHTML: { __html: this.props.scriptBottom } })
       )
@@ -4868,7 +4870,7 @@ module.exports = model;
 
 module.exports.getOrders = (root, {}) => {
   return new Promise((resolve, reject) => {
-    model.find({}).exec((err, res) => {
+    model.find({}).sort({ created_at: -1 }).exec((err, res) => {
       err ? reject(err) : resolve(res);
     });
   });

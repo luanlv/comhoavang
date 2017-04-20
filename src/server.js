@@ -194,12 +194,14 @@ app.get('*', routeCache.cacheSeconds(20), async (req, res, next) => {
       data.scripts.push(assets[route.chunk].js);
     }
 
+    let version = 1
+
     if(isAdmin){
-      const html = ReactDOM.renderToStaticMarkup(<HtmlAdmin {...data} isAdmin={isAdmin} />);
+      const html = ReactDOM.renderToStaticMarkup(<HtmlAdmin v={version} {...data} isAdmin={isAdmin} />);
       res.status(route.status || 200);
       res.send(`<!doctype html>${html}`);
     } else {
-      const html = ReactDOM.renderToStaticMarkup(<Html {...data} isAdmin={isAdmin}  scriptTop={setting.scriptTop || ''} scriptBottom={setting.scriptBottom || ''} css={setting.css || ''} />);
+      const html = ReactDOM.renderToStaticMarkup(<Html v={version} {...data} isAdmin={isAdmin}  scriptTop={setting.scriptTop || ''} scriptBottom={setting.scriptBottom || ''} css={setting.css || ''} />);
       res.status(route.status || 200);
       res.send(`<!doctype html>${html}`);
     }

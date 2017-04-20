@@ -37,13 +37,13 @@ class Aside extends React.Component {
               </div>
             </div>
             <ul className="list-video">
-              <li><Link to="/bai-viet/cach-lam-che-com-thom-mat" className="video-box"><span className="video-img">
-                        <img src="/image/R8cvtxxu3g-che-com-03.jpg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl0_Img3" alt="R8cvtxxu3g-che-com-03.jpg" />
+              <li><Link to="/bai-viet/thuc-don-3-mon-gian-di-ma-ngon-cho-ngay-luoi-vao-bep" className="video-box"><span className="video-img">
+                        <img src="/image/small/niolaFMsg1-1492484092-14924837329720-untitled-1.jpg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl0_Img3" alt="R8cvtxxu3g-che-com-03.jpg" />
                       </span><span className="video-content"><span className="video-name">
-                          Cách bảo quản và sử dụng Cốm Mễ Trì </span> </span></Link>
+                          Thực đơn 3 món giản dị mà ngon cho ngày lười vào bếp </span> </span></Link>
               </li>
               <li><Link to="/bai-viet/com-me-tri-thom-ngon-duoc-lam-cong-phu-the-nao" className="video-box"><span className="video-img">
-                        <img src="/image/5n9GkKlQVI-01dc4a05-cc41-48f9-8ee7-b10058293fef.jpg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl1_Img3" alt="Cốm Mễ Trì thơm ngon được làm công phu thế nào.jpg" />
+                        <img src="/image/small/q8u9mdGl1f-8dd01a94-a7ba-44f0-9469-026371258284.jpg" id="ctl00_ctl00_ctl00_ContentPlaceHolder1_cphAside_lstVideo_ctrl0_lstListVideo_ctrl1_Img3" alt="Cốm Mễ Trì thơm ngon được làm công phu thế nào.jpg" />
 
                       </span><span className="video-content"><span className="video-name">
                           Cốm Mễ Trì thơm ngon được làm công phu thế nào?</span> </span></Link>

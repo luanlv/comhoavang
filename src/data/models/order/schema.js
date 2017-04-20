@@ -21,7 +21,7 @@ module.exports = model;
 
 module.exports.getOrders = (root, {}) => {
   return new Promise((resolve, reject) => {
-    model.find({}).exec((err, res) => {
+    model.find({}).sort({created_at: -1}).exec((err, res) => {
       err ? reject(err) : resolve(res);
     });
   });
