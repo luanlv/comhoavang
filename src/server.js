@@ -99,7 +99,6 @@ app.use('/graphql',  expressGraphQL(req => ({
   pretty: __DEV__,
 })));
 
-
 //
 // Register server-side rendering middleware
 // -----------------------------------------------------------------------------

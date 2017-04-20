@@ -18,7 +18,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: '{ getProducts{name, slug, price, coverUrl, description, saleOff, body, created_at},getOneProduct(slug: "'+ params.slug +'"){name, price, coverUrl, description, saleOff, body, created_at} }',
+          query: '{ getProducts{name, slug, price, coverUrl, description, saleOff, body, created_at},getOneProduct(slug: "'+ params.slug +'"){name, slug, price, coverUrl, description, saleOff, body, created_at} }',
         }),
         credentials: 'include',
       });

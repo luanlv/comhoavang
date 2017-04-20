@@ -19,14 +19,17 @@ import postQueries from './models/post/queries'
 import productQueries from './models/product/queries'
 import userQueries from './models/user/queries'
 import settingQueries from './models/setting/queries'
+import orderQueries from './models/order/queries'
 
 // mutation
 import settingMutation from './models/setting/mutations'
 import postMutation from './models/post/mutations'
 
+
 let {listImage} = imageQueries
 let { users } = userQueries
 let { setting } = settingQueries
+let { getOrders } = orderQueries
 let { getNews, getOneNews, getFoodNews, getOnePost, getNewsInCategory} = postQueries
 let { getOneProduct, getProducts } = productQueries
 
@@ -44,7 +47,8 @@ const schema = new Schema({
       getOnePost,
       getNewsInCategory,
       getOneProduct,
-      getProducts
+      getProducts,
+      getOrders
     },
   }),
   mutation: new ObjectType({

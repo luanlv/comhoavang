@@ -7,13 +7,14 @@ import {setData} from '../../actions/data'
 
 export default {
   path: '/lien-he-dat-hang',
-  async action({ store }) {
+  async action({ store, query }) {
     if(!process.env.BROWSER || !store.getState().setting.ssr || (process.env.BROWSER && needFetch())){
 
     }
+
     return {
       title: 'Liên hệ đặt hàng',
-      component: <Layout><Home /></Layout>,
+      component: <Layout><Home selectProduct={query.sp} /></Layout>,
     };
   },
 

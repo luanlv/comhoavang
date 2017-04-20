@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const Post = mongoose.model('Post')
 const Setting = mongoose.model('Setting')
 const Product = mongoose.model('Product')
+const Order = mongoose.model('Order')
 let bodyParser = require('body-parser')
 
 router.post('/post/new', bodyParser.json() ,(req, res) => {
@@ -40,6 +41,13 @@ router.post('/product/update', bodyParser.json() ,(req, res) => {
     if (err) return res.statusCode(400).send(err);
     res.send(resData);
   });
+})
+
+router.post('/order/new', bodyParser.json() ,(req, res) => {
+  Order.create(req.body, (err, resData) => {
+    if(err) res.sendStatus(400)
+    res.send(resData)
+  })
 })
 
 module.exports = router;
