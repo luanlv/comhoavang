@@ -7,6 +7,7 @@ var schema = new mongoose.Schema({
   address: {type: String, default: ''},
   product: {type: String, default: ''},
   quantity: {type: String, default: ''},
+  done: {type: Boolean, default: false},
   created_at: {type: Date, default: Date.now},
 });
 

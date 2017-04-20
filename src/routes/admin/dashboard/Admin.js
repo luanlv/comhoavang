@@ -8,20 +8,106 @@
  */
 
 import React, { PropTypes } from 'react';
-import UniversalRouter from 'universal-router'
-import history from '../../../core/history'
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import { Button, DatePicker} from 'antd';
+import { Button, DatePicker, Table, Timeline, Icon, Row, Col} from 'antd';
+import moment from 'moment'
 class Admin extends React.Component {
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-  };
+  constructor(props){
+    super(props)
+    this.state = {
+      orders: this.props.orders || []
+    }
+  }
 
   render() {
     return (
         <div>
+          <Row className="padding-5">
+            <Table columns={columns} rowKey={record => record.created_at} dataSource={this.state.orders} />
+            {/*<Timeline pending={<a href="#">Xem thêm</a>}>*/}
+              {/*{this.state.orders.map((el, index) => {*/}
+                {/*if(el.done){*/}
+                  {/*return (*/}
+                    {/*<Success key={index}>*/}
+                      {/*{el.created_at}*/}
+                    {/*</Success>*/}
+                  {/*)*/}
+                {/*} else {*/}
+                  {/*return (*/}
+                    {/*<Pending key={index}>*/}
+                      {/*{moment(el.created_at).fromNow()} :*/}
+                      {/*<b style={{color: 'red'}}>{el.name}</b>*/}
+                      {/*đã đặt*/}
+                      {/*<b style={{color: 'red'}}>{el.quantity} (kg) {mapProduct(el.product)}</b>*/}
+                      {/*<br/>*/}
+                      {/*Địa chỉ: <b style={{color: 'red'}}>{el.address}</b>*/}
+                    {/*</Pending>*/}
+                  {/*)*/}
+                {/*}*/}
+              {/*})}*/}
+            {/*</Timeline>*/}
+          </Row>
         </div>
     );
+  }
+}
+
+
+const columns = [
+  {
+    title: 'Thời gian đặt hàng',
+    dataIndex: 'created_at',
+    key: 'created_at',
+    render: text => <span>{moment(text).fromNow()}</span>,
+  },
+  {
+  title: 'Tên',
+  dataIndex: 'name',
+  key: 'name',
+  render: text => <span>{text}</span>,
+},
+  {
+    title: 'Số điện thoại',
+    dataIndex: 'phone',
+    key: 'phone',
+    render: text => <span>{text}</span>,
+  },
+  {
+    title: 'Địa chỉ',
+    dataIndex: 'address',
+    key: 'address',
+    render: text => <span>{text}</span>,
+  },
+  {
+    title: 'Số lượng (kg)',
+    dataIndex: 'quantity',
+    key: 'quantity',
+    render: text => <span>{text}</span>,
+  },
+  {
+    title: 'Sản phẩm',
+    key: 'action',
+    render: (text, record) => (
+      <span>
+        {mapProduct(record.product)}
+      </span>
+    ),
+  }
+];
+
+function mapProduct(slug){
+  switch(slug){
+    case 'com-kho-hoa-vang':
+      return 'Cốm khô hoa vàng'
+      break;
+    case 'Chả Cốm':
+      return 'Chả Cốm'
+      break;
+    case 'com-non-me-tri':
+      return 'Cốm Non Mễ Trì'
+      break;
+    default:
+      return ''
+      break;
   }
 }
 

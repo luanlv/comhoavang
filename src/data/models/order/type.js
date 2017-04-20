@@ -40,6 +40,9 @@ export default new GraphQLObjectType({
     quantity: {
       type: new GraphQLNonNull(GraphQLString)
     },
+    done: {
+      type: new GraphQLNonNull(GraphQLBoolean)
+    },
     created_at: {
       type: new GraphQLNonNull(GraphQLDateTime)
     },
