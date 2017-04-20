@@ -3089,7 +3089,7 @@ class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     const { title, description, styles, scripts, state, children } = this.props;
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'html',
-      { className: 'no-js', lang: 'en' },
+      { className: 'no-js', lang: 'vi' },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'head',
         null,
@@ -3112,19 +3112,9 @@ class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese', rel: 'stylesheet', type: 'text/css' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css', rel: 'stylesheet', type: 'text/css' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css', rel: 'stylesheet', type: 'text/css' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: '/assets/styles/uniform-base.css', rel: 'stylesheet', type: 'text/css' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: '/assets/styles/slick.css', rel: 'stylesheet', type: 'text/css' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: '/assets/styles/jquery.ui.datepicker.css', rel: 'stylesheet', type: 'text/css' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: '/assets/styles/lugo.datepicker.css', rel: 'stylesheet', type: 'text/css' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: '/assets/styles/site.css', rel: 'stylesheet', type: 'text/css' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: '/assets/styles/site-repond.css', rel: 'stylesheet' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.ui.datepicker-vi-VN.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.easing.1.3.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.mb.browser.min.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.textheight.js', type: 'text/javascript' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: '/assets/styles/style.min.css', rel: 'stylesheet' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { rel: 'stylesheet', type: 'text/css', href: '/css/app.css' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('style', { dangerouslySetInnerHTML: { __html: this.props.css } }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { dangerouslySetInnerHTML: { __html: this.props.scriptTop } })
       ),
@@ -3140,20 +3130,10 @@ class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           // eslint-disable-next-line react/no-danger
           dangerouslySetInnerHTML: { __html: `window.APP_STATE=${__WEBPACK_IMPORTED_MODULE_1_serialize_javascript___default()(state, { isJSON: true })}` }
         }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/hoverIntent.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/imagesloaded.pkgd.min.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/bootstrap.min.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.uniform.min.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/isotope.pkgd.min.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/slick.min.js', type: 'text/javascript' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.panel.mobile.js' }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: '/assets/js/jquery.main.js', type: 'text/javascript' }),
-        scripts.map(script => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { key: script, src: script })),
-        __WEBPACK_IMPORTED_MODULE_2__config__["d" /* analytics */].google.trackingId && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', {
-          // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML: { __html: 'window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;' + `ga('create','${__WEBPACK_IMPORTED_MODULE_2__config__["d" /* analytics */].google.trackingId}','auto');ga('send','pageview')` }
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', {
+          dangerouslySetInnerHTML: { __html: `head.load("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")` + `.js("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" )` + `.js("/assets/js/jquery.ui.datepicker-vi-VN.js")` + `.js("/assets/js/jquery.easing.1.3.js")` + `.js("/assets/js/jquery.mb.browser.min.js")` + `.js("/assets/js/jquery.textheight.js")` + `.js("/assets/js/hoverIntent.js")` + `.js("/assets/js/imagesloaded.pkgd.min.js")` + `.js("/assets/js/bootstrap.min.js")` + `.js("/assets/js/jquery.uniform.min.js")` + `.js("/assets/js/isotope.pkgd.min.js")` + `.js("/assets/js/slick.min.js")` + `.js("/assets/js/jquery.panel.mobile.js")` + `.js("/assets/js/jquery.main.js")` + `.js("${scripts[0]}")` + `.js("${scripts[1]}")` }
         }),
-        __WEBPACK_IMPORTED_MODULE_2__config__["d" /* analytics */].google.trackingId && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://www.google-analytics.com/analytics.js', async: true, defer: true }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { dangerouslySetInnerHTML: { __html: this.props.scriptBottom } })
       )
     );
