@@ -125,11 +125,18 @@
   transform: translateY(-50%); }
 
 .blink_me {
-  animation: blinker 0.35s linear infinite; }
+  animation: blinker 0.7s linear infinite; }
 
 @keyframes blinker {
   50% {
     opacity: 0.85; } }
+
+.blink_me2 {
+  animation: blinker2 0.3s linear infinite; }
+
+@keyframes blinker2 {
+  50% {
+    opacity: 0.6; } }
 
 .modal-backdrop {
   display: none; }

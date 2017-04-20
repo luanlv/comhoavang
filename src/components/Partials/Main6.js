@@ -47,7 +47,7 @@ class Main extends React.Component {
 
                       <div className="col-w230 w258" style={{width: 250, float: 'none', textAlign: 'center'}}>
                         <div className="box-in" style={{margin: '0 auto'}}>
-                          <Link to={"/lien-he-dat-hang?sp=" + product.slug} className="button-btn btn-b corner text-center blink_me">Đặt hàng ngay!</Link>
+                          <Link to={"/lien-he-dat-hang?sp=" + product.slug} className="button-btn btn-b corner text-center blink_me2">Đặt hàng ngay!</Link>
                         </div>
                       </div>
 
