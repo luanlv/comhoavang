@@ -2,11 +2,10 @@
     $.fn.extend({
 
         mobilepanel: function (options) {
-             console.log('mobile panel')
             // Đặt các giá trị mặc định
             var defaults = {
                 panelLeft: true,
-                speed: 400,
+                speed: 100,
                 wrapperid: "#wrapper",
                 cssmenu: ".menu-mobile",
                 easing: null

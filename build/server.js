@@ -856,7 +856,7 @@ class MenuMobile extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { id: 'menumobile', className: 'mobile-panel mobilep-left', style: { transform: 'translate3d(-120%, 0px, 0px)' } },
+      { id: 'menumobile', className: 'mobile-panel mobile-left', style: { transform: 'translate3d(-120%, 0px, 0px)' } },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: 'close-menu' },
