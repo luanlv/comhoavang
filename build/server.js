@@ -4222,7 +4222,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     { className: 'box-in' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                       'a',
-                      { href: 'tel://0981346110', className: 'button-btn phone corner blink_me', style: { fontSize: 18, fontWeight: 'bold' } },
+                      { href: 'tel:0973318868', className: 'button-btn phone corner blink_me', style: { fontSize: 18, fontWeight: 'bold' } },
                       'T\u01B0 v\u1EA5n: ',
                       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'b',

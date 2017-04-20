@@ -53,7 +53,7 @@ class Main extends React.Component {
 
                       <div className="col-w230 w298" style={{width: 250, float: 'none'}}>
                         <div className="box-in">
-                          <a href="tel://0981346110" className="button-btn phone corner blink_me" style={{fontSize: 18, fontWeight: 'bold'}}>
+                          <a href="tel:0973318868" className="button-btn phone corner blink_me" style={{fontSize: 18, fontWeight: 'bold'}}>
                             Tư vấn: <b>097 331 8868</b></a>
                         </div>
                       </div>
