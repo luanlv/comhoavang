@@ -5,6 +5,7 @@ const Post = mongoose.model('Post')
 const Setting = mongoose.model('Setting')
 const Product = mongoose.model('Product')
 const Order = mongoose.model('Order')
+const Seo = mongoose.model('Seo')
 let bodyParser = require('body-parser')
 let Mailer = require('./services/mailgun');
 let axios = require('axios')
@@ -65,6 +66,13 @@ router.post('/order/new', bodyParser.json() ,async (req, res) => {
         console.log(err)
       })
 
+    return res.send(resData)
+  })
+})
+
+router.post('/seo/new', bodyParser.json() ,(req, res) => {
+  Seo.create(req.body, (err, resData) => {
+    if(err) return res.sendStatus(400)
     return res.send(resData)
   })
 })

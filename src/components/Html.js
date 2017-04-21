@@ -32,31 +32,34 @@ class Html extends React.Component {
   };
 
   render() {
-    const { title, description, styles, scripts, state, children, v } = this.props;
+    const { title, description, styles, scripts, state, children, v, seo } = this.props;
     return (
       <html className="no-js" lang="vi">
         <head>
+            {/*<base href="http://comhoavang.com" />*/}
+            {/*<base href="http://localhost:3000" />*/}
             <meta charSet="utf-8" />
             <meta httpEquiv="x-ua-compatible" content="ie=edge" />
             <title>{title}</title>
             <meta name="description" content={description} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <meta name="referrer" content="unsafe-url" />
-            <meta name="referrer" content="origin" />
-            <meta name="referrer" content="no-referrer-when-downgrade" />
-            <meta name="referrer" content="origin-when-cross-origin" />
-            {/*<meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />*/}
             <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+            {/*Og tag*/}
+            <meta property="og:locale" content="vi_VN" />
+            <meta property="og:type" content="website" />
+            {seo && seo.og_title && <meta property="og:title" content={seo.og_title} />}
+            {seo && seo.url && <meta property="og:url" content={seo.url} />}
+            {seo && seo.og_image && <meta property="og:image" content={seo.og_image} />}
+            {/**/}
 
             <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
             <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
             <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-            {/*<link href="/assets/styles/font-awesome.min.css" rel="stylesheet" type="text/css" />*/}
-            {/*<link href="/assets/styles/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />*/}
+
             <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-            <link href="/assets/styles/style.min.css" rel="stylesheet" />
-            <link rel="stylesheet" type="text/css"  href="/css/app.css" />
+            <link href={"/assets/styles/style.min.css?v=" + v} rel="stylesheet" />
+            <link rel="stylesheet" type="text/css"  href={"/css/app.css?v=" +v }/>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" />
             <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
             <script dangerouslySetInnerHTML={{ __html: this.props.scriptTop }} />
@@ -101,6 +104,7 @@ class Html extends React.Component {
                 +  `.js("${scripts[1]}?v=${v}")`}}
           >
           </script>
+
           <script dangerouslySetInnerHTML={{ __html: this.props.scriptBottom }} />
 
         </body>

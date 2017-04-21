@@ -24,11 +24,12 @@ export default {
     require('./news').default,
     require('./monngon').default,
     require('./product').default,
+    require('./seo').default,
   ],
   async action({store, next}) {
     let user = store.getState().user
     if(!(user && user.isAdmin)){
-      return { redirect: '/login' }
+      window.location.href = '/login'
     }
 
     const route = await next();

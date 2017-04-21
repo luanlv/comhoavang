@@ -10,7 +10,8 @@ var AdminRequire =  require.ensure([], require => {
       EditFoods: require('./monngon/EditFoods').default,
       ListFoods: require('./monngon/ListFoods').default,
       EditProduct: require('./product/EditProduct').default,
-      ListProduct: require('./product/ListProduct').default
+      ListProduct: require('./product/ListProduct').default,
+      Seo: require('./seo/View.js').default
     }
   }
 )

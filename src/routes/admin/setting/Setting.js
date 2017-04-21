@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Button, DatePicker, Switch, Row, Col, message, Collapse} from 'antd';
+import { Button, DatePicker, Switch, Row, Col, message, Collapse, Input} from 'antd';
 // import CodeMirror from '../Components/CodeMirror'
 import fetch from '../../../core/fetch';
 import axios from 'axios'
@@ -110,7 +110,7 @@ class Setting extends React.Component {
           <Row className="padding-5">
             <b>Facebook Admin ID: </b>
             <br/>
-            <input defaultValue={this.state.setting.adminId} onChange={(e) => {
+            <Input size="large"  defaultValue={this.state.setting.adminId} onChange={(e) => {
               let value = e.target.value
               this.setState(prev => {
                 return {
@@ -127,7 +127,7 @@ class Setting extends React.Component {
           <Row className="padding-5">
             <b>Facebook Admin ID: </b>
             <br/>
-            <input defaultValue={this.state.setting.emailAdmin} onChange={(e) => {
+            <Input size="large"  defaultValue={this.state.setting.emailAdmin} onChange={(e) => {
               let value = e.target.value
               this.setState(prev => {
                 return {

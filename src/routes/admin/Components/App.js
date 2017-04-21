@@ -56,6 +56,14 @@ class App extends React.Component {
                   </span>
                 </Link>
               </Menu.Item>
+              <Menu.Item key="Seo">
+                <Link to="/admin/seo/">
+                  <span>
+                    <Icon type="layout" />
+                    <span className="nav-text">SEO</span>
+                  </span>
+                </Link>
+              </Menu.Item>
 
               <SubMenu
                 key="sub0"

@@ -20,6 +20,7 @@ import productQueries from './models/product/queries'
 import userQueries from './models/user/queries'
 import settingQueries from './models/setting/queries'
 import orderQueries from './models/order/queries'
+import seoQueries from './models/seo/queries'
 
 // mutation
 import settingMutation from './models/setting/mutations'
@@ -32,6 +33,7 @@ let { setting } = settingQueries
 let { getOrders } = orderQueries
 let { getNews, getOneNews, getFoodNews, getOnePost, getNewsInCategory} = postQueries
 let { getOneProduct, getProducts } = productQueries
+let { seo, allSeo } = seoQueries
 
 const schema = new Schema({
   query: new ObjectType({
@@ -48,7 +50,9 @@ const schema = new Schema({
       getNewsInCategory,
       getOneProduct,
       getProducts,
-      getOrders
+      getOrders,
+      seo,
+      allSeo
     },
   }),
   mutation: new ObjectType({

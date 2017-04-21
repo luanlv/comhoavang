@@ -86,6 +86,7 @@ class EditNewsComponent extends React.Component {
       modalSelectImage: false,
     });
   }
+
   handleSelectImage(img){
     if(this.state.selectImageType === 'cover') {
       this.setState(prevState => {
@@ -343,6 +344,7 @@ class EditNewsComponent extends React.Component {
             </TabPane>
           </Tabs>
         </Row>
+
         <Modal
           style={{top: 30}}
           width="90%"

@@ -8,9 +8,9 @@ import { showLoading, hideLoading } from 'react-redux-loading-bar'
 
 export default {
   path: '/bai-viet/:slug',
-  async action({ store, params }) {
-    // process.env.BROWSER
+  async action({ store, params, path}) {
     var post;
+    let seo = {}
     if(!process.env.BROWSER || !store.getState().setting.ssr || (process.env.BROWSER && needFetch())){
       store.dispatch(showLoading())
       const resp = await fetch('/graphql', {
@@ -20,7 +20,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: '{getOnePost(slug: "' + params.slug + '"){title,slug,body,category, description}}',
+          query: '{seo(url: "'+ path +'"){url,title,description,og_title,og_image,og_description},getOnePost(slug: "' + params.slug + '"){title,slug,body,category, description}}',
         }),
         credentials: 'include',
       });
@@ -29,12 +29,14 @@ export default {
       if (!data || !data.getOnePost) {
         return { redirect: '/' }
       }
+      seo = data.seo || {}
       store.dispatch(dataAction.setData(data))
       store.dispatch(hideLoading())
     }
     return {
-      title: store.getState().data.post.value.title,
-      description: store.getState().data.post.value.description,
+      title: seo.title || store.getState().data.post.value.title,
+      description: seo.description || store.getState().data.post.value.description,
+      seo: seo,
       component: <Layout><Home post={store.getState().data.post.value} /></Layout>,
     };
   },

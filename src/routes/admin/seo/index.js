@@ -8,22 +8,25 @@
  */
 
 import React from 'react';
-import Layout from '../../components/Layout';
-// import Contact from './Contact';
+import fetch from '../../../core/fetch';
 
-const title = 'Contact Us';
+const title = 'Dashboard';
 
 export default {
 
-  path: '/contact',
+  path: '/seo',
 
-  async action({store}) {
-    const Contact = await require.ensure([], require => require('./Contact').default, 'contact');
+  async action({query}) {
+    const {App, Seo } = await require('../AdminRequire')
     return {
       title,
-      chunk: 'contact',
-      component: <Layout><Contact title={title} /></Layout>,
+      chunk: 'admin',
+      disableSSR: true,
+      component: <App
+        name={title}
+      >
+        <Seo title={title} />
+      </App>,
     };
   },
-
 };

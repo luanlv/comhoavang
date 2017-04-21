@@ -8,7 +8,8 @@ import { showLoading, hideLoading } from 'react-redux-loading-bar'
 
 export default {
   path: '/san-pham',
-  async action({ store }) {
+  async action({ store, path}) {
+    let seo = {}
     if(!process.env.BROWSER || !store.getState().setting.ssr || (process.env.BROWSER && needFetch())){
       store.dispatch(showLoading())
       const resp = await fetch('/graphql', {
@@ -18,17 +19,20 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: '{ getProducts{name, price, slug, coverUrl, description, saleOff, body, created_at} }',
+          query: '{ seo(url: "'+ path +'"){url,title,description,og_title,og_image,og_description},getProducts{name, price, slug, coverUrl, description, saleOff, body, created_at} }',
         }),
         credentials: 'include',
       });
       const { data } = await resp.json();
+      seo = data.seo || {}
       store.dispatch(setData(data))
       store.dispatch(hideLoading())
     }
 
     return {
-      title: 'Trang danh sách sản phẩm',
+      title: seo.title || 'Trang danh sách sản phẩm',
+      description: seo.description || '',
+      seo: seo,
       component: <Layout><Home products={store.getState().data.products.value} /></Layout>,
     };
   },
