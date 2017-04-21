@@ -1327,3 +1327,12 @@
 2017-04-22T00:53:39.895+0700 I -        [conn559] end connection 127.0.0.1:55144 (3 connections now open)
 2017-04-22T00:53:39.895+0700 I -        [conn560] end connection 127.0.0.1:55146 (3 connections now open)
 2017-04-22T00:53:39.895+0700 I -        [conn558] end connection 127.0.0.1:55142 (1 connection now open)
+2017-04-22T01:12:36.212+0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:55466 #561 (1 connection now open)
+2017-04-22T01:12:36.280+0700 I NETWORK  [conn561] received client metadata from 127.0.0.1:55466 conn561: { driver: { name: "nodejs", version: "2.2.25" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "4.10.4-1-ARCH" }, platform: "Node.js v7.8.0, LE, mongodb-core: 2.1.9" }
+2017-04-22T01:12:36.315+0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:55468 #562 (2 connections now open)
+2017-04-22T01:12:36.328+0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:55470 #563 (3 connections now open)
+2017-04-22T01:12:37.358+0700 I NETWORK  [thread1] connection accepted from 127.0.0.1:55482 #564 (4 connections now open)
+2017-04-22T01:13:46.249+0700 I -        [conn564] end connection 127.0.0.1:55482 (4 connections now open)
+2017-04-22T01:13:46.250+0700 I -        [conn562] end connection 127.0.0.1:55468 (3 connections now open)
+2017-04-22T01:13:46.250+0700 I -        [conn563] end connection 127.0.0.1:55470 (3 connections now open)
+2017-04-22T01:13:46.250+0700 I -        [conn561] end connection 127.0.0.1:55466 (1 connection now open)

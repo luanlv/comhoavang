@@ -11618,6 +11618,13 @@ router.post('/seo/new', bodyParser.json(), (req, res) => {
   });
 });
 
+router.post('/seo/update', bodyParser.json(), (req, res) => {
+  Seo.findOneAndUpdate({ url: req.body.url }, { $set: req.body }, { new: true }, function (err, resData) {
+    if (err) return res.statusCode(400).send(err);
+    res.send(resData);
+  });
+});
+
 module.exports = router;
 
 /***/ }),
