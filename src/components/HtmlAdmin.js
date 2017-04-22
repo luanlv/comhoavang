@@ -69,7 +69,7 @@ class Html extends React.Component {
 
 
 
-          <link rel="stylesheet" type="text/css"  href="/css/admin.css" />
+          <link rel="stylesheet" type="text/css"  href={"/css/admin.css?v=" + v} />
         </head>
 
         <body>

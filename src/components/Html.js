@@ -82,9 +82,6 @@ class Html extends React.Component {
           )}
 
           {/*{scripts.map(script => <script key={script} src={script} />)}*/}
-
-
-          <br/>
           <script
             dangerouslySetInnerHTML={{ __html:
                 `head.load("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")`
