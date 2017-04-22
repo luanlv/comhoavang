@@ -54,7 +54,7 @@ router.use('/small/', getSmallImage , express.static(path.join(__dirname , '../i
 router.use('/', express.static(path.join(__dirname , '../images')));
 
 function getSmallImage(req, res, next){
-  var imageName = decodeURI(req.originalUrl.slice(13))
+  var imageName = decodeURI(req.path.slice(1))
   var originalPathImage = path.join(__dirname , '../images/', imageName)
   if(!fs.existsSync(originalPathImage)){
     return next()

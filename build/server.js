@@ -6918,6 +6918,12 @@ var Waypoint = __webpack_require__(190);
 
 
 
+if (false) {
+  message.config({
+    top: 20,
+    duration: 2.5
+  });
+}
 
 const Dragger = __WEBPACK_IMPORTED_MODULE_2_antd__["Upload"].Dragger;
 
@@ -7135,7 +7141,7 @@ class Library extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                 { bordered: false, className: 'imgWr',
                   onClick: () => this.showModal(el)
                 },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: "/image/small/" + el.name })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: "/image/small/" + el.name + "?t=" + el.created_at })
               )
             );
           }),
@@ -7289,13 +7295,15 @@ class Library extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                           'b',
                           { style: { color: 'red' } },
-                          res.data.oldSize
+                          Math.floor(res.data.oldSize).toLocaleString(),
+                          ' kB'
                         ),
                         ' c\xF2n ',
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                           'b',
                           { style: { color: 'blue' } },
-                          res.data.newSize
+                          Math.floor(res.data.newSize).toLocaleString(),
+                          ' kB'
                         )
                       ));
                       this.setState(prev => {
@@ -12452,7 +12460,7 @@ router.use('/small/', getSmallImage, express.static(path.join(__dirname, '../ima
 router.use('/', express.static(path.join(__dirname, '../images')));
 
 function getSmallImage(req, res, next) {
-  var imageName = decodeURI(req.originalUrl.slice(13));
+  var imageName = decodeURI(req.path.slice(1));
   var originalPathImage = path.join(__dirname, '../images/', imageName);
   if (!fs.existsSync(originalPathImage)) {
     return next();
@@ -12662,7 +12670,8 @@ router.post('/imageEditor', function (req, res) {
       Image.update({ slug: req.body.slug }, {
         $set: {
           dimensions: dimensions,
-          type: "image/png"
+          type: "image/png",
+          created_at: Date.now()
         }
       }).exec((err, resData) => {
         if (err) return res.status(400).send('error');

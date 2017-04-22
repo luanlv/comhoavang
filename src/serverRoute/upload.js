@@ -133,7 +133,8 @@ router.post('/imageEditor', function(req, res) {
       Image.update({slug: req.body.slug}, {
         $set: {
           dimensions: dimensions,
-          type: "image/png"
+          type: "image/png",
+          created_at: Date.now()
         }
       }).exec((err, resData) => {
         if (err) return res.status(400).send('error')

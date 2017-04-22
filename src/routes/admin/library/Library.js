@@ -15,6 +15,12 @@ var Waypoint = require('react-waypoint');
 import CopyToClipboard from 'react-copy-to-clipboard';
 import ImageEditor from '../Components/ImageEditor'
 import axios from 'axios'
+if(process.env.BROWSER){
+  message.config({
+    top: 20,
+    duration: 2.5,
+  });
+}
 
 const Dragger = Upload.Dragger;
 
@@ -204,7 +210,7 @@ class Library extends React.Component {
                     <Card bordered={false} className="imgWr"
                       onClick={() => this.showModal(el)}
                     >
-                      <img src={"/image/small/" + el.name} />
+                      <img src={"/image/small/" + el.name + "?t=" + el.created_at} />
                     </Card>
                   </Col>
                 )
@@ -291,7 +297,7 @@ class Library extends React.Component {
                               onConfirm={() => {
                                 axios.post('/image/min/' + this.state.selectedImage.name, {})
                                   .then(res => {
-                                    message.success(<div>Đã giảm từ <b style={{color: 'red'}}>{res.data.oldSize}</b> còn <b style={{color: 'blue'}}>{res.data.newSize}</b></div>)
+                                    message.success(<div>Đã giảm từ <b style={{color: 'red'}}>{Math.floor(res.data.oldSize).toLocaleString()} kB</b> còn <b style={{color: 'blue'}}>{Math.floor(res.data.newSize).toLocaleString()} kB</b></div>)
                                     this.setState(prev => {
                                       return {
                                         ...prev,
