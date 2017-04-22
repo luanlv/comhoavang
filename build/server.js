@@ -9190,6 +9190,7 @@ class View extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Table"], {
           columns: columns, rowKey: record => record.created_at, dataSource: this.state.listSEO,
           onRowClick: (record, index) => {
+            console.log(record);
             this.setState(prev => {
               return _extends({}, prev, {
                 new: false,
@@ -9226,7 +9227,7 @@ class View extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Input"], {
             placeholder: 'URL',
-            defaultValue: this.state.selectSEO.url || '',
+            value: this.state.selectSEO.url || '',
             onChange: e => {
               let value = e.target.value;
               this.setState(prev => {
@@ -9254,7 +9255,7 @@ class View extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Input"], {
             placeholder: 'T\u1EF1a \u0111\u1EC1',
-            defaultValue: this.state.selectSEO.title || '',
+            value: this.state.selectSEO.title || '',
             onChange: e => {
               let value = e.target.value;
               this.setState(prev => {
@@ -9291,7 +9292,7 @@ class View extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Input"], { type: 'textarea',
             autosize: { minRows: 2, maxRows: 10 },
-            defaultValue: this.state.selectSEO.description,
+            value: this.state.selectSEO.description,
             onChange: e => {
               let value = e.target.value;
               this.setState(prev => {
@@ -9319,7 +9320,7 @@ class View extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Input"], {
             placeholder: 'T\u1EF1a \u0111\u1EC1 (OG)',
-            defaultValue: this.state.selectSEO.og_title || '',
+            value: this.state.selectSEO.og_title || '',
             onChange: e => {
               let value = e.target.value;
               this.setState(prev => {
@@ -9408,7 +9409,7 @@ class View extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_antd__["Input"], { type: 'textarea',
             autosize: { minRows: 2, maxRows: 10 },
-            defaultValue: this.state.selectSEO.og_description,
+            value: this.state.selectSEO.og_description,
             onChange: e => {
               let value = e.target.value;
               this.setState(prev => {

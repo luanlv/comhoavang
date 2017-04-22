@@ -191,6 +191,7 @@ class View extends React.Component {
             <Table
               columns={columns} rowKey={record => record.created_at} dataSource={this.state.listSEO}
               onRowClick = {(record, index) => {
+                console.log(record)
                 this.setState(prev => {
                   return {
                     ...prev,
@@ -217,7 +218,7 @@ class View extends React.Component {
               <br/>
               <Input
                 placeholder="URL"
-                defaultValue={this.state.selectSEO.url || ''}
+                value={this.state.selectSEO.url || ''}
                 onChange={(e) => {
                   let value = e.target.value
                   this.setState(prev => {
@@ -238,7 +239,7 @@ class View extends React.Component {
               <br/>
               <Input
                 placeholder="Tựa đề"
-                defaultValue={this.state.selectSEO.title || ''}
+                value={this.state.selectSEO.title || ''}
                 onChange={(e) => {
                   let value = e.target.value
                   this.setState(prev => {
@@ -258,7 +259,7 @@ class View extends React.Component {
               <label><b>Mô tả ( {(this.state.selectSEO.description.length >= 140 && this.state.selectSEO.description.length <= 150) ? <span style={{color: 'blue'}}>{this.state.selectSEO.description.length}</span> : <span style={{color: 'red'}}>{this.state.selectSEO.description.length}</span>} /150) :</b></label>
               <Input type="textarea"
                      autosize={{ minRows: 2, maxRows: 10 }}
-                     defaultValue={this.state.selectSEO.description}
+                     value={this.state.selectSEO.description}
                      onChange={(e) => {
                        let value = e.target.value
                        this.setState(prev => {
@@ -279,7 +280,7 @@ class View extends React.Component {
               <br/>
               <Input
                 placeholder="Tựa đề (OG)"
-                defaultValue={this.state.selectSEO.og_title || ''}
+                value={this.state.selectSEO.og_title || ''}
                 onChange={(e) => {
                   let value = e.target.value
                   this.setState(prev => {
@@ -335,7 +336,7 @@ class View extends React.Component {
               <label><b>Mô tả ( {(this.state.selectSEO.og_description.length >= 140 && this.state.selectSEO.og_description.length <= 150) ? <span style={{color: 'blue'}}>{this.state.selectSEO.og_description.length}</span> : <span style={{color: 'red'}}>{this.state.selectSEO.og_description.length}</span>} /150) :</b></label>
               <Input type="textarea"
                      autosize={{ minRows: 2, maxRows: 10 }}
-                     defaultValue={this.state.selectSEO.og_description}
+                     value={this.state.selectSEO.og_description}
                      onChange={(e) => {
                        let value = e.target.value
                        this.setState(prev => {
