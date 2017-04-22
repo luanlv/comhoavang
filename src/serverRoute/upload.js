@@ -3,6 +3,7 @@ var router = express.Router();
 const fileUpload = require('express-fileupload');
 const path = require('path');
 var sizeOf = require('image-size');
+var fs = require('fs');
 var Gm = require("gm")
 //mongodb
 
@@ -15,6 +16,7 @@ router.post('/image', function(req, res) {
   if (!req.files)
     return res.status(400).send('No files were uploaded.');
   let image = req.files.image;
+
   let id = randomString(10)
   let fileName = id + '-' + image.name
   image.mv(path.join(__dirname , '../images', fileName), function(err) {
@@ -118,6 +120,57 @@ router.post('/imageFroala', function(req, res) {
   });
 });
 
+router.post('/imageEditor', function(req, res) {
+  var img = req.body.img
+  var data = img.replace(/^data:image\/\w+;base64,/, "");
+  var buf = new Buffer(data, 'base64');
+  let dimensions = sizeOf(buf);
+  if(req.body.override) {
+    var pathImage = path.join(__dirname, '../images', req.body.name)
+    var pathImageSmall = path.join(__dirname, '../images-small', req.body.name)
+    fs.writeFile(pathImage, buf, (err) => {
+      if (err) return res.status(400).send('error')
+      Image.update({slug: req.body.slug}, {
+        $set: {
+          dimensions: dimensions,
+          type: "image/png"
+        }
+      }).exec((err, resData) => {
+        if (err) return res.status(400).send('error')
+        fs.unlinkSync(pathImageSmall)
+        res.send(resData)
+      })
+    });
+  } else {
+    let id = randomString(10)
+    let fileName = id + '-' + req.body.name
+    var pathImage = path.join(__dirname , '../images', fileName)
+    fs.writeFile(pathImage, buf, (err) => {
+      if (err) return res.status(400).send('error')
+      let data = {
+        slug: id,
+        name: fileName,
+        type: "image/png",
+        dimensions: dimensions,
+        userUpload: 'admin'
+      }
+
+      Image.create(data, (err, image) => {
+        if(err) return res.status(400).send(
+          {
+            uploaded: 0,
+            error: {
+              message: 'error'
+            }
+          }
+        );
+        return res.send('ok')
+      })
+    });
+  }
+
+});
+
 module.exports = router;
 
 function randomString(len, charSet) {
@@ -129,3 +182,4 @@ function randomString(len, charSet) {
   }
   return randomString;
 }
+

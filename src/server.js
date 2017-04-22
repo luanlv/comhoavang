@@ -58,13 +58,19 @@ global.navigator.userAgent = global.navigator.userAgent || 'all';
 //
 // Register Node.js middleware
 // -----------------------------------------------------------------------------
+
+var jsonParser       = bodyParser.json({limit:1024*1024*20, type:'application/json'});
+var urlencodedParser = bodyParser.urlencoded({ extended:true,limit:1024*1024*20,type:'application/x-www-form-urlencoding' })
+
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/assets', (req, res) => {
   res.sendStatus(400)
 })
-app.use(cookieParser());
+
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(jsonParser);
+app.use(urlencodedParser);
 app.use(session({
   cookie: { maxAge: (24*3600*1000*30)},
   resave: true,
@@ -106,6 +112,11 @@ app.use('/graphql',  expressGraphQL(req => ({
 app.get('*', routeCache.cacheSeconds(20), async (req, res, next) => {
   let routeUrl = req.originalUrl
   let isAdmin = (routeUrl.slice(0,6) === '/admin')
+  if(isAdmin){
+    if(!req.user || !req.user.isAdmin){
+      return res.redirect('/login')
+    }
+  }
   try {
     let setting = await Setting.findOne({})
     const store = configureStore({

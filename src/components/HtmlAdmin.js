@@ -47,7 +47,8 @@ class Html extends React.Component {
           <meta name="referrer" content="no-referrer-when-downgrade" />
           <meta name="referrer" content="origin-when-cross-origin" />
           {/*<meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />*/}
-          <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+          <link rel="apple-touch-icon" href="/ico.png" />
+          <link rel="icon" type="image/png" href="ico.png" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.js"></script>

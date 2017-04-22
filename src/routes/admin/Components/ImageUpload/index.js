@@ -5,6 +5,7 @@ import fetch from '../../../../core/fetch';
 const Dragger = Upload.Dragger;
 
 class ImageUpload extends React.Component {
+
   constructor(props){
     super(props)
     this.state = {

@@ -28,10 +28,6 @@ export default {
   ],
   async action({store, next}) {
     let user = store.getState().user
-    if(!(user && user.isAdmin)){
-      window.location.href = '/login'
-    }
-
     const route = await next();
     // Provide default values for title, description etc.
     route.title = `${route.title || 'Amdmin Page'}`;

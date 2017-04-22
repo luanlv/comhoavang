@@ -13,6 +13,8 @@ import {Icon, Input, Button, DatePicker, Row, Col, Card, Upload, message, Modal}
 import fetch from '../../../core/fetch';
 var Waypoint = require('react-waypoint');
 import CopyToClipboard from 'react-copy-to-clipboard';
+import ImageEditor from '../Components/ImageEditor'
+import axios from 'axios'
 
 const Dragger = Upload.Dragger;
 
@@ -36,10 +38,13 @@ class Library extends React.Component {
       copied: false,
       uploadArea: false,
       visible: false,
+      editImage: false,
       filter: '',
       time: (new Date()).toISOString(),
       imgs: [],
-      selectedImage: {}
+      selectedImage: {},
+      vImg : '?v=' + new Date().getTime(),
+      imageRef: null
     }
     this.fetchImage(40, this.state.time)
   }
@@ -87,12 +92,21 @@ class Library extends React.Component {
     });
   }
   handleCancel (e) {
-    console.log(e);
     this.setState({
       visible: false,
+      imageRef : null
     });
   }
-
+  handleOkEditImage (e) {
+    this.setState({
+      editImage: false,
+    });
+  }
+  handleCancelEditImage (e) {
+    this.setState({
+      editImage: false,
+    });
+  }
   beforeUpload (file) {
     const isImage = file.type.match('image*')
     if (!isImage) {
@@ -145,6 +159,7 @@ class Library extends React.Component {
                   })
                 }}
               >Thêm ảnh</Button>
+
             </Col>
             <Col sm={8}>
               <Input size="large" placeholder="Search by name"
@@ -219,7 +234,7 @@ class Library extends React.Component {
               >
                 {this.state.selectedImage.name && <Card bordered={false} className="imgWr"
                 >
-                  <img src={"/image/" + this.state.selectedImage.name} />
+                  <img src={"/image/" + this.state.selectedImage.name + this.state.vImg} />
                 </Card>}
               </Col>
               <Col
@@ -265,11 +280,79 @@ class Library extends React.Component {
                                    }, 1000)
                                  }
                                  }>
-                  <button>Copy link ảnh</button>
+                  <Button type="primary">Copy link ảnh</Button>
                 </CopyToClipboard>
+                <br/>
+                <br/>
+                <Button
+                  type="primary"
+                  onClick={() => {
+                    axios.post('/image/min/' + this.state.selectedImage.name, {})
+                      .then(res => {
+                        message.success(<div>Đã giảm từ <b style={{color: 'red'}}>{res.data.oldSize}</b> còn <b style={{color: 'blue'}}>{res.data.newSize}</b></div>)
+                        this.setState(prev => {
+                          return {
+                            ...prev,
+                            vImg: '?v=' + new Date().getTime()
+                          }
+                        })
+                      })
+                      .catch(err => {
+                        message.error('Có lỗi')
+                      })
+                  }}
+                >Giảm chất lượng ảnh</Button>
+                <br/>
+                <br/>
+                <Button
+                  type="primary"
+                  onClick={() => {
+                    this.setState(prev => {
+                      return {
+                        ...prev,
+                        visible: false,
+                        editImage: true,
+                        imageRef: "/image/" + this.state.selectedImage.name + this.state.vImg
+                      }
+                    })
+                  }}
+                >Chỉnh sửa ảnh này</Button>
+
               </Col>
             </Row>
           </Modal>
+
+
+          <Modal title="Chỉnh sửa ảnh" visible={this.state.editImage}
+                 onOk={(e) => this.handleOkEditImage(e)}
+                 onCancel={(e) => this.handleCancelEditImage(e)}
+                 style={{ top: 0 }}
+                 width="100%"
+                 maskClosable={true}
+                 className="img"
+          >
+            {this.state.imageRef && <ImageEditor
+              imageRef={this.state.imageRef}
+              width={this.state.selectedImage.dimensions.width}
+              height={this.state.selectedImage.dimensions.height}
+              slug={this.state.selectedImage.slug}
+              name={this.state.selectedImage.name}
+              handleOk={() => {
+                  console.log('close modal !!')
+                  let currentTime = (new Date()).toISOString()
+                  this.setState(prev => {
+                    return {
+                      ...prev,
+                      time: currentTime,
+                      editImage: false
+                    }
+                  })
+                  this.fetchImage(40, currentTime)
+                }
+              }
+            />}
+          </Modal>
+
         </div>
     );
   }

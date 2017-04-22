@@ -10,6 +10,7 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Login.css';
+import axios from 'axios';
 
 class Login extends React.Component {
   static propTypes = {
@@ -39,36 +40,57 @@ class Login extends React.Component {
           </div>
 
           <strong className={s.lineThrough}>OR</strong>
-          <form method="post">
-            <div className={s.formGroup}>
-              <label className={s.label} htmlFor="usernameOrEmail">
-                Username or email address:
-              </label>
-              <input
-                className={s.input}
-                id="usernameOrEmail"
-                type="text"
-                name="usernameOrEmail"
-                autoFocus
-              />
+
+          <form className='ui large form' action='/auth/login' method='POST'
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  var $username = $(e.target).find('[name=username]').val()
+                  var $password = $(e.target).find('[name=password]').val()
+                  let data = {
+                    username: $username,
+                    password: $password
+                  }
+                  axios.post(
+                    '/auth/login',
+                    data
+                  ).then((res) => {
+                    if (res.data) {
+                      window.location.reload()
+                    } else {
+                      $('#loginError').text('Sai tên đăng nhập hoặc mật khẩu')
+                    }
+                  }).catch((err) => {
+                    console.log(err)
+                  })
+                }}
+          >
+            <div className='ui stacked segment'>
+              <div className='field'>
+                <div className='ui left icon input'>
+                  <i className='user icon' />
+                  <input type='text' placeholder='E-mail' id='username' name='username' />
+                </div>
+              </div>
+              <div className='field'>
+                <div className='ui left icon input'>
+                  <i className='lock icon' />
+                  <input type='password' placeholder='Mật khẩu' id='password' name='password' />
+                </div>
+              </div>
+              <button type='submit' className='ui fluid large teal submit button'
+                      onClick={() => {
+                        console.log('on click !')
+                      }}
+              >Đăng nhập</button>
             </div>
-            <div className={s.formGroup}>
-              <label className={s.label} htmlFor="password">
-                Password:
-              </label>
-              <input
-                className={s.input}
-                id="password"
-                type="password"
-                name="password"
-              />
-            </div>
-            <div className={s.formGroup}>
-              <button className={s.button} type="submit">
-                Log in
-              </button>
-            </div>
+
+            <div className='ui error message' />
           </form>
+
+
+
+
+
         </div>
       </div>
     );

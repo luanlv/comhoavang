@@ -22,7 +22,7 @@ export default {
     needFetch()
     let user = store.getState().user
     if(user && user.username){
-      window.location.href = '/'
+      return { redirect: '/' }
     }
     return {
       title,
