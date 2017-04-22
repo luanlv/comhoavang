@@ -9,7 +9,7 @@
 
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import {Icon, Input, Button, DatePicker, Row, Col, Card, Upload, message, Modal} from 'antd';
+import {Icon, Input, Button, DatePicker, Row, Col, Card, Upload, message, Modal, Popconfirm} from 'antd';
 import fetch from '../../../core/fetch';
 var Waypoint = require('react-waypoint');
 import CopyToClipboard from 'react-copy-to-clipboard';
@@ -29,6 +29,8 @@ const props = {
   showUploadList: false,
   action: '/upload/image',
 };
+
+const text = 'Đồng ý?';
 
 class Library extends React.Component {
   constructor (props) {
@@ -271,53 +273,86 @@ class Library extends React.Component {
                 <b>Link :</b> {this.state.copied ? <span style={{color: 'red'}}>Copied !"</span> : <span style={{color: 'blue'}}>
                   {"/image/" + this.state.selectedImage.name}
                 </span>}
-                <br/>
-                <CopyToClipboard text={"/image/" + this.state.selectedImage.name}
-                                 onCopy={() => {
-                                   this.setState({copied: true})
-                                   setTimeout(() => {
-                                     this.setState({copied: false})
-                                   }, 1000)
-                                 }
-                                 }>
-                  <Button type="primary">Copy link ảnh</Button>
-                </CopyToClipboard>
-                <br/>
-                <br/>
-                <Button
-                  type="primary"
-                  onClick={() => {
-                    axios.post('/image/min/' + this.state.selectedImage.name, {})
-                      .then(res => {
-                        message.success(<div>Đã giảm từ <b style={{color: 'red'}}>{res.data.oldSize}</b> còn <b style={{color: 'blue'}}>{res.data.newSize}</b></div>)
-                        this.setState(prev => {
-                          return {
-                            ...prev,
-                            vImg: '?v=' + new Date().getTime()
-                          }
-                        })
-                      })
-                      .catch(err => {
-                        message.error('Có lỗi')
-                      })
-                  }}
-                >Giảm chất lượng ảnh</Button>
-                <br/>
-                <br/>
-                <Button
-                  type="primary"
-                  onClick={() => {
-                    this.setState(prev => {
-                      return {
-                        ...prev,
-                        visible: false,
-                        editImage: true,
-                        imageRef: "/image/" + this.state.selectedImage.name + this.state.vImg
-                      }
-                    })
-                  }}
-                >Chỉnh sửa ảnh này</Button>
 
+                <Row className="padding-5">
+                  <CopyToClipboard text={"/image/" + this.state.selectedImage.name}
+                                   onCopy={() => {
+                                     this.setState({copied: true})
+                                     setTimeout(() => {
+                                       this.setState({copied: false})
+                                     }, 1000)
+                                   }
+                                   }>
+                    <Button type="primary">Copy link ảnh</Button>
+                  </CopyToClipboard>
+                </Row>
+                <Row className="padding-5">
+                  <Popconfirm placement="right" title={text}
+                              onConfirm={() => {
+                                axios.post('/image/min/' + this.state.selectedImage.name, {})
+                                  .then(res => {
+                                    message.success(<div>Đã giảm từ <b style={{color: 'red'}}>{res.data.oldSize}</b> còn <b style={{color: 'blue'}}>{res.data.newSize}</b></div>)
+                                    this.setState(prev => {
+                                      return {
+                                        ...prev,
+                                        vImg: '?v=' + new Date().getTime()
+                                      }
+                                    })
+                                  })
+                                  .catch(err => {
+                                    message.error('Có lỗi')
+                                  })
+                              }}
+                              okText="Đồng ý" cancelText="Hủy">
+                    <Button
+                      type="primary"
+                    >Giảm chất lượng ảnh</Button>
+                  </Popconfirm>
+                </Row>
+                <Row className="padding-5">
+                  <Button
+                    type="primary"
+                    onClick={() => {
+                      this.setState(prev => {
+                        return {
+                          ...prev,
+                          visible: false,
+                          editImage: true,
+                          imageRef: "/image/" + this.state.selectedImage.name + this.state.vImg
+                        }
+                      })
+                    }}
+                  >Chỉnh sửa ảnh này</Button>
+                </Row>
+                <Row className="padding-5">
+                  <Popconfirm placement="right" title={text}
+                              onConfirm={() => {
+                                console.log(' confirm')
+                                axios.post('/image/delete', {
+                                  slug: this.state.selectedImage.slug,
+                                  name: this.state.selectedImage.name
+                                })
+                                  .then(res => {
+                                    message.success('Xóa thành công')
+                                    let currentTime = (new Date()).toISOString()
+                                    this.setState(prev => {
+                                      return {
+                                        ...prev,
+                                        time: currentTime,
+                                        editImage: false,
+                                        visible: false
+                                      }
+                                    })
+                                    this.fetchImage(40, currentTime)
+                                  })
+                                  .catch(err => {
+                                    message.error('Có lỗi')
+                                  })
+                              }}
+                              okText="Đồng ý xóa" cancelText="Hủy">
+                    <Button type="danger">Xóa ảnh</Button>
+                  </Popconfirm>
+                </Row>
               </Col>
             </Row>
           </Modal>
@@ -344,7 +379,8 @@ class Library extends React.Component {
                     return {
                       ...prev,
                       time: currentTime,
-                      editImage: false
+                      editImage: false,
+                      visible: false
                     }
                   })
                   this.fetchImage(40, currentTime)

@@ -220,13 +220,13 @@ module.exports = require("antd");
 /* 6 */
 /***/ (function(module, exports) {
 
-module.exports = require("graphql-iso-date");
+module.exports = require("mongoose");
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports) {
 
-module.exports = require("mongoose");
+module.exports = require("graphql-iso-date");
 
 /***/ }),
 /* 8 */
@@ -2217,7 +2217,7 @@ function sync(...args) {
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-let mongoose = __webpack_require__(7),
+let mongoose = __webpack_require__(6),
     Schema = mongoose.Schema;
 
 var schema = new mongoose.Schema({
@@ -2330,7 +2330,7 @@ module.exports.newPost = (root, { category, slug, title, coverUrl, description, 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_graphql_type_json__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_graphql_type_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_graphql_type_json__);
@@ -2385,7 +2385,7 @@ module.exports.newPost = (root, { category, slug, title, coverUrl, description, 
 /* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
-let mongoose = __webpack_require__(7);
+let mongoose = __webpack_require__(6);
 
 var schema = new mongoose.Schema({
   id: { type: String },
@@ -2428,7 +2428,7 @@ module.exports.update = (root, { ssr }) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 
 
@@ -2594,7 +2594,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__actions_runtime__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__actions_setting__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__config__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_mongoose__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_mongoose__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24_mongoose___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_24_mongoose__);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -4703,7 +4703,7 @@ const UserProfile = __WEBPACK_IMPORTED_MODULE_1__sequelize__["a" /* default */].
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mongoose = __webpack_require__(7);
+var mongoose = __webpack_require__(6);
 let autoIncrement = __webpack_require__(182);
 autoIncrement.initialize(mongoose.connection);
 
@@ -4716,7 +4716,7 @@ module.exports = autoIncrement;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schema__ = __webpack_require__(74);
@@ -4751,7 +4751,7 @@ module.exports = autoIncrement;
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
-let mongoose = __webpack_require__(7);
+let mongoose = __webpack_require__(6);
 
 var schema = new mongoose.Schema({
   slug: { type: String, required: true, unique: true, index: true },
@@ -4789,7 +4789,7 @@ module.exports.getListImageByTime = (root, { num, time, filter }) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 
 
@@ -4840,7 +4840,7 @@ module.exports.getListImageByTime = (root, { num, time, filter }) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schema__ = __webpack_require__(77);
@@ -4863,7 +4863,7 @@ module.exports.getListImageByTime = (root, { num, time, filter }) => {
 /* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
-let mongoose = __webpack_require__(7),
+let mongoose = __webpack_require__(6),
     Schema = mongoose.Schema;
 
 var schema = new mongoose.Schema({
@@ -4898,7 +4898,7 @@ module.exports.getOrders = (root, {}) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_graphql_type_json__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_graphql_type_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_graphql_type_json__);
@@ -5004,7 +5004,7 @@ module.exports.getOrders = (root, {}) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schema__ = __webpack_require__(36);
@@ -5116,7 +5116,7 @@ module.exports.getOrders = (root, {}) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schema__ = __webpack_require__(82);
@@ -5148,7 +5148,7 @@ module.exports.getOrders = (root, {}) => {
 /* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-let mongoose = __webpack_require__(7),
+let mongoose = __webpack_require__(6),
     Schema = mongoose.Schema;
 
 var schema = new mongoose.Schema({
@@ -5199,7 +5199,7 @@ module.exports.getProducts = (root, {}) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_graphql_type_json__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_graphql_type_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_graphql_type_json__);
@@ -5254,7 +5254,7 @@ module.exports.getProducts = (root, {}) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type__ = __webpack_require__(86);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schema__ = __webpack_require__(85);
@@ -5291,7 +5291,7 @@ module.exports.getProducts = (root, {}) => {
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-let mongoose = __webpack_require__(7),
+let mongoose = __webpack_require__(6),
     Schema = mongoose.Schema;
 
 var schema = new mongoose.Schema({
@@ -5335,7 +5335,7 @@ module.exports.getAllSeo = (root, { filter }) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_graphql_type_json__ = __webpack_require__(26);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_graphql_type_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_graphql_type_json__);
@@ -5411,7 +5411,7 @@ module.exports.getAllSeo = (root, { filter }) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_graphql___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_graphql__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_graphql_iso_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_graphql_iso_date__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__type__ = __webpack_require__(39);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__schema__ = __webpack_require__(38);
@@ -5457,7 +5457,7 @@ module.exports.getAllSeo = (root, { filter }) => {
 /* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
-let mongoose = __webpack_require__(7),
+let mongoose = __webpack_require__(6),
     Schema = mongoose.Schema;
 let findOrCreate = __webpack_require__(183);
 let autoIncrement = __webpack_require__(72);
@@ -6261,12 +6261,15 @@ class ImageEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
       position: { x: 0.5, y: 0.5 },
       scale: 1,
       rotate: 0,
-      rate: 'custom',
+      rate: 'keepOld',
       borderRadius: 0,
       preview: null,
       width: this.props.width || 200,
+      initWidth: this.props.width || 200,
       height: this.props.height || 200,
-      override: true
+      initHeight: this.props.height || 200,
+      override: true,
+      background: 'transparent'
     };
   }
 
@@ -6274,8 +6277,10 @@ class ImageEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
     this.setState(prev => {
       return _extends({}, prev, {
         imageRef: nextProps.imageRef || '',
-        width: nextProps.width || 200,
-        height: nextProps.height || 200
+        width: this.props.width || 200,
+        initWidth: this.props.width || 200,
+        height: this.props.height || 200,
+        initHeight: this.props.height || 200
       });
     });
   }
@@ -6285,7 +6290,9 @@ class ImageEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
   }
 
   heightWithRate(width, height) {
-    if (this.state.rate === 'custom') {
+    if (this.state.rate === 'keepOld') {
+      return Math.round(width * this.state.initHeight / this.state.initWidth);
+    } else if (this.state.rate === 'custom') {
       return height;
     } else if (this.state.rate === '4-3') {
       return Math.round(width * 3 / 4);
@@ -6297,7 +6304,6 @@ class ImageEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
     return height;
   }
   render() {
-    console.log(parseFloat(this.state.scale));
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       null,
@@ -6308,6 +6314,7 @@ class ImageEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
           __WEBPACK_IMPORTED_MODULE_1_antd__["Col"],
           { xs: 12, style: { padding: 15 } },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_react_avatar_editor___default.a, {
+            style: { background: this.state.background },
             ref: this.setEditorRef,
             scale: parseFloat(this.state.scale),
             width: this.state.width,
@@ -6352,6 +6359,45 @@ class ImageEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'b',
             null,
+            'N\u1EC1n (Kh\xF4ng \u1EA3nh h\u01B0\u1EDFng \u0111\u1EBFn \u1EA3nh):'
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            __WEBPACK_IMPORTED_MODULE_1_antd__["Radio"].Group,
+            { value: this.state.background, onChange: e => {
+                this.setState(prev => {
+                  return {
+                    prev,
+                    background: e.target.value
+                  };
+                });
+              } },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_antd__["Radio"].Button,
+              { value: 'transparent' },
+              'Trong su\u1ED1t'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_antd__["Radio"].Button,
+              { value: 'red' },
+              'N\u1EC1n \u0111\u1ECF'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_antd__["Radio"].Button,
+              { value: 'blue' },
+              'N\u1EC1n xanh da tr\u1EDDi'
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_antd__["Radio"].Button,
+              { value: 'green' },
+              'N\u1EC1n xanh l\xE1 c\xE2y'
+            )
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'b',
+            null,
             'T\u1EF7 l\u1EC7:'
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
@@ -6365,6 +6411,11 @@ class ImageEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
                   };
                 });
               } },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_antd__["Radio"].Button,
+              { value: 'keepOld' },
+              'Nh\u01B0 \u1EA3nh c\u0169'
+            ),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               __WEBPACK_IMPORTED_MODULE_1_antd__["Radio"].Button,
               { value: 'custom' },
@@ -6456,13 +6507,20 @@ class ImageEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Componen
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_antd__["Button"],
-            { onClick: this.handleSave, type: 'primary' },
-            this.state.override ? 'Thay thế ảnh cũ' : 'Thêm ảnh mới'
+            __WEBPACK_IMPORTED_MODULE_1_antd__["Popconfirm"],
+            { placement: 'right',
+              onConfirm: this.handleSave,
+              okText: '\u0110\u1ED3ng \xFD', cancelText: 'H\u1EE7y' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_1_antd__["Button"],
+              { type: 'primary' },
+              this.state.override ? 'Thay thế ảnh cũ' : 'Thêm ảnh mới'
+            )
           )
         )
       )
     );
+    console.log(parseFloat(this.state.scale));
   }
 }
 
@@ -6875,6 +6933,8 @@ const props = {
   action: '/upload/image'
 };
 
+const text = 'Đồng ý?';
+
 class Library extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
     super(props);
@@ -7195,75 +7255,121 @@ class Library extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
               { style: { color: 'blue' } },
               "/image/" + this.state.selectedImage.name
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_4_react_copy_to_clipboard___default.a,
-              { text: "/image/" + this.state.selectedImage.name,
-                onCopy: () => {
-                  this.setState({ copied: true });
-                  setTimeout(() => {
-                    this.setState({ copied: false });
-                  }, 1000);
-                } },
+              __WEBPACK_IMPORTED_MODULE_2_antd__["Row"],
+              { className: 'padding-5' },
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_antd__["Button"],
-                { type: 'primary' },
-                'Copy link \u1EA3nh'
+                __WEBPACK_IMPORTED_MODULE_4_react_copy_to_clipboard___default.a,
+                { text: "/image/" + this.state.selectedImage.name,
+                  onCopy: () => {
+                    this.setState({ copied: true });
+                    setTimeout(() => {
+                      this.setState({ copied: false });
+                    }, 1000);
+                  } },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  __WEBPACK_IMPORTED_MODULE_2_antd__["Button"],
+                  { type: 'primary' },
+                  'Copy link \u1EA3nh'
+                )
               )
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_antd__["Button"],
-              {
-                type: 'primary',
-                onClick: () => {
-                  __WEBPACK_IMPORTED_MODULE_6_axios___default.a.post('/image/min/' + this.state.selectedImage.name, {}).then(res => {
-                    __WEBPACK_IMPORTED_MODULE_2_antd__["message"].success(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                      'div',
-                      null,
-                      '\u0110\xE3 gi\u1EA3m t\u1EEB ',
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'b',
-                        { style: { color: 'red' } },
-                        res.data.oldSize
-                      ),
-                      ' c\xF2n ',
-                      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'b',
-                        { style: { color: 'blue' } },
-                        res.data.newSize
-                      )
-                    ));
+              __WEBPACK_IMPORTED_MODULE_2_antd__["Row"],
+              { className: 'padding-5' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_2_antd__["Popconfirm"],
+                { placement: 'right', title: text,
+                  onConfirm: () => {
+                    __WEBPACK_IMPORTED_MODULE_6_axios___default.a.post('/image/min/' + this.state.selectedImage.name, {}).then(res => {
+                      __WEBPACK_IMPORTED_MODULE_2_antd__["message"].success(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        'div',
+                        null,
+                        '\u0110\xE3 gi\u1EA3m t\u1EEB ',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'b',
+                          { style: { color: 'red' } },
+                          res.data.oldSize
+                        ),
+                        ' c\xF2n ',
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'b',
+                          { style: { color: 'blue' } },
+                          res.data.newSize
+                        )
+                      ));
+                      this.setState(prev => {
+                        return _extends({}, prev, {
+                          vImg: '?v=' + new Date().getTime()
+                        });
+                      });
+                    }).catch(err => {
+                      __WEBPACK_IMPORTED_MODULE_2_antd__["message"].error('Có lỗi');
+                    });
+                  },
+                  okText: '\u0110\u1ED3ng \xFD', cancelText: 'H\u1EE7y' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  __WEBPACK_IMPORTED_MODULE_2_antd__["Button"],
+                  {
+                    type: 'primary'
+                  },
+                  'Gi\u1EA3m ch\u1EA5t l\u01B0\u1EE3ng \u1EA3nh'
+                )
+              )
+            ),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              __WEBPACK_IMPORTED_MODULE_2_antd__["Row"],
+              { className: 'padding-5' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_2_antd__["Button"],
+                {
+                  type: 'primary',
+                  onClick: () => {
                     this.setState(prev => {
                       return _extends({}, prev, {
-                        vImg: '?v=' + new Date().getTime()
+                        visible: false,
+                        editImage: true,
+                        imageRef: "/image/" + this.state.selectedImage.name + this.state.vImg
                       });
                     });
-                  }).catch(err => {
-                    __WEBPACK_IMPORTED_MODULE_2_antd__["message"].error('Có lỗi');
-                  });
-                }
-              },
-              'Gi\u1EA3m ch\u1EA5t l\u01B0\u1EE3ng \u1EA3nh'
+                  }
+                },
+                'Ch\u1EC9nh s\u1EEDa \u1EA3nh n\xE0y'
+              )
             ),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              __WEBPACK_IMPORTED_MODULE_2_antd__["Button"],
-              {
-                type: 'primary',
-                onClick: () => {
-                  this.setState(prev => {
-                    return _extends({}, prev, {
-                      visible: false,
-                      editImage: true,
-                      imageRef: "/image/" + this.state.selectedImage.name + this.state.vImg
+              __WEBPACK_IMPORTED_MODULE_2_antd__["Row"],
+              { className: 'padding-5' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_2_antd__["Popconfirm"],
+                { placement: 'right', title: text,
+                  onConfirm: () => {
+                    console.log(' confirm');
+                    __WEBPACK_IMPORTED_MODULE_6_axios___default.a.post('/image/delete', {
+                      slug: this.state.selectedImage.slug,
+                      name: this.state.selectedImage.name
+                    }).then(res => {
+                      __WEBPACK_IMPORTED_MODULE_2_antd__["message"].success('Xóa thành công');
+                      let currentTime = new Date().toISOString();
+                      this.setState(prev => {
+                        return _extends({}, prev, {
+                          time: currentTime,
+                          editImage: false,
+                          visible: false
+                        });
+                      });
+                      this.fetchImage(40, currentTime);
+                    }).catch(err => {
+                      __WEBPACK_IMPORTED_MODULE_2_antd__["message"].error('Có lỗi');
                     });
-                  });
-                }
-              },
-              'Ch\u1EC9nh s\u1EEDa \u1EA3nh n\xE0y'
+                  },
+                  okText: '\u0110\u1ED3ng \xFD x\xF3a', cancelText: 'H\u1EE7y' },
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  __WEBPACK_IMPORTED_MODULE_2_antd__["Button"],
+                  { type: 'danger' },
+                  'X\xF3a \u1EA3nh'
+                )
+              )
             )
           )
         )
@@ -7290,7 +7396,8 @@ class Library extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             this.setState(prev => {
               return _extends({}, prev, {
                 time: currentTime,
-                editImage: false
+                editImage: false,
+                visible: false
               });
             });
             this.fetchImage(40, currentTime);
@@ -12041,7 +12148,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 var express = __webpack_require__(25);
 var router = express.Router();
-const mongoose = __webpack_require__(7);
+const mongoose = __webpack_require__(6);
 const Post = mongoose.model('Post');
 const Setting = mongoose.model('Setting');
 const Product = mongoose.model('Product');
@@ -12138,7 +12245,7 @@ module.exports = router;
 var express = __webpack_require__(25);
 var router = express.Router();
 
-let mongoose = __webpack_require__(7);
+let mongoose = __webpack_require__(6);
 const User = mongoose.model('User');
 // const Token = mongoose.model('Token')
 // const Session = mongoose.model('Session')
@@ -12300,10 +12407,28 @@ var request = __webpack_require__(192);
 var Gm = __webpack_require__(44);
 var utf8 = __webpack_require__(195);
 var iconv = __webpack_require__(175);
+const mongoose = __webpack_require__(6);
+const Image = mongoose.model('Image');
 
 const imagemin = __webpack_require__(177);
 const imageminJpegtran = __webpack_require__(178);
 const imageminPngquant = __webpack_require__(179);
+
+router.post('/delete', (req, res) => {
+  let pathImage = path.join(__dirname, '../images', req.body.name);
+  let pathImageSmall = path.join(__dirname, '../images-small', req.body.name);
+  fs.unlinkSync(pathImage);
+  Image.remove({ slug: req.body.slug }, (err, resData) => {
+    if (err) return res.status(400).send('err');
+    if (fs.existsSync(pathImage)) {
+      fs.unlinkSync(pathImage);
+    }
+    if (fs.existsSync(pathImageSmall)) {
+      fs.unlinkSync(pathImageSmall);
+    }
+    res.send(resData);
+  });
+});
 
 router.post('/min/:name', (req, res) => {
   let pathImage = path.join(__dirname, '../images', req.params.name);
@@ -12430,7 +12555,7 @@ var fs = __webpack_require__(43);
 var Gm = __webpack_require__(44);
 //mongodb
 
-const mongoose = __webpack_require__(7);
+const mongoose = __webpack_require__(6);
 const Image = mongoose.model('Image');
 
 router.use(fileUpload());

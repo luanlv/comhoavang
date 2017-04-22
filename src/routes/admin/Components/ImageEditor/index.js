@@ -1,5 +1,5 @@
 import React from 'react'
-import {Icon, Input, Button, DatePicker, Row, Col, Card, Upload, message, Modal, Slider, Switch, Radio} from 'antd';
+import {Icon, Input, Button, DatePicker, Row, Col, Card, Upload, message, Modal, Slider, Switch, Radio, Popconfirm} from 'antd';
 import fetch from '../../../../core/fetch';
 import ReactAvatarEditor from 'react-avatar-editor'
 import axios from 'axios'
@@ -14,12 +14,15 @@ class ImageEditor extends React.Component {
       position: { x: 0.5, y: 0.5 },
       scale: 1,
       rotate: 0,
-      rate: 'custom',
+      rate: 'keepOld',
       borderRadius: 0,
       preview: null,
       width: this.props.width || 200,
+      initWidth: this.props.width || 200,
       height: this.props.height || 200,
-      override: true
+      initHeight: this.props.height || 200,
+      override: true,
+      background: 'transparent'
     }
   }
 
@@ -28,8 +31,10 @@ class ImageEditor extends React.Component {
       return {
         ...prev,
         imageRef: nextProps.imageRef || '',
-        width: nextProps.width || 200,
-        height: nextProps.height || 200
+        width: this.props.width || 200,
+        initWidth: this.props.width || 200,
+        height: this.props.height || 200,
+        initHeight: this.props.height || 200,
       }
     })
   }
@@ -112,7 +117,9 @@ class ImageEditor extends React.Component {
   }
 
   heightWithRate (width, height) {
-    if(this.state.rate === 'custom'){
+    if(this.state.rate === 'keepOld'){
+      return Math.round(width * this.state.initHeight / this.state.initWidth)
+    } else if(this.state.rate === 'custom'){
       return height
     } else if ( this.state.rate === '4-3'){
       return Math.round(width * 3 / 4)
@@ -124,12 +131,12 @@ class ImageEditor extends React.Component {
     return height
   }
   render() {
-    console.log(parseFloat(this.state.scale))
     return (
       <div>
         <Row>
           <Col xs={12} style={{padding: 15}}>
             <ReactAvatarEditor
+              style={{background: this.state.background}}
               ref={this.setEditorRef}
               scale={parseFloat(this.state.scale)}
               width={this.state.width}
@@ -151,8 +158,8 @@ class ImageEditor extends React.Component {
           <Col xs={12}>
             {/*{ !!this.state.preview &&*/}
             {/*<img*/}
-              {/*src={this.state.preview.img}*/}
-              {/*style={{ borderRadius: `${(Math.min(this.state.preview.height, this.state.preview.width) + 10) * ((this.state.preview.borderRadius / 2) / 100)}px` }}*/}
+            {/*src={this.state.preview.img}*/}
+            {/*style={{ borderRadius: `${(Math.min(this.state.preview.height, this.state.preview.width) + 10) * ((this.state.preview.borderRadius / 2) / 100)}px` }}*/}
             {/*/>*/}
             {/*}*/}
 
@@ -166,6 +173,23 @@ class ImageEditor extends React.Component {
               defaultValue={1}
             />
             <br />
+            <b>Nền (Không ảnh hưởng đến ảnh):</b>
+            <br/>
+            <Radio.Group value={this.state.background} onChange={e => {
+              this.setState(prev => {
+                return {
+                  prev,
+                  background: e.target.value
+                }
+              })
+            }}>
+              <Radio.Button value="transparent">Trong suốt</Radio.Button>
+              <Radio.Button value="red">Nền đỏ</Radio.Button>
+              <Radio.Button value="blue">Nền xanh da trời</Radio.Button>
+              <Radio.Button value="green">Nền xanh lá cây</Radio.Button>
+            </Radio.Group>
+            <br />
+            <br />
             <b>Tỷ lệ:</b>
             <br/>
             <Radio.Group value={this.state.rate} onChange={value => {
@@ -176,6 +200,7 @@ class ImageEditor extends React.Component {
                 }
               })
             }}>
+              <Radio.Button value="keepOld">Như ảnh cũ</Radio.Button>
               <Radio.Button value="custom">Tự do</Radio.Button>
               <Radio.Button value="4-3">4/3</Radio.Button>
               <Radio.Button value="1-1">1/1</Radio.Button>
@@ -210,8 +235,8 @@ class ImageEditor extends React.Component {
             <br />
             <b>Quay ảnh:</b>
             <div>
-            <Button onClick={this.rotateLeft}>Quay trái</Button>
-            <Button onClick={this.rotateRight}>Quay phải</Button>
+              <Button onClick={this.rotateLeft}>Quay trái</Button>
+              <Button onClick={this.rotateRight}>Quay phải</Button>
             </div>
             <br />
             <b>Đè ảnh cũ: </b>
@@ -225,15 +250,22 @@ class ImageEditor extends React.Component {
             }} />
             <br/>
             <br/>
-            <Button onClick={this.handleSave} type="primary">
-              {this.state.override ? 'Thay thế ảnh cũ' : 'Thêm ảnh mới'}
-            </Button>
+
+            <Popconfirm placement="right"
+                        onConfirm={this.handleSave}
+                        okText="Đồng ý" cancelText="Hủy">
+              <Button  type="primary">
+                {this.state.override ? 'Thay thế ảnh cũ' : 'Thêm ảnh mới'}
+              </Button>
+            </Popconfirm>
+
           </Col>
 
         </Row>
 
       </div>
     )
+    console.log(parseFloat(this.state.scale))
   }
 }
 
