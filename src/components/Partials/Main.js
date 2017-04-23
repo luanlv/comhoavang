@@ -8,15 +8,6 @@ class Main extends React.Component {
     const products = this.props.data.products.value
     return (
       <div id="colContent">
-        <div id="banner-top" className="row">
-          <div className="left col-md-3">
-            <img src="/assets/images/banner_left.jpg" alt="banner 1"/>
-          </div>
-          <div className="right col-md-9">
-            <img src="/assets/images/banner_right.jpg" alt="banner 2"/>
-          </div>
-        </div>
-
         <h2 className="title text-uppercase">
           sản phẩm
         </h2>
