@@ -20,7 +20,7 @@ export default {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          query: '{seo(url: "'+ path +'"){url,title,description,og_title,og_image,og_description},getNewsInCategory(page:'+ page +', slug: "' + params.slug + '" ){page,totalPage,data{title, slug, coverUrl, description}}}',
+          query: '{seo(url: "'+ path +'"){url,title,description,og_title,og_image,og_description},getNewsInCategory(page:'+ page +', slug: "' + params.slug + '" ){page,totalPage,data{title, category, slug, coverUrl, description}}}',
         }),
         credentials: 'include',
       });

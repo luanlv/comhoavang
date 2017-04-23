@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from '../Link'
+import FacebookProvider, { Comments } from 'react-facebook';
 
 class Main extends React.Component {
   render() {
@@ -59,7 +60,9 @@ class Main extends React.Component {
               </div>
             )
           })}
-
+          <FacebookProvider appID="123093138237586">
+            <Comments href={"http://comhoavang.com/danh-muc/" + firstPost.category} data-numposts="5" />
+          </FacebookProvider>
         </div>
       )
     }

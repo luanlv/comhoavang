@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from '../Link'
+import FacebookProvider, { Comments } from 'react-facebook';
 
 class Slider extends React.Component {
   render () {
@@ -80,7 +81,11 @@ class Main extends React.Component {
                   )
                 })}
               </div>
-            </div>
+
+          <FacebookProvider appID="123093138237586">
+            <Comments href="http://comhoavang.com/mon-ngon" data-numposts="5" />
+          </FacebookProvider>
+        </div>
       );
     }
   }

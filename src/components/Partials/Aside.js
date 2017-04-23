@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from '../Link'
+import FacebookProvider, { Page } from 'react-facebook';
 
 class Aside extends React.Component {
   render() {
@@ -51,7 +52,9 @@ class Aside extends React.Component {
             </ul>
           </div>
         </div>
-
+        <FacebookProvider appID="123093138237586">
+          <Page href="https://www.facebook.com/comhoavang/" data-numposts="5" />
+        </FacebookProvider>
 
       </div>
     )

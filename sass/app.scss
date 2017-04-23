@@ -1,4 +1,5 @@
 @import './frontEnd/landing';
+@import 'facebook';
 .lineh {
   .title-2 {
     line-height: 40px !important;
@@ -80,4 +81,11 @@
 
 .modal-backdrop {
   display: none;
+}
+
+#banner-top {
+  img {
+    width: 100%;
+    height: auto;
+  }
 }

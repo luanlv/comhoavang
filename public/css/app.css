@@ -77,6 +77,12 @@
       padding: 5px 25px;
       background: #5cb846 !important; }
 
+.fb-comments, .fb-comments iframe[style], .fb-like-box, .fb-like-box iframe[style] {
+  width: 100% !important; }
+
+.fb-comments span, .fb-comments iframe span[style], .fb-like-box span, .fb-like-box iframe span[style] {
+  width: 100% !important; }
+
 .lineh .title-2 {
   line-height: 40px !important;
   max-height: 40px; }
@@ -140,3 +146,7 @@
 
 .modal-backdrop {
   display: none; }
+
+#banner-top img {
+  width: 100%;
+  height: auto; }

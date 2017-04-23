@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from '../Link'
+import FacebookProvider, { Comments } from 'react-facebook';
 
 class Main extends React.Component {
   render() {
@@ -70,25 +71,30 @@ class Main extends React.Component {
 
               </div>
 
-              <div className="wrap-section prom">
-                <div className="product-tb pro-tb row">
-                  {products.map((el, index) => {
-                    return (
-                      <div key={index} className="col-xs-4 element-item">
-                        <div className="product-box">
-                          <Link to={'/san-pham/' + el.slug} className="product-img">
-                            <img src={el.coverUrl.replace("\/image", "\/image\/small")} alt={el.name} /></Link>
-                          <div className="product-content">
-                            <h3 className="product-name">
-                              <Link to={'/san-pham/' + el.slug}>
-                                {el.name}</Link></h3>
-                          </div>
-                        </div>
+          <div className="wrap-section prom">
+            <div className="product-tb pro-tb row">
+              {products.map((el, index) => {
+                return (
+                  <div key={index} className="col-xs-4 element-item">
+                    <div className="product-box">
+                      <Link to={'/san-pham/' + el.slug} className="product-img">
+                        <img src={el.coverUrl.replace("\/image", "\/image\/small")} alt={el.name} /></Link>
+                      <div className="product-content">
+                        <h3 className="product-name">
+                          <Link to={'/san-pham/' + el.slug}>
+                            {el.name}</Link></h3>
                       </div>
-                    )
-                  })}
-                </div>
-              </div>
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+
+          <FacebookProvider appID="123093138237586">
+            <Comments href={"http://comhoavang.com/san-pham/" + product.slug} data-numposts="5" />
+          </FacebookProvider>
       </div>
       )
     }

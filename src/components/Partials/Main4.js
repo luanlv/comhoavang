@@ -1,4 +1,5 @@
 import React from 'react'
+import FacebookProvider, { Comments } from 'react-facebook';
 
 const Main = ({post}) => {
     return (
@@ -14,6 +15,11 @@ const Main = ({post}) => {
           <h2>{post.title}</h2>
           <div className="post-body" dangerouslySetInnerHTML={{__html: post.body}} />
         </div>
+
+        <FacebookProvider appID="123093138237586">
+          <Comments href={"http://comhoavang.com/bai-viet/" + post.slug} data-numposts="5" />
+        </FacebookProvider>
+
       </div>
     )
 }

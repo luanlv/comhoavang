@@ -8,12 +8,8 @@
  */
 
 import React, { PropTypes } from 'react';
-import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import Header from '../../components/Partials/Header'
 import Main2 from '../../components/Partials/Main2'
 import Aside from '../../components/Partials/Aside'
-import Footer from '../../components/Partials/Footer'
-import MenuMobile from '../../components/Partials/MenuMobile'
 
 class Home extends React.Component {
 

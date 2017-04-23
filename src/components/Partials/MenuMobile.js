@@ -19,7 +19,7 @@ class MenuMobile extends React.Component {
               <Link to="/"
                 onClick={this.closeMenu}
               >
-                <img src="/assets/images/logo-com.png" alt="logo com hoa vang" /></Link></div>
+                <img src="/assets/images/main_logo.png" alt="logo com hoa vang" /></Link></div>
             <ul className="menu-nav">
               <li><Link to="/san-pham" onClick={this.closeMenu} >Sản phẩm</Link>
                 <ul>

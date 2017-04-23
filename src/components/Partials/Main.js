@@ -1,7 +1,5 @@
 import React from 'react'
 import Link from '../../components/Link'
-
-
 class Main extends React.Component {
   render() {
     const first_foodNews = this.props.data.foodNews.value.data[0]
@@ -10,6 +8,15 @@ class Main extends React.Component {
     const products = this.props.data.products.value
     return (
       <div id="colContent">
+        <div id="banner-top" className="row">
+          <div className="left col-md-3">
+            <img src="/assets/images/banner_left.jpg" alt="banner 1"/>
+          </div>
+          <div className="right col-md-9">
+            <img src="/assets/images/banner_right.jpg" alt="banner 2"/>
+          </div>
+        </div>
+
         <h2 className="title text-uppercase">
           sản phẩm
         </h2>
@@ -131,7 +138,6 @@ class Main extends React.Component {
             <Link to="/tin-tuc"><span>Xem tất cả</span></Link>
           </div>
         </div>
-
 
       </div>
     )

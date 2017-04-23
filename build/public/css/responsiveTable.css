@@ -1,52 +1,30 @@
-
 .responsiveTable {
-  width: 100%;
-  thead th {
-    text-align: left;
-  }
-
-  thead {
-    background: rgba(100, 100, 100, 0.1);
-  }
-
-  tbody tr {
-  }
-}
+  width: 100%; }
+  .responsiveTable thead th {
+    text-align: left; }
+  .responsiveTable thead {
+    background: rgba(100, 100, 100, 0.1); }
 
 .responsiveTable td .tdBefore {
-  display: none;
-}
+  display: none; }
 
 @media screen and (max-width: 47.9375em) {
-  .responsiveTable {
-
-  }
-
   .responsiveTable table, .responsiveTable thead, .responsiveTable tbody, .responsiveTable th, .responsiveTable td, .responsiveTable tr {
-    display: block;
-  }
-
+    display: block; }
   .responsiveTable thead tr {
     position: absolute;
     top: -9999px;
     left: -9999px;
-    border-bottom: 2px solid #333;
-
-  }
-
+    border-bottom: 2px solid #333; }
   .responsiveTable tbody tr {
     border: 1px solid #eee;
-    padding-top: 1em;
-  }
-
+    padding-top: 1em; }
   .responsiveTable td.pivoted {
     border: none !important;
     border-bottom: 10px solid #eee;
     position: relative;
     padding-left: 50% !important;
-    text-align: left !important;
-  }
-
+    text-align: left !important; }
   .responsiveTable td .tdBefore {
     position: absolute;
     display: block;
@@ -55,11 +33,8 @@
     padding-right: 10px;
     white-space: nowrap;
     text-align: left !important;
-    font-weight: 600;
-  }
-}
+    font-weight: 600; } }
 
 .responsiveTable td.pivoted {
   border-bottom: 1px dotted #ddd;
-  padding: 5px 0;
-}
+  padding: 5px 0; }
