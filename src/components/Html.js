@@ -50,10 +50,10 @@ class Html extends React.Component {
           <meta property="og:type" content="website" />
           <meta property='fb:app_id' content='123093138237586' />
           <meta property='fb:admins' content='100004231235930' />
-          
-            {seo && seo.og_title && <meta property="og:title" content={seo.og_title} />}
-            {seo && seo.url && <meta property="og:url" content={seo.url} />}
-            {seo && seo.og_image && <meta property="og:image" content={seo.og_image} />}
+
+          {seo && seo.og_title && <meta property="og:title" content={seo.og_title} />}
+          {seo && seo.url && <meta property="og:url" content={'http://comhoavang.com' + seo.url} />}
+          {seo && seo.og_image && <meta property="og:image" content={'http://comhoavang.com' + decodeURI(seo.og_image)} />}
             {/**/}
 
             <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
