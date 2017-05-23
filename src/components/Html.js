@@ -48,9 +48,9 @@ class Html extends React.Component {
           {/*Og tag*/}
           <meta property="og:locale" content="vi_VN" />
           <meta property="og:type" content="website" />
-          <meta property=”fb:app_id” content="123093138237586" />
-          <meta property=”fb:admins” content="100004231235930” />
-
+          <meta property='fb:app_id' content='123093138237586' />
+          <meta property='fb:admins' content='100004231235930' />
+          
             {seo && seo.og_title && <meta property="og:title" content={seo.og_title} />}
             {seo && seo.url && <meta property="og:url" content={seo.url} />}
             {seo && seo.og_image && <meta property="og:image" content={seo.og_image} />}
