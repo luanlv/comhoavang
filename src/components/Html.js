@@ -36,18 +36,21 @@ class Html extends React.Component {
     return (
       <html className="no-js" lang="vi">
         <head>
-            {/*<base href="http://comhoavang.com" />*/}
-            {/*<base href="http://localhost:3000" />*/}
-            <meta charSet="utf-8" />
-            <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-            <title>{title}</title>
-            <meta name="description" content={description} />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="apple-touch-icon" href="/ico.png" />
-            <link rel="icon" type="image/png" href="ico.png" />
-            {/*Og tag*/}
-            <meta property="og:locale" content="vi_VN" />
-            <meta property="og:type" content="website" />
+          {/*<base href="http://comhoavang.com" />*/}
+          {/*<base href="http://localhost:3000" />*/}
+          <meta charSet="utf-8" />
+          <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+          <title>{title}</title>
+          <meta name="description" content={description} />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="apple-touch-icon" href="/ico.png" />
+          <link rel="icon" type="image/png" href="ico.png" />
+          {/*Og tag*/}
+          <meta property="og:locale" content="vi_VN" />
+          <meta property="og:type" content="website" />
+          <meta property=”fb:app_id” content="123093138237586" />
+          <meta property=”fb:admins” content="100004231235930” />
+
             {seo && seo.og_title && <meta property="og:title" content={seo.og_title} />}
             {seo && seo.url && <meta property="og:url" content={seo.url} />}
             {seo && seo.og_image && <meta property="og:image" content={seo.og_image} />}
