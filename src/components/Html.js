@@ -107,9 +107,7 @@ class Html extends React.Component {
           </script>
 
           <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async' />
-          <script
-            dangerouslySetInnerHTML={{ __html: `var OneSignal=window.OneSignal||[];OneSignal.push(["init",{appId:"80a94d18-cf56-489d-851f-94c48bee6cbb",autoRegister:!1,subdomainName:"commetri.onesignal.com",notifyButton:{enable:!0,text:{"tip.state.unsubscribed":"Đăng ký nhận thông báo ","tip.state.subscribed":"Bạn đã đăng ký nhận thông báo","tip.state.blocked":"Bạn đã chặn hiển thị thông báo","message.prenotify":"Click để đăng ký nhận thông báo","message.action.subscribed":"Cảm ơn bạn đã đăng ký!","message.action.resubscribed":"Bạn đã đăng ký nhận thông báo","message.action.unsubscribed":"Bạn đã hủy đăng ký nhận thông báo","dialog.main.title":"Quản lý thông báo","dialog.main.button.subscribe":"ĐĂNG KÝ","dialog.main.button.unsubscribe":"HỦY ĐĂNG KÝ","dialog.blocked.title":"Bỏ chặn thông báo","dialog.blocked.message":"Thực hiện các hướng dẫn sau để cho phép thông báo:"}},welcomeNotification:{title:"ovuinhi.com",message:"Cảm ơn bạn đã đăng ký!"},promptOptions:{siteName:"ovuinhi.com",actionMessage:"Nhận thông báo mới nhất về comhoavang.com",exampleNotificationTitle:"comhoavang.com",exampleNotificationMessage:"Nhận thông báo  mới nhất",exampleNotificationCaption:"Bạn có thể dừng nhận thông báo bất kỳ lúc nào",acceptButtonText:"CHO PHÉP",cancelButtonText:"BỎ QUA"}}]);`}}
-          />
+          
           <script dangerouslySetInnerHTML={{ __html: this.props.scriptBottom }} />
 
         </body>
