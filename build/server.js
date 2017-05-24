@@ -2853,7 +2853,7 @@ app.get('*', routeCache.cacheSeconds(20), (() => {
       if (__WEBPACK_IMPORTED_MODULE_18__assets_json___default.a[route.chunk]) {
         data.scripts.push(__WEBPACK_IMPORTED_MODULE_18__assets_json___default.a[route.chunk].js);
       }
-      let version = 4;
+      let version = 5;
 
       if (isAdmin) {
         const html = __WEBPACK_IMPORTED_MODULE_7_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__components_HtmlAdmin__["a" /* default */], _extends({ v: version }, data, { isAdmin: isAdmin })));
@@ -3179,9 +3179,10 @@ class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:type', content: 'website' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'fb:app_id', content: '123093138237586' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'fb:admins', content: '100004231235930' }),
-        seo && seo.og_title && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:title', content: seo.og_title }),
-        seo && seo.url && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:url', content: 'http://comhoavang.com' + seo.url }),
-        seo && seo.og_image && __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:image', content: 'http://comhoavang.com' + decodeURI(seo.og_image) }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'fb:admins', content: '100008346038178' }),
+        seo && seo.og_title ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:title', content: seo.og_title }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:title', content: 'C\u01A1 s\u1EDF chuy\xEAn s\u1EA3n xu\u1EA5t v\xE0 cung c\u1EA5p \u0111\u1EB7c s\u1EA3n H\xE0 N\u1ED9i - C\u1ED1m M\u1EC5 Tr\xEC, Ch\u1EA3 C\u1ED1m, C\u1ED1m Kh\xF4 . \u0110\u1ECBa ch\u1EC9 b\xE1n c\u1ED1m M\u1EC5 Tr\xEC uy t\xEDn, ch\u1EA5t l\u01B0\u1EE3ng, gi\xE1 c\u1EA3 h\u1EE3p l\xFD' }),
+        seo && seo.url ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:url', content: 'http://comhoavang.com' + seo.url }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:url', content: 'http://comhoavang.com' }),
+        seo && seo.og_image ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:image', content: 'http://comhoavang.com' + seo.og_image }) : __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('meta', { property: 'og:image', content: 'http://comhoavang.com/image/705cP8xYVH-083610_c1mh.jpg' }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,vietnamese', rel: 'stylesheet', type: 'text/css', async: true }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&subset=latin,vietnamese', rel: 'stylesheet', type: 'text/css', async: true }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('link', { href: 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin,vietnamese', rel: 'stylesheet', type: 'text/css', async: true }),
@@ -3207,6 +3208,10 @@ class Html extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', {
           dangerouslySetInnerHTML: { __html: `head.load("https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")` + `.js("https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" )` + `.js("/assets/js/jquery.ui.datepicker-vi-VN.js?v=${v}")` + `.js("/assets/js/jquery.easing.1.3.js?v=${v}")` + `.js("/assets/js/jquery.mb.browser.min.js?v=${v}")` + `.js("/assets/js/jquery.textheight.js?v=${v}")` + `.js("/assets/js/hoverIntent.js?v=${v}")` + `.js("/assets/js/imagesloaded.pkgd.min.js?v=${v}")` + `.js("/assets/js/bootstrap.min.js?v=${v}")` + `.js("/assets/js/jquery.uniform.min.js?v=${v}")` + `.js("/assets/js/isotope.pkgd.min.js")` + `.js("/assets/js/slick.min.js")` + `.js("/assets/js/jquery.panel.mobile.js?v=${v}")` + `.js("/assets/js/jquery.main.js?v=${v}")` + `.js("${scripts[0]}?v=${v}")` + `.js("${scripts[1]}?v=${v}")` }
+        }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js', async: 'async' }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', {
+          dangerouslySetInnerHTML: { __html: `var OneSignal=window.OneSignal||[];OneSignal.push(["init",{appId:"80a94d18-cf56-489d-851f-94c48bee6cbb",autoRegister:!1,subdomainName:"commetri.onesignal.com",notifyButton:{enable:!0,text:{"tip.state.unsubscribed":"Đăng ký nhận thông báo ","tip.state.subscribed":"Bạn đã đăng ký nhận thông báo","tip.state.blocked":"Bạn đã chặn hiển thị thông báo","message.prenotify":"Click để đăng ký nhận thông báo","message.action.subscribed":"Cảm ơn bạn đã đăng ký!","message.action.resubscribed":"Bạn đã đăng ký nhận thông báo","message.action.unsubscribed":"Bạn đã hủy đăng ký nhận thông báo","dialog.main.title":"Quản lý thông báo","dialog.main.button.subscribe":"ĐĂNG KÝ","dialog.main.button.unsubscribe":"HỦY ĐĂNG KÝ","dialog.blocked.title":"Bỏ chặn thông báo","dialog.blocked.message":"Thực hiện các hướng dẫn sau để cho phép thông báo:"}},welcomeNotification:{title:"ovuinhi.com",message:"Cảm ơn bạn đã đăng ký!"},promptOptions:{siteName:"ovuinhi.com",actionMessage:"Nhận thông báo mới nhất về comhoavang.com",exampleNotificationTitle:"comhoavang.com",exampleNotificationMessage:"Nhận thông báo  mới nhất",exampleNotificationCaption:"Bạn có thể dừng nhận thông báo bất kỳ lúc nào",acceptButtonText:"CHO PHÉP",cancelButtonText:"BỎ QUA"}}]);` }
         }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('script', { dangerouslySetInnerHTML: { __html: this.props.scriptBottom } })
       )

@@ -50,23 +50,23 @@ class Html extends React.Component {
           <meta property="og:type" content="website" />
           <meta property='fb:app_id' content='123093138237586' />
           <meta property='fb:admins' content='100004231235930' />
+          <meta property='fb:admins' content='100008346038178' />
+          {(seo && seo.og_title) ? (<meta property="og:title" content={seo.og_title} />) : (<meta property="og:title" content='Cơ sở chuyên sản xuất và cung cấp đặc sản Hà Nội - Cốm Mễ Trì, Chả Cốm, Cốm Khô . Địa chỉ bán cốm Mễ Trì uy tín, chất lượng, giá cả hợp lý' />) }
+          {(seo && seo.url) ? (<meta property="og:url" content={'http://comhoavang.com' + seo.url} />) : (<meta property="og:url" content={'http://comhoavang.com'} />) }
+          {(seo && seo.og_image) ? (<meta property="og:image" content={'http://comhoavang.com' + seo.og_image} />) : (<meta property="og:image" content='http://comhoavang.com/image/705cP8xYVH-083610_c1mh.jpg' />)}
 
-          {seo && seo.og_title && <meta property="og:title" content={seo.og_title} />}
-          {seo && seo.url && <meta property="og:url" content={'http://comhoavang.com' + seo.url} />}
-          {seo && seo.og_image && <meta property="og:image" content={'http://comhoavang.com' + decodeURI(seo.og_image)} />}
-            {/**/}
 
-            <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
-            <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
-            <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+          <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
+          <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&amp;subset=latin,vietnamese" rel="stylesheet" type="text/css" async />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-            <link href={"/assets/styles/style.min.css?v=" + v} rel="stylesheet" />
-            <link rel="stylesheet" type="text/css"  href={"/css/app.css?v=" +v }/>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" />
-            <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
-            <script dangerouslySetInnerHTML={{ __html: this.props.scriptTop }} />
+          <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+          <link href={"/assets/styles/style.min.css?v=" + v} rel="stylesheet" />
+          <link rel="stylesheet" type="text/css"  href={"/css/app.css?v=" +v }/>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js" />
+          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          <script dangerouslySetInnerHTML={{ __html: this.props.scriptTop }} />
         </head>
 
         <body>
@@ -106,6 +106,10 @@ class Html extends React.Component {
           >
           </script>
 
+          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async' />
+          <script
+            dangerouslySetInnerHTML={{ __html: `var OneSignal=window.OneSignal||[];OneSignal.push(["init",{appId:"80a94d18-cf56-489d-851f-94c48bee6cbb",autoRegister:!1,subdomainName:"commetri.onesignal.com",notifyButton:{enable:!0,text:{"tip.state.unsubscribed":"Đăng ký nhận thông báo ","tip.state.subscribed":"Bạn đã đăng ký nhận thông báo","tip.state.blocked":"Bạn đã chặn hiển thị thông báo","message.prenotify":"Click để đăng ký nhận thông báo","message.action.subscribed":"Cảm ơn bạn đã đăng ký!","message.action.resubscribed":"Bạn đã đăng ký nhận thông báo","message.action.unsubscribed":"Bạn đã hủy đăng ký nhận thông báo","dialog.main.title":"Quản lý thông báo","dialog.main.button.subscribe":"ĐĂNG KÝ","dialog.main.button.unsubscribe":"HỦY ĐĂNG KÝ","dialog.blocked.title":"Bỏ chặn thông báo","dialog.blocked.message":"Thực hiện các hướng dẫn sau để cho phép thông báo:"}},welcomeNotification:{title:"ovuinhi.com",message:"Cảm ơn bạn đã đăng ký!"},promptOptions:{siteName:"ovuinhi.com",actionMessage:"Nhận thông báo mới nhất về comhoavang.com",exampleNotificationTitle:"comhoavang.com",exampleNotificationMessage:"Nhận thông báo  mới nhất",exampleNotificationCaption:"Bạn có thể dừng nhận thông báo bất kỳ lúc nào",acceptButtonText:"CHO PHÉP",cancelButtonText:"BỎ QUA"}}]);`}}
+          />
           <script dangerouslySetInnerHTML={{ __html: this.props.scriptBottom }} />
 
         </body>
