@@ -1996,7 +1996,7 @@ class CKEditor extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   componentDidMount() {
     let configuration = {
       // removePlugins : 'magicline',
-      extraPlugins: 'autogrow,image2,sharedspace',
+      extraPlugins: 'autogrow,image2,sharedspace,colorbutton,justify,font',
       uploadUrl: '/upload/imageCKEditor',
       disallowedContent: 'img{width,height}',
       sharedSpaces: {
