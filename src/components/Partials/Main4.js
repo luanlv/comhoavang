@@ -5,14 +5,14 @@ const Main = ({post}) => {
     return (
       <div id="colContent">
         <div className="headno">
-          <h1 className="title text-uppercase">
+          <div className="title text-uppercase">
             <span id="ctl00_ctl00_ctl00_ContentPlaceHolder1_ContentPlaceHolder1_ContentPlaceHolder1_lblTitleNews">
               {mapSlugToName(post.category)}
-            </span></h1>
+            </span></div>
         </div>
 
         <div className="wrapper-text">
-          <h2>{post.title}</h2>
+          <h1>{post.title}</h1>
           <div className="post-body" dangerouslySetInnerHTML={{__html: post.body}} />
         </div>
 
