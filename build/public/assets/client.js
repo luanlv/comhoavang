@@ -8162,9 +8162,8 @@ var Footer = function (_React$Component) {
                     __self: this
                   },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h2',
-                    {
-                      __source: {
+                    'div',
+                    { className: 'botHeading', __source: {
                         fileName: _jsxFileName,
                         lineNumber: 19
                       },
@@ -8321,9 +8320,8 @@ var Footer = function (_React$Component) {
                     __self: this
                   },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h2',
-                    {
-                      __source: {
+                    'div',
+                    { className: 'botHeading', __source: {
                         fileName: _jsxFileName,
                         lineNumber: 40
                       },
@@ -8428,9 +8426,8 @@ var Footer = function (_React$Component) {
                     __self: this
                   },
                   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'h2',
-                    {
-                      __source: {
+                    'div',
+                    { className: 'botHeading', __source: {
                         fileName: _jsxFileName,
                         lineNumber: 55
                       },

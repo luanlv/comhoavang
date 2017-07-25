@@ -16,8 +16,8 @@ class Footer extends React.Component {
             <div className="footer-right">
               <div className="row">
                 <div className="col-md-4 col-sm-6 col-xs-12">
-                  <h2>
-                    MÓN NGON TỪ CỐM </h2>
+                  <div className="botHeading">
+                    MÓN NGON TỪ CỐM </div>
                   <ul className="list-footer">
                     <li><Link to={'/bai-viet/cach-lam-che-com-thom-mat'}>
                       Chè cốm
@@ -37,8 +37,8 @@ class Footer extends React.Component {
                   </ul>
                 </div>
                 <div className="col-md-4 col-sm-6 col-xs-12">
-                  <h2>
-                    THÔNG TIN WEBSITE</h2>
+                  <div className="botHeading">
+                    THÔNG TIN WEBSITE</div>
                   <ul className="list-footer">
                     <li><Link to={'/lien-he-dat-hang'}>
                         Hình thức thanh toán
@@ -52,7 +52,7 @@ class Footer extends React.Component {
                   </ul>
                 </div>
                 <div className="col-md-4 col-sm-12 col-xs-12">
-                  <h2>CƠ SỞ SẢN XUẤT CỐM MỄ TRÌ</h2>
+                  <div className="botHeading">CƠ SỞ SẢN XUẤT CỐM MỄ TRÌ</div>
                   <ul className="address-box list-footer">
                     <li className="add-1"><span>Địa chỉ : 128 – chợ Mễ Trì hạ, quận Nam Từ Liêm, TP.Hà Nội</span></li>
                     <li className="add-2"><span>Điện thoại : 097 331 8868</span></li>
