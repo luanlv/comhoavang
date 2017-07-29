@@ -104,6 +104,6 @@ class Main extends React.Component {
 export { Main as default }
 
 
-function numberWithCommas(x) {
+function numberWithCommas(x = 0) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }

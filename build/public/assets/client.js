@@ -2805,7 +2805,9 @@ var Main = function (_React$Component) {
 
 
 
-function numberWithCommas(x) {
+function numberWithCommas() {
+  var x = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
