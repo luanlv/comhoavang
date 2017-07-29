@@ -1,5 +1,29 @@
 import React from 'react'
 import FacebookProvider, { Comments } from 'react-facebook';
+import history from '../../core/history'
+
+function isLeftClickEvent(event) {
+  return event.button === 0;
+}
+
+function isModifiedEvent(event) {
+  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
+}
+
+function onClick(event) {
+  if (
+    event.target.tagName === 'A' &&
+    isLeftClickEvent(event) &&
+    !isModifiedEvent(event) &&
+    event.target.host === window.location.host
+  ) {
+    event.preventDefault();
+    history.push({
+      pathname: event.target.pathname,
+      search: event.target.search,
+    });
+  }
+}
 
 const Main = ({post}) => {
     return (
@@ -13,7 +37,9 @@ const Main = ({post}) => {
 
         <div className="wrapper-text">
           <h1>{post.title}</h1>
-          <div className="post-body" dangerouslySetInnerHTML={{__html: post.body}} />
+          <div className="post-body" dangerouslySetInnerHTML={{__html: post.body}}
+               onClick={onClick}
+          />
         </div>
 
         <FacebookProvider appID="123093138237586">
