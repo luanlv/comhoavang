@@ -5332,7 +5332,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
               // Provide default values for title, description etc.
-              route.title = (route.title || 'Untitled Page') + ' - ComHoaVang.Com';
+              route.title = '' + (route.title || 'Untitled Page');
               route.description = route.description || '';
 
               return _context.abrupt('return', route);

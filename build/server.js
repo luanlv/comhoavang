@@ -16785,7 +16785,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
       const route = yield next();
 
       // Provide default values for title, description etc.
-      route.title = `${route.title || 'Untitled Page'} - ComHoaVang.Com`;
+      route.title = `${route.title || 'Untitled Page'}`;
       route.description = route.description || '';
 
       return route;
