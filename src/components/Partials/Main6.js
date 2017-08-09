@@ -32,9 +32,9 @@ class Main extends React.Component {
                     <div className="price-product" style={{textAlign: 'center'}}>
                       <em style={{color: 'red'}}>{numberWithCommas(product.price)} đ/kg</em>
                     </div>
-                    <div className="product-status" style={{textAlign: 'center', borderTop: '1px solid #ddd'}}>
-                      Mua trên 3kg giảm <b style={{color: 'blue'}}>10%</b>
-                    </div>
+                    {/*<div className="product-status" style={{textAlign: 'center', borderTop: '1px solid #ddd'}}>*/}
+                      {/*Mua trên 3kg giảm <b style={{color: 'blue'}}>10%</b>*/}
+                    {/*</div>*/}
                     <div className="product-ship" style={{textAlign: 'center', borderTop: '1px solid #ddd', borderBottom: '1px solid #ddd'}}>
                       <div className="centerText" style={{display: 'inline-block', paddingRight: 5}}>
                         Vận chuyển

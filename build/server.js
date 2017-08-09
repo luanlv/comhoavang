@@ -6772,26 +6772,6 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
               ),
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'product-status', style: { textAlign: 'center', borderTop: '1px solid #ddd' }, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 35
-                  },
-                  __self: this
-                },
-                'Mua tr\xEAn 3kg gi\u1EA3m ',
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'b',
-                  { style: { color: 'blue' }, __source: {
-                      fileName: _jsxFileName,
-                      lineNumber: 36
-                    },
-                    __self: this
-                  },
-                  '10%'
-                )
-              ),
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'div',
                 { className: 'product-ship', style: { textAlign: 'center', borderTop: '1px solid #ddd', borderBottom: '1px solid #ddd' }, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 38
