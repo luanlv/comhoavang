@@ -8,9 +8,9 @@ class Main extends React.Component {
     const products = this.props.data.products.value
     return (
       <div id="colContent">
-        <h2 className="title text-uppercase">
-          sản phẩm
-        </h2>
+        <h1 className="title text-uppercase">
+          Cốm hà nội
+        </h1>
 
         <div className="wrap-section line-bottom pro-site">
           <div className="product-tb pro-tb row">

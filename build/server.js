@@ -4985,14 +4985,14 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         __self: this
       },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h2',
+        'h1',
         { className: 'title text-uppercase', __source: {
             fileName: _jsxFileName,
             lineNumber: 11
           },
           __self: this
         },
-        's\u1EA3n ph\u1EA9m'
+        'C\u1ED1m h\xE0 n\u1ED9i'
       ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
