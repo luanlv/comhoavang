@@ -21,11 +21,17 @@ class Header extends React.Component {
             <ul id="menu" className="desktop-showhide sf-js-enabled" style={{touchAction: 'pan-y'}}>
               <li className="home">
                 <Link to="/">Trang chủ</Link></li>
-              <li>
-                <Link to="/san-pham" className="sf-with-ul">Sản phẩm</Link>
+              <li className="hasSubMenu">
+                <Link to="#" className="sf-with-ul">Cốm Hà Nội</Link>
+                <ul className="subMenu">
+                  <li><Link to="/san-pham/com-non-me-tri" className="sf-with-ul">Cốm Non Hà Nội</Link></li>
+                  <li><Link to="/san-pham/com-kho-hoa-vang" className="sf-with-ul">Cốm Khô Hà Nội</Link></li>
+                </ul>
               </li>
+              <li><Link to="/san-pham/cha-com">Chả Cốm</Link></li>
               <li><Link to="/mon-ngon">Món ngon</Link></li>
               <li><Link to="/tin-tuc">Tin tức</Link></li>
+              <li><Link to="/cau-hoi-thuong-gap">Câu hỏi thuờng gặp</Link></li>
               <li className="last"><Link to="/lien-he-dat-hang">Liên hệ đặt hàng</Link></li>
             </ul>
             <div className="header-bottom">

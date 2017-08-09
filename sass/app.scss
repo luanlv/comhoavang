@@ -229,3 +229,13 @@
   -ms-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
+
+.hasSubMenu {
+  //position: relative;
+  ul {
+    z-index: 9999;
+  }
+  &:hover ul {
+    display: block !important;
+  }
+}

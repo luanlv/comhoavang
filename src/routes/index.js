@@ -22,6 +22,7 @@ export default {
     require('./danhsachsanpham').default,
     // require('./landingpage').default,
     require('./lienhedathang').default,
+    require('./cauhoithuonggap').default,
     require('./danhmuc').default,
     require('./tintuc').default,
     require('./baiviet').default,
