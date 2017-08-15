@@ -1,10 +1,5 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
+/*global
+ $, jQuery
  */
 
 import React, { PropTypes } from 'react';
@@ -24,7 +19,6 @@ class Layout extends React.Component {
   };
 
   componentDidMount(){
-    console.log('test ok')
     if(process.env.BROWSER) {
       window.myfunload()
     }
