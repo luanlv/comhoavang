@@ -133,6 +133,8 @@ class Home extends React.Component {
                           <option value="com-kho-hoa-vang">Cốm khô hoa vàng</option>
                           <option value="cha-com">Chả Cốm</option>
                           <option value="com-non-me-tri">Cốm Non Mễ Trì</option>
+                          <option value="xoi-com">Xôi cốm</option>
+                          <option value="banh-com-me-tri">Bánh cốm</option>
                         </select>
                       </div>
                     </div>

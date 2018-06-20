@@ -126,6 +126,12 @@ function mapProduct(slug){
     case 'com-non-me-tri':
       return 'Cốm Non Mễ Trì'
       break;
+    case 'xoi-com':
+      return 'Xôi cốm'
+      break;
+    case 'banh-com-me-tri':
+      return 'Bánh cốm Mễ Trì'
+      break;
     default:
       return ''
       break;

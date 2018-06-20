@@ -7016,6 +7016,12 @@ function mapProduct(slug) {
     case 'com-non-me-tri':
       return 'Cốm Non Mễ Trì';
       break;
+    case 'xoi-com':
+      return 'Xôi cốm';
+      break;
+    case 'banh-com-me-tri':
+      return 'Bánh cốm Mễ Trì';
+      break;
     default:
       return '';
       break;
@@ -11785,6 +11791,16 @@ class Home extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                           'option',
                           { value: 'com-non-me-tri' },
                           'C\u1ED1m Non M\u1EC5 Tr\xEC'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'option',
+                          { value: 'xoi-com' },
+                          'X\xF4i c\u1ED1m'
+                        ),
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                          'option',
+                          { value: 'banh-com-me-tri' },
+                          'B\xE1nh c\u1ED1m'
                         )
                       )
                     )
