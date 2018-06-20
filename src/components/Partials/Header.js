@@ -26,6 +26,14 @@ class Header extends React.Component {
                 <ul className="subMenu">
                   <li><Link to="/san-pham/com-non-me-tri" className="sf-with-ul">Cốm Non Hà Nội</Link></li>
                   <li><Link to="/san-pham/com-kho-hoa-vang" className="sf-with-ul">Cốm Khô Hà Nội</Link></li>
+                  <li>
+                    <Link className="sf-with-ul" to="/san-pham/xoi-com" onClick={this.closeMenu} >
+                      Xôi cốm
+                    </Link></li>
+                  <li>
+                    <Link className="sf-with-ul" to="/san-pham/banh-com-me-tri" onClick={this.closeMenu} >
+                      Bánh cốm
+                    </Link></li>
                 </ul>
               </li>
               <li><Link to="/san-pham/cha-com">Chả Cốm</Link></li>

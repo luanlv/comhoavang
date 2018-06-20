@@ -890,6 +890,24 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
                     { to: '/san-pham/com-kho-hoa-vang', className: 'sf-with-ul' },
                     'C\u1ED1m Kh\xF4 H\xE0 N\u1ED9i'
                   )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
+                    { className: 'sf-with-ul', to: '/san-pham/xoi-com', onClick: this.closeMenu },
+                    'X\xF4i c\u1ED1m'
+                  )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
+                    { className: 'sf-with-ul', to: '/san-pham/banh-com-me-tri', onClick: this.closeMenu },
+                    'B\xE1nh c\u1ED1m'
+                  )
                 )
               )
             ),
