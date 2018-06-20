@@ -33,6 +33,14 @@ class MenuMobile extends React.Component {
                     <Link to="/san-pham/com-non-me-tri" onClick={this.closeMenu} >
                       Cốm Non Mễ Trì
                     </Link></li>
+                  <li>
+                    <Link to="/san-pham/xoi-com" onClick={this.closeMenu} >
+                      Xôi cốm
+                    </Link></li>
+                  <li>
+                    <Link to="/san-pham/banh-com-me-tri" onClick={this.closeMenu} >
+                      Bánh cốm
+                    </Link></li>
                 </ul>
               </li>
               <li><Link to="/mon-ngon" onClick={this.closeMenu} >MÓN NGON</Link>

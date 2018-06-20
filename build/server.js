@@ -1073,6 +1073,24 @@ class MenuMobile extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
                     { to: '/san-pham/com-non-me-tri', onClick: this.closeMenu },
                     'C\u1ED1m Non M\u1EC5 Tr\xEC'
                   )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
+                    { to: '/san-pham/xoi-com', onClick: this.closeMenu },
+                    'X\xF4i c\u1ED1m'
+                  )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'li',
+                  null,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_1__Link__["a" /* default */],
+                    { to: '/san-pham/banh-com-me-tri', onClick: this.closeMenu },
+                    'B\xE1nh c\u1ED1m'
+                  )
                 )
               )
             ),
