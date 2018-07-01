@@ -289,6 +289,26 @@ class Layout extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           message: href
         }, function (data, status) {});
       });
+
+      window.addEventListener('load', () => {
+        // noinspection JSUnresolvedVariable
+        let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', '/tuy_hong_nhan.mp3');
+        xhr.responseType = 'arraybuffer';
+        xhr.addEventListener('load', () => {
+          let playsound = audioBuffer => {
+            let source = audioCtx.createBufferSource();
+            source.buffer = audioBuffer;
+            source.connect(audioCtx.destination);
+            source.loop = false;
+            source.start();
+          };
+
+          audioCtx.decodeAudioData(xhr.response).then(playsound);
+        });
+        xhr.send();
+      });
     }
   }
 
@@ -2935,7 +2955,7 @@ app.get('*', routeCache.cacheSeconds(20), (() => {
       if (__WEBPACK_IMPORTED_MODULE_18__assets_json___default.a[route.chunk]) {
         data.scripts.push(__WEBPACK_IMPORTED_MODULE_18__assets_json___default.a[route.chunk].js);
       }
-      let version = 6;
+      let version = 7;
 
       if (isAdmin) {
         const html = __WEBPACK_IMPORTED_MODULE_7_react_dom_server___default.a.renderToStaticMarkup(__WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_11__components_HtmlAdmin__["a" /* default */], _extends({ v: version }, data, { isAdmin: isAdmin })));
