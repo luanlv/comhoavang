@@ -106,8 +106,7 @@ class Html extends React.Component {
           >
           </script>
 
-          <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async' />
-          
+
           <script dangerouslySetInnerHTML={{ __html: this.props.scriptBottom }} />
 
         </body>
