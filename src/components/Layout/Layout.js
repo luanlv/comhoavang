@@ -21,6 +21,22 @@ class Layout extends React.Component {
   componentDidMount(){
     if(process.env.BROWSER) {
       window.myfunload()
+      $('a[href^="tel:"]').click(function(){
+        var href = jQuery(this).attr('href');
+        $.post("https://api.pushover.net/1/messages.json",
+          {
+            token : "a8czo1z9hyibk6dqvjcz69ht2kfwo1",
+
+            user : "urjjxg4efo6grfikn65gpqcgqv5nr2",
+
+
+            title : "comhoavang.com",
+
+            message : href
+          },
+          function(data, status){
+          });
+      })
     }
   }
 

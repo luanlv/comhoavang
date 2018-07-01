@@ -57,14 +57,21 @@ router.post('/order/new', bodyParser.json() ,async (req, res) => {
   Order.create(req.body, (err, resData) => {
     if(err) return res.sendStatus(400)
     Mailer.sendNewOrderMail(emailAdmin, resData.name, resData.phone)
-    // Mailer.sendNewOrderMail('luanlv2591@gmail.com', resData.name, resData.phone)
-    axios.post('https://graph.facebook.com/' + adminId + '/notifications?access_token=123093138237586|FEx3yoFukySO_rviU4Wl6MJxyRA&href=admin&template=Co_don_hang_moi')
-      .then(res => {
-        console.log(res.data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
+
+    axios.post("https://api.pushover.net/1/messages.json",
+      {
+        token : "a8czo1z9hyibk6dqvjcz69ht2kfwo1",
+        user : "urjjxg4efo6grfikn65gpqcgqv5nr2",
+        title : "comhoavang.com",
+        message : `
+        Họ tên: ${resData.name}
+        SDT: ${resData.phone}
+        Địa chỉ: ${resData.address}
+        Sản phẩm: ${resData.product}
+        Số lượng: ${resData.quantity}
+        `
+      }
+    )
 
     return res.send(resData)
   })
