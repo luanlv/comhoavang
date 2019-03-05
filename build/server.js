@@ -12880,7 +12880,7 @@ passport.use(new LocalStrategy(function (username, password, done) {
     //     return done(null, false, {message: "Invalid password"});
     //   }
     // });
-    if (password === 'luan@123') {
+    if (password === 'tu@123') {
       return done(null, user[0]);
     } else {
       return done(null, false, { message: "Invalid password" });
